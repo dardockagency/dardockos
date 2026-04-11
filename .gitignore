@@ -1,0 +1,39 @@
+# macOS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Python
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+dist/
+build/
+
+# Env / secrets
+.env
+.env.*
+.claude/
+**/.claude/
+
+# Archives
+*.zip
+
+# Local temp
+tmp/
+.tmp/
+
+# Dardock heavy / sensitive areas not needed in repo bootstrap
+000. Dardock/Facturas/
+000. Dardock/Cursos/
+000. Dardock/90_archivo_legacy/
+
+# Client artifacts to keep out unless intentionally added later
+1. Cliente/**/node_modules/
