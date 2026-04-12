@@ -240,3 +240,29 @@ Luego abre:
 - `000. Dardock/README_SISTEMA_DARDOCK.md`
 
 Y vuelve a entrar al sistema desde ahí.
+
+---
+
+## 13. Shortcut deploy del dashboard
+
+En el repo `dardock-command-center` existe un shortcut versionado:
+
+```bash
+npm run ship
+```
+
+Eso ejecuta:
+
+```bash
+git add .
+git commit -m "actualiza dashboard"
+git push origin main
+```
+
+Si quieres usar otro mensaje:
+
+```bash
+npm run ship -- "ajusta dashboard de cosas nuestras"
+```
+
+Ese push dispara un redeploy automático en Vercel si el repo está conectado al proyecto correcto.
