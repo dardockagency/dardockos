@@ -1,0 +1,43 @@
+{
+  "name": "dardock-whatsapp-router",
+  "version": "0.1.0",
+  "description": "Dardock workflow plugin for classifying WhatsApp messages into tasks, progress updates, blockers, reports, and operational replies.",
+  "author": {
+    "name": "Dardock",
+    "email": "matias@dardock.com",
+    "url": "https://dardock.com"
+  },
+  "homepage": "https://www.notion.so/238522c13e44810abeb5e515d0b97a9e",
+  "repository": "https://github.com/dardockagency/dardock-os-private",
+  "license": "UNLICENSED",
+  "keywords": [
+    "whatsapp",
+    "make",
+    "automation",
+    "dardock",
+    "operations"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Dardock WhatsApp Router",
+    "shortDescription": "Route WhatsApp notes into ClickUp tasks and Notion reports.",
+    "longDescription": "Classifies Dardock WhatsApp messages into operational intents such as task, progress, blocker, query, or report, then prepares structured outputs for ClickUp, Notion, and response messages.",
+    "developerName": "Dardock",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Automation"
+    ],
+    "websiteURL": "https://dardock.com",
+    "privacyPolicyURL": "https://dardock.com",
+    "termsOfServiceURL": "https://dardock.com",
+    "defaultPrompt": [
+      "Clasifica este mensaje de WhatsApp y prepara la acción operativa.",
+      "Convierte esta nota de voz transcrita en tarea ClickUp y avance Notion.",
+      "Responde este WhatsApp con estado ejecutivo del cliente."
+    ],
+    "brandColor": "#16A34A"
+  }
+}

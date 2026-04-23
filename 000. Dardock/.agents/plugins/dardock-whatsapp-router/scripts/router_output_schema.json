@@ -1,0 +1,13 @@
+{
+  "intent": "task | progress | blocker | query | report",
+  "client_slug": "",
+  "client_name": "",
+  "topic": "",
+  "priority": "urgent | high | medium | low",
+  "owner": "",
+  "summary": "",
+  "next_action": "",
+  "clickup_action": "create_task | comment_task | query_tasks | none",
+  "notion_action": "create_report | update_page | none",
+  "whatsapp_reply": ""
+}

@@ -1,0 +1,37 @@
+# macOS / local noise
+.DS_Store
+**/.DS_Store
+
+# Secrets and local environment
+.env
+.env.*
+*.local
+secrets/
+credentials/
+tokens/
+
+# Heavy or sensitive folders not intended for OS repo
+Facturas/
+Cursos/
+Logo/
+90_archivo_legacy/
+
+# Bundled exports / archives
+*.zip
+*.docx
+*.xlsx
+
+# App build output / dependencies
+node_modules/
+dist/
+dist-ssr/
+build/
+
+# Nested repos are versioned separately — each has its own GitHub remote
+Dashboard/dardock-command-center/.git/
+Dashboard/pixel-perfect/.git/
+consejo/.git/
+
+# Do not commit generated logs
+logs/
+*.log

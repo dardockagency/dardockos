@@ -1,0 +1,40 @@
+{
+  "name": "[Cliente] Acción concreta",
+  "description": "## Contexto\n\n## Acción requerida\n\n## Definición de terminado\n\n## Evidencia\n",
+  "status": "to do",
+  "priority": 2,
+  "tags": [
+    "cliente-slug",
+    "tipo"
+  ],
+  "custom_fields": [
+    {
+      "name": "Cliente",
+      "value": ""
+    },
+    {
+      "name": "Tipo",
+      "value": ""
+    },
+    {
+      "name": "Canal",
+      "value": ""
+    },
+    {
+      "name": "Próxima acción",
+      "value": ""
+    },
+    {
+      "name": "Definición de terminado",
+      "value": ""
+    },
+    {
+      "name": "Fuente",
+      "value": ""
+    },
+    {
+      "name": "Impacto",
+      "value": ""
+    }
+  ]
+}

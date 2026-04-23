@@ -1,0 +1,43 @@
+{
+  "name": "dardock-clickup",
+  "version": "0.1.0",
+  "description": "Dardock workflow plugin for preparing ClickUp tasks, comments, schemas, and automation payloads from agency context.",
+  "author": {
+    "name": "Dardock",
+    "email": "matias@dardock.com",
+    "url": "https://dardock.com"
+  },
+  "homepage": "https://www.notion.so/238522c13e44810abeb5e515d0b97a9e",
+  "repository": "https://github.com/dardockagency/dardock-os-private",
+  "license": "UNLICENSED",
+  "keywords": [
+    "clickup",
+    "dardock",
+    "operations",
+    "tasks",
+    "agency"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Dardock ClickUp",
+    "shortDescription": "Prepare and sync Dardock tasks with ClickUp workflows.",
+    "longDescription": "Turns Dardock client context, WhatsApp notes, Notion reports, and campaign blockers into ClickUp-ready tasks, comments, priorities, and definitions of done. Designed to avoid duplicate markdown task boards.",
+    "developerName": "Dardock",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Automation"
+    ],
+    "websiteURL": "https://dardock.com",
+    "privacyPolicyURL": "https://dardock.com",
+    "termsOfServiceURL": "https://dardock.com",
+    "defaultPrompt": [
+      "Crea una tarea ClickUp para Dany desde esta nota de WhatsApp.",
+      "Convierte estos bloqueos de tracking en tareas priorizadas para ClickUp.",
+      "Prepara comentario ClickUp y bloque Notion con este avance de cliente."
+    ],
+    "brandColor": "#111827"
+  }
+}

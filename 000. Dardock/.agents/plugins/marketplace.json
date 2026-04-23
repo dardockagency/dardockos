@@ -1,0 +1,32 @@
+{
+  "name": "dardock-local-marketplace",
+  "interface": {
+    "displayName": "Dardock Local Plugins"
+  },
+  "plugins": [
+    {
+      "name": "dardock-clickup",
+      "source": {
+        "source": "local",
+        "path": "./plugins/dardock-clickup"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "dardock-whatsapp-router",
+      "source": {
+        "source": "local",
+        "path": "./plugins/dardock-whatsapp-router"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

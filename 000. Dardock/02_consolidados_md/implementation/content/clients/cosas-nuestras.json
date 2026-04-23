@@ -1,0 +1,265 @@
+{
+  "meta": {
+    "id": "cosas-nuestras",
+    "name": "Cosas Nuestras",
+    "industry": "Ecommerce · Decoración · Shopify",
+    "period": "Abril 2026",
+    "updatedAt": "2026-04-12T10:00:00Z"
+  },
+
+  "insight": "Sistema rentable, pero mal calibrado",
+
+  "systemHealth": {
+    "globalScore": 54,
+    "status": "warning",
+    "statusLabel": "Inestable",
+    "interpretation": "Tracking y funnel limitan la escala real",
+    "layers": [
+      {
+        "id": "offer",
+        "label": "Oferta",
+        "score": 72,
+        "status": "warning",
+        "note": "Value Ladder incompleta — falta mid-ticket y retención",
+        "noteInternal": "Sin entry-ticket bajo $12.000. Sin suscripción o club de clientes. La escalera tiene dos peldaños pero necesita cuatro para sostener LTV competitivo en la categoría."
+      },
+      {
+        "id": "tracking",
+        "label": "Tracking",
+        "score": 30,
+        "status": "critical",
+        "note": "Señal de Meta incompleta desde el 8 de abril",
+        "noteInternal": "CAPI desconectado. EMQ 4.2/10 (mínimo aceptable 7.0). El pixel de navegador sigue enviando eventos pero sin deduplicación. El sistema de optimización de Meta está tomando decisiones a ciegas. Prioridad 1 antes de cualquier otra acción."
+      },
+      {
+        "id": "funnel",
+        "label": "Funnel",
+        "score": 58,
+        "status": "warning",
+        "note": "86% del tráfico abandona sin retargeting activo",
+        "noteInternal": "Drop severo en consideración: CVR 14% vs benchmark 30%. Sin audiencia de retargeting configurada para visitantes de producto. Sin flujo de recuperación de carritos abandonados activo."
+      },
+      {
+        "id": "campaigns",
+        "label": "Campañas",
+        "score": 61,
+        "status": "warning",
+        "note": "ROAS bajo break-even en 3 grupos de anuncios",
+        "noteInternal": "ROAS general 1.8× vs target 3.0×. Ad sets identificados bajo 0.8×: [Broad_Intereses_30+], [Retargeting_Catalogo_7d], [PMax_General]. Reasignar presupuesto luego de reconectar CAPI para tener atribución limpia."
+      },
+      {
+        "id": "creative",
+        "label": "Creativo",
+        "score": 45,
+        "status": "critical",
+        "note": "Mismos assets activos hace 47 días sin rotación",
+        "noteInternal": "Frecuencia promedio 4.1× en audiencias de prospección. CTR cayó 31% en las últimas 3 semanas. Necesitan mínimo 3 nuevos conceptos antes de activar retargeting. Brief creativo debe incluir ángulo de prueba social y diferenciador de producto."
+      }
+    ]
+  },
+
+  "criticalAlert": {
+    "active": true,
+    "message": "Señal de Meta interrumpida desde el 8 de abril — atribución de campañas incompleta",
+    "layer": "tracking",
+    "since": "2026-04-08"
+  },
+
+  "kpis": [
+    {
+      "id": "roas",
+      "label": "ROAS",
+      "value": "1.8×",
+      "unit": "",
+      "delta": "-40% vs target",
+      "deltaDirection": "down",
+      "status": "critical",
+      "target": "3.0×",
+      "isProtagonist": true
+    },
+    {
+      "id": "cpa",
+      "label": "CPA Google",
+      "value": "$8.200",
+      "unit": "CLP",
+      "delta": "+37% sobre meta",
+      "deltaDirection": "down",
+      "status": "warning",
+      "target": "$6.000",
+      "isProtagonist": false
+    },
+    {
+      "id": "cvr",
+      "label": "CVR Landing",
+      "value": "1.4%",
+      "unit": "",
+      "delta": "-44% vs benchmark",
+      "deltaDirection": "down",
+      "status": "critical",
+      "target": "2.5%",
+      "isProtagonist": false
+    },
+    {
+      "id": "aov",
+      "label": "Ticket promedio",
+      "value": "$42.000",
+      "unit": "CLP",
+      "delta": "-24% vs meta",
+      "deltaDirection": "down",
+      "status": "warning",
+      "target": "$55.000",
+      "isProtagonist": false
+    },
+    {
+      "id": "emq",
+      "label": "EMQ Meta",
+      "value": "4.2",
+      "unit": "/10",
+      "delta": "Bajo mínimo aceptable",
+      "deltaDirection": "down",
+      "status": "critical",
+      "target": "7.0",
+      "isProtagonist": false
+    }
+  ],
+
+  "pending": [
+    {
+      "id": "p-001",
+      "title": "Aprobar brief creativo para 3 nuevos conceptos Meta",
+      "description": "Dardock preparó las direcciones creativas para sacar la fatiga actual. Necesitamos tu aprobación para que Israel inicie producción.",
+      "dueDate": "2026-04-15",
+      "status": "pending",
+      "priority": "high"
+    },
+    {
+      "id": "p-002",
+      "title": "Confirmar budget de pauta para Q2",
+      "description": "Para mantener la estructura de campañas necesitamos confirmar el presupuesto mensual del trimestre antes del 18 de abril.",
+      "dueDate": "2026-04-18",
+      "status": "pending",
+      "priority": "medium"
+    },
+    {
+      "id": "p-003",
+      "title": "Validar acceso CAPI en Business Manager",
+      "description": "Para reconectar la señal de Meta necesitamos que confirmes acceso de administrador en el Business Manager.",
+      "dueDate": "2026-04-13",
+      "status": "pending",
+      "priority": "high"
+    }
+  ],
+
+  "agencyThisWeek": [
+    {
+      "id": "a-001",
+      "task": "Reconectar CAPI y validar EMQ",
+      "status": "in-progress",
+      "layer": "tracking"
+    },
+    {
+      "id": "a-002",
+      "task": "Pausar ad sets ROAS < 0.8×",
+      "status": "planned",
+      "layer": "campaigns"
+    },
+    {
+      "id": "a-003",
+      "task": "Preparar brief creativo para 3 nuevos conceptos",
+      "status": "done",
+      "layer": "creative"
+    },
+    {
+      "id": "a-004",
+      "task": "Auditoría de estructura de campañas Google",
+      "status": "done",
+      "layer": "campaigns"
+    }
+  ],
+
+  "roadmap": {
+    "urgent": [
+      {
+        "id": "r-001",
+        "action": "Reconectar CAPI Meta",
+        "impact": "Restaura atribución completa — base de todo lo demás",
+        "layer": "tracking",
+        "dependency": null,
+        "owner": "dardock"
+      },
+      {
+        "id": "r-002",
+        "action": "Pausar ad sets bajo break-even",
+        "impact": "Libera ~$90.000 CLP/mes de inversión sin retorno",
+        "layer": "campaigns",
+        "dependency": "CAPI conectado primero",
+        "owner": "dardock"
+      },
+      {
+        "id": "r-003",
+        "action": "Aprobar brief y producir 3 creativos nuevos",
+        "impact": "Detiene fatiga — CTR objetivo +25%",
+        "layer": "creative",
+        "dependency": "Aprobación del cliente",
+        "owner": "client"
+      }
+    ],
+    "thirtyDays": [
+      {
+        "id": "r-004",
+        "action": "Activar retargeting de consideración",
+        "impact": "Recuperar hasta 30% del tráfico que abandona sin comprar",
+        "layer": "funnel",
+        "dependency": "Creativos nuevos listos",
+        "owner": "dardock"
+      },
+      {
+        "id": "r-005",
+        "action": "Instalar flujo email post-compra (3 emails mínimo)",
+        "impact": "Activa canal de retención sin costo de adquisición adicional",
+        "layer": "funnel",
+        "dependency": "Acceso a plataforma de email",
+        "owner": "both"
+      },
+      {
+        "id": "r-006",
+        "action": "Optimizar landing de producto principal",
+        "impact": "CVR de landing objetivo: 2.2% (+57% sobre actual)",
+        "layer": "funnel",
+        "dependency": null,
+        "owner": "both"
+      }
+    ],
+    "ninetyDays": [
+      {
+        "id": "r-007",
+        "action": "Lanzar entry-ticket bajo $12.000",
+        "impact": "Abre la Value Ladder — amplía base de compradores nuevos",
+        "layer": "offer",
+        "dependency": "Decisión de producto del cliente",
+        "owner": "client"
+      },
+      {
+        "id": "r-008",
+        "action": "Construir lookalike de compradores reales",
+        "impact": "Prospección de mayor calidad — CPA objetivo -20%",
+        "layer": "campaigns",
+        "dependency": "500+ conversiones limpias en el pixel",
+        "owner": "dardock"
+      },
+      {
+        "id": "r-009",
+        "action": "Evaluar suscripción o club de clientes",
+        "impact": "Activa LTV recurrente — reduce dependencia de adquisición continua",
+        "layer": "offer",
+        "dependency": "Base de compradores establecida",
+        "owner": "client"
+      }
+    ]
+  },
+
+  "funnel": {
+    "available": false,
+    "stages": []
+  }
+}

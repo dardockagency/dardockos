@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "id": "ads-group",
+    "name": "ADS Group",
+    "industry": "COMPLETAR — rubro del cliente",
+    "period": "Abril 2026",
+    "updatedAt": "2026-04-12T10:00:00Z"
+  },
+
+  "insight": "COMPLETAR — insight principal del diagnóstico",
+
+  "systemHealth": {
+    "globalScore": 0,
+    "status": "warning",
+    "statusLabel": "COMPLETAR",
+    "interpretation": "COMPLETAR — frase de contexto",
+    "layers": [
+      {
+        "id": "offer",
+        "label": "Oferta",
+        "score": 0,
+        "status": "warning",
+        "note": "COMPLETAR",
+        "noteInternal": "COMPLETAR — diagnóstico interno"
+      },
+      {
+        "id": "tracking",
+        "label": "Tracking",
+        "score": 0,
+        "status": "warning",
+        "note": "COMPLETAR",
+        "noteInternal": "COMPLETAR"
+      },
+      {
+        "id": "funnel",
+        "label": "Funnel",
+        "score": 0,
+        "status": "warning",
+        "note": "COMPLETAR",
+        "noteInternal": "COMPLETAR"
+      },
+      {
+        "id": "campaigns",
+        "label": "Campañas",
+        "score": 0,
+        "status": "warning",
+        "note": "COMPLETAR",
+        "noteInternal": "COMPLETAR"
+      },
+      {
+        "id": "creative",
+        "label": "Creativo",
+        "score": 0,
+        "status": "warning",
+        "note": "COMPLETAR",
+        "noteInternal": "COMPLETAR"
+      }
+    ]
+  },
+
+  "criticalAlert": {
+    "active": false,
+    "message": null,
+    "layer": null,
+    "since": null
+  },
+
+  "kpis": [
+    {
+      "id": "kpi-protagonista",
+      "label": "COMPLETAR — métrica principal",
+      "value": "COMPLETAR",
+      "unit": "",
+      "delta": null,
+      "deltaDirection": null,
+      "status": "warning",
+      "target": null,
+      "isProtagonist": true
+    },
+    {
+      "id": "kpi-2",
+      "label": "COMPLETAR",
+      "value": "COMPLETAR",
+      "unit": "",
+      "delta": null,
+      "deltaDirection": null,
+      "status": "warning",
+      "target": null,
+      "isProtagonist": false
+    },
+    {
+      "id": "kpi-3",
+      "label": "COMPLETAR",
+      "value": "COMPLETAR",
+      "unit": "",
+      "delta": null,
+      "deltaDirection": null,
+      "status": "warning",
+      "target": null,
+      "isProtagonist": false
+    },
+    {
+      "id": "kpi-4",
+      "label": "COMPLETAR",
+      "value": "COMPLETAR",
+      "unit": "",
+      "delta": null,
+      "deltaDirection": null,
+      "status": "warning",
+      "target": null,
+      "isProtagonist": false
+    },
+    {
+      "id": "kpi-5",
+      "label": "COMPLETAR",
+      "value": "COMPLETAR",
+      "unit": "",
+      "delta": null,
+      "deltaDirection": null,
+      "status": "warning",
+      "target": null,
+      "isProtagonist": false
+    }
+  ],
+
+  "pending": [],
+
+  "agencyThisWeek": [],
+
+  "roadmap": {
+    "urgent": [],
+    "thirtyDays": [],
+    "ninetyDays": []
+  },
+
+  "funnel": {
+    "available": false,
+    "stages": []
+  }
+}
