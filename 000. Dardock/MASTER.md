@@ -14,6 +14,7 @@
 | Tocar el dashboard (código) | [Dashboard/dardock-command-center/](Dashboard/dardock-command-center/) |
 | Enviar una propuesta | [04_comercial_propuestas/](04_comercial_propuestas/) |
 | Entender el flujo de la agencia | [FLUJO_AGENCIA_DARDOCK](01_uso_diario/FLUJO_AGENCIA_DARDOCK.md) |
+| Ver reportes / minutas de clientes | [Notion — Agency HQ](#notion--estructura-y-uso) |
 
 ---
 
@@ -90,6 +91,73 @@ npm run ship   → deploy a Vercel
 ```
 
 Agregar cliente nuevo = nuevo archivo en `src/data/clients/<slug>.ts`
+
+---
+
+## Notion — estructura y uso
+
+Notion es la fuente de verdad para reportes, minutas y wiki compartible con clientes. No reemplaza ClickUp (tareas) ni esta carpeta (contexto estratégico compacto).
+
+### Páginas principales
+
+| Página en Notion | Para qué sirve |
+|---|---|
+| **Dardock OS** | Home principal — punto de entrada en Notion |
+| **Dardock — Agency HQ** | Vista ejecutiva semanal; debe estar alineada con [AGENCIA_ESTADO](01_uso_diario/AGENCIA_ESTADO.md) |
+| **Comandos & Skills — Referencia Dardock** | Referencia operativa de Claude/Codex disponible para el equipo |
+| **Backup MDs — Sistema Dardock** | Espejo de markdowns para compartir; no es fuente primaria |
+
+### Bases de datos (databases)
+
+**Clientes** — registro maestro de cada cliente activo
+
+| Campo | Qué poner |
+|---|---|
+| Cliente | Nombre |
+| Slug | `dany-caceres`, `cosas-nuestras`, etc. |
+| Estado | Activo / Pipeline / Pausado / Cerrado |
+| Servicio | Performance / Tracking / Growth / Auditoría |
+| Score | Número ejecutivo del estado del cliente |
+| Tracking | Crítico / Parcial / Sano |
+| Próximo hito | Una línea con lo más urgente |
+
+**Reportes** — un registro por reporte enviado
+
+| Campo | Qué poner |
+|---|---|
+| Título | `[Cliente] Reporte semanal YYYY-MM-DD` |
+| Cliente | Relación a Clientes |
+| Tipo | Semanal / Mensual / Auditoría / Tracking / Comercial |
+| Estado | Borrador → En revisión → Enviado |
+| Decisión principal | Una línea ejecutiva del resultado de la semana |
+| Link ClickUp | Tarea o epic relacionado |
+
+**Minutas** — registro de reuniones con clientes
+
+| Campo | Qué poner |
+|---|---|
+| Título | `[Cliente] Reunión YYYY-MM-DD` |
+| Participantes | Quiénes estuvieron |
+| Decisiones | Bullets de lo acordado |
+| Tareas creadas | Links a ClickUp (las tareas van allá, no en Notion) |
+
+### Regla de flujo
+
+```
+Reunión / avance / resultado
+       ↓
+  Se captura en Notion (minuta o reporte)
+       ↓
+  Las tareas que genera se crean en ClickUp y se enlazan desde Notion
+       ↓
+  El contexto estratégico compacto se actualiza en clientes/<slug>/Estado_Actual.md
+```
+
+### Qué NO va en Notion
+- Tableros de tareas (eso es ClickUp)
+- Contexto técnico detallado de cliente (eso es `clientes/<slug>/`)
+- Credenciales o tokens (nunca en Notion)
+- Borradores de estrategia en proceso (primero en local, a Notion solo cuando está listo para compartir)
 
 ---
 
