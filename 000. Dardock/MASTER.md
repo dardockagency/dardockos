@@ -96,104 +96,103 @@ Agregar cliente nuevo = nuevo archivo en `src/data/clients/<slug>.ts`
 
 ## Notion — estructura real
 
-Notion opera como wiki ejecutiva y espejo de reportes. No reemplaza ClickUp (tareas) ni la carpeta local (contexto técnico compacto).
+Notion es introducción, documentación y log. No es tasking (eso es ClickUp) ni contexto técnico (eso es la carpeta local).
 
 ### Árbol de páginas
 
 ```
-🐢 Dardock OS                          ← HOME del workspace
-├── 🏢 Dardock — Agency HQ             ← Vista operativa semanal (abrir cada lunes)
-│   ├── 📚 Backup MDs — Sistema Dardock   ← Espejo de markdowns locales
+🐢 Dardock OS                             ← HOME: axiomas, stack, equipo, navegación
+├── 🏢 Dardock — Agency HQ                ← Vista operativa semanal (abrir cada lunes)
+│   ├── 📋 Log de Avances (database)      ← Registro de avances, bloqueos y decisiones
+│   ├── 📚 Backup MDs — Sistema Dardock   ← Espejo de markdowns locales (GitHub manda)
 │   └── 🗂️ Clientes Inactivos             ← Clientes sin retainer activo
+├── 🎭 Consejo Dardock                    ← Documentación de los 5 personajes + protocolos
 └── ⚡ Comandos & Skills — Referencia Dardock
 ```
 
-### Páginas y su función real
+### Páginas y su función
 
-| Página | URL / ubicación | Para qué se usa |
-|---|---|---|
-| **🐢 Dardock OS** | Root del workspace | Home con todas las databases embebidas; punto de entrada |
-| **🏢 Agency HQ** | Hijo de Dardock OS | Alertas activas, scores de clientes, entregables de la semana — actualizar cada lunes |
-| **🗂️ Clientes Inactivos** | Hijo de Agency HQ | Clientes sin retainer (Designio, Trip Arcade, FOSKO, ADS Group) con criterio de reactivación |
-| **📚 Backup MDs** | Hijo de Agency HQ | Espejo de los CLAUDE.md y Estado_Actual de cada cliente; no es fuente primaria |
-| **⚡ Comandos & Skills** | Hijo de Dardock OS | Referencia de comandos Claude Code y skills disponibles para el equipo |
+| Página | Para qué se usa |
+|---|---|
+| **🐢 Dardock OS** | Home del workspace: quiénes somos, axiomas, stack operativo, equipo, navegación |
+| **🏢 Agency HQ** | Alertas activas, scores de clientes, entregables de la semana — actualizar cada lunes |
+| **📋 Log de Avances** | Database: un registro por cada avance, bloqueo, decisión o reporte enviado |
+| **🎭 Consejo Dardock** | Documentación completa de los 5 personajes y 5 protocolos de sesión |
+| **📚 Backup MDs** | Espejo legible de los markdowns del OS; fuente primaria sigue siendo GitHub |
+| **🗂️ Clientes Inactivos** | Designio, Trip Arcade, FOSKO, ADS Group — criterio de reactivación documentado |
+| **⚡ Comandos & Skills** | Referencia de comandos Claude Code, flujo de sesión, URLs clave |
 
-### Databases que existen (Company OS)
+### Databases activas
 
-El workspace usa un sistema **Company OS** con 4 databases relacionadas entre sí:
+**Clientes Dardock** — CRM de la agencia
 
-**Company OS Clients** — registro de clientes
-| Campo real | Tipo | Uso |
+| Campo | Tipo | Valores |
 |---|---|---|
 | Name | Título | Nombre del cliente |
+| Estado | Select | Activo · Pipeline · Pausado · Cerrado |
+| Servicio | Multi-select | Performance · Tracking · Growth System · Auditoría · Setup one-shot |
+| Score | Número | 0–100 (score ejecutivo del estado) |
+| Tracking_Salud | Select | Sano · Parcial · Crítico |
+| Próximo hito | Texto | Una línea con la acción más urgente |
 | Email | Email | Contacto directo |
-| Contact | Relación → Team | Persona de contacto interno |
-| Projects | Relación → Projects | Proyectos vinculados |
-| Expenses | Relación → Expenses | Gastos del cliente |
-| Location | Texto | País / ciudad |
+| Projects | Relación → Proyectos Dardock | Proyectos vinculados |
 
-> ⚠️ **Gap identificado:** esta database no tiene Score, Estado (Activo/Pausado), ni Servicio (Performance/Tracking). Hay que añadir esos campos para que sea útil como CRM de agencia.
+**Proyectos Dardock** — proyectos por cliente
 
-**Company OS Projects** — proyectos por cliente
-| Campo real | Tipo | Uso |
+| Campo | Tipo | Valores |
 |---|---|---|
 | Name | Título | Nombre del proyecto |
-| Status | Status | Not started / In progress / Done / Archive |
-| Timing | Fecha | Rango de fechas |
-| Budget | Número ($) | Presupuesto del proyecto |
-| Clients | Relación → Clients | Cliente asociado |
-| Tasks | Relación → Tasks | Tareas del proyecto |
-| Done | Rollup | % de tareas completadas |
-| Type | Multi-select | Tipo de trabajo (actualmente: Webdesign, Branding, etc. — hay que actualizar a Performance, Tracking, Growth, Auditoría) |
+| Status | Status | Not started · In progress · Done · Archive |
+| Type | Multi-select | Performance Ads · Tracking & CAPI · Growth System · Auditoría · Funnel & Landing · Setup one-shot · Contenido |
+| Timing | Fecha | Rango del proyecto |
+| Budget | Número ($) | Presupuesto |
+| Clients | Relación → Clientes | Cliente asociado |
+| Done | Rollup | % tareas completadas |
 
-**Company OS Tasks** — tareas por proyecto
-| Campo real | Tipo | Uso |
+**📋 Log de Avances** — registro operativo semanal
+
+| Campo | Tipo | Valores |
 |---|---|---|
-| Name | Título | Nombre de la tarea |
-| Status | Status | Not started / In progress / In Review / Done |
-| Date | Fecha | Fecha límite |
-| Assign | Persona | Responsable (Matías o Israel) |
-| Project | Relación → Projects | Proyecto al que pertenece |
-| Working hours | Número | Horas estimadas |
-| Price | Número ($) | Valor de la tarea |
+| Título | Título | Descripción del avance/bloqueo/decisión |
+| Cliente | Select | Dany Cáceres · Cosas Nuestras · Genera Industrial · ADS Group · Dardock interno |
+| Semana | Fecha | Semana a la que pertenece |
+| Tipo | Select | Avance · Bloqueo · Decisión · Alerta · Reporte enviado |
+| Resumen | Texto | Qué pasó |
+| Decisión o siguiente paso | Texto | Qué se decidió o qué sigue |
+| Link ClickUp | URL | Tarea relacionada |
+| Estado | Select | Activo · Resuelto · Archivado |
 
-> ℹ️ Esta database duplica funcionalidad con ClickUp. Mientras ClickUp siga siendo fuente de tareas, esta se usa solo para proyectos con presupuesto/facturación asociada.
+### Stack operativo completo
 
-**Company OS Team** — equipo (Matías, Israel, etc.)
-
-### Database pendiente de crear: Reportes
-
-No existe una database de reportes semanales operativa. La que aparece en el workspace (`Reportes Semanal`) está anidada en un proyecto interno sin estructura real.
-
-**Campos mínimos para crearla:**
-| Campo | Tipo | Valor |
+| Herramienta | Rol | Fuente de verdad de... |
 |---|---|---|
-| Título | Título | `[Cliente] Reporte YYYY-MM-DD` |
-| Cliente | Relación → Clients | Cliente del reporte |
-| Tipo | Select | Semanal / Mensual / Auditoría |
-| Estado | Status | Borrador → En revisión → Enviado |
-| Decisión principal | Texto | Una línea ejecutiva |
-| Link ClickUp | URL | Tarea o epic relacionado |
+| **GitHub** | Repos: OS + dashboard + consejo | Código y markdowns versionados |
+| **Notion** | Documentación + wiki + log de avances | Conocimiento compartible y reportes |
+| **ClickUp** | Tasking: tareas, responsables, fechas | Ejecución diaria del equipo |
+| **Make.com** | Automatización de flujos | Pipelines: WhatsApp → ClickUp → Notion |
+| **Claude Code** | Operaciones con IA | Auditorías, análisis, código, copy |
+| **Stape / sGTM** | Server-side tracking | Señal limpia de conversiones |
+| **Vercel** | Deploy automático del dashboard | central.dardock.com |
 
-### Flujo real de información
+### Flujo de información
 
 ```
 Trabajo ejecutado (ClickUp)
         ↓
-Resultado / avance relevante
+Avance, bloqueo o decisión relevante
         ↓
-Reporte en Notion (database Reportes) ← compartible con cliente
+Registrar en Log de Avances (Notion) ← fuente de historial
         ↓
-Si genera tarea nueva → crear en ClickUp y enlazar desde Notion
+Si es reporte para cliente → redactar y marcar "Reporte enviado"
         ↓
-Si cambia estado estratégico → actualizar clientes/<slug>/Estado_Actual.md local
+Si cambia estado estratégico → actualizar clientes/<slug>/Estado_Actual.md en GitHub
 ```
 
 ### Qué NO va en Notion
-- Microgestión de tareas diarias (eso es ClickUp)
-- Contexto técnico detallado de campañas (eso es `clientes/<slug>/`)
-- Credenciales, tokens o accesos (nunca en Notion)
-- Decisiones estratégicas en proceso (eso es el Consejo Dardock → `consejo/decisiones/`)
+- Microgestión de tareas diarias → ClickUp
+- Contexto técnico de campañas → `clientes/<slug>/` en GitHub
+- Decisiones estratégicas en proceso → Consejo Dardock (`consejo/decisiones/`)
+- Credenciales o tokens → nunca en Notion
 
 ---
 
