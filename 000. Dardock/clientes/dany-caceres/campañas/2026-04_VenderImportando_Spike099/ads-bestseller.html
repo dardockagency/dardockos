@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vender Importando · Ads Best-Seller #1 Amazon</title>
+<style>
+  :root {
+    --bg: #0f0f10;
+    --card: #1a1a1c;
+    --card-hi: #232325;
+    --border: #2a2a2d;
+    --text: #ededed;
+    --muted: #8a8a8f;
+    --accent: #e63946;
+    --gold: #ff9900;
+    --green: #4ade80;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+    padding: 40px 20px 80px;
+  }
+  .container { max-width: 1100px; margin: 0 auto; }
+
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 24px;
+    margin-bottom: 40px;
+  }
+  .pill {
+    display: inline-block;
+    background: var(--gold);
+    color: #1a1a1a;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    padding: 5px 12px;
+    border-radius: 999px;
+    text-transform: uppercase;
+  }
+  h1 {
+    font-size: 32px;
+    margin: 14px 0 8px;
+    letter-spacing: -0.02em;
+  }
+  .subtitle { color: var(--muted); font-size: 15px; }
+
+  .achievement {
+    background: linear-gradient(135deg, rgba(255,153,0,0.12), rgba(230,57,70,0.08));
+    border: 1px solid rgba(255,153,0,0.3);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .achievement .badge {
+    background: var(--gold);
+    color: #1a1a1a;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+  .achievement h3 { font-size: 18px; margin-bottom: 4px; }
+  .achievement p { color: var(--muted); font-size: 14px; }
+
+  section { margin-bottom: 48px; }
+  h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  h2 .count {
+    font-size: 12px;
+    background: var(--card-hi);
+    color: var(--muted);
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-weight: 500;
+  }
+  .section-desc { color: var(--muted); font-size: 14px; margin-bottom: 24px; }
+
+  .ad-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+  .ad-head {
+    background: var(--card-hi);
+    padding: 16px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .ad-id {
+    background: var(--gold);
+    color: #1a1a1a;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 6px;
+    letter-spacing: 0.04em;
+  }
+  .ad-name { font-size: 17px; font-weight: 600; flex: 1; }
+  .ad-tag {
+    font-size: 11px;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 4px 10px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .ad-body {
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 24px;
+  }
+  @media (max-width: 800px) {
+    .ad-body { grid-template-columns: 1fr; }
+  }
+
+  .layout-mock {
+    background: #fafafa;
+    color: #1a1a1a;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 18px;
+    border-radius: 8px;
+    white-space: pre;
+    overflow-x: auto;
+  }
+
+  .copy-block {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .copy-row { position: relative; }
+  .copy-label {
+    font-size: 10px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .copy-value {
+    background: var(--card-hi);
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 15px;
+    line-height: 1.5;
+    border: 1px solid var(--border);
+    white-space: pre-line;
+  }
+  .copy-value.headline { font-size: 17px; font-weight: 600; }
+  .copy-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .copy-btn:hover { border-color: var(--text); color: var(--text); }
+  .copy-btn.copied { background: var(--green); border-color: var(--green); color: #0a0a0a; }
+
+  /* Brief */
+  .brief-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+  }
+  .brief-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+  .brief-item .label {
+    font-size: 10px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 6px;
+  }
+  .brief-item .value { font-size: 14px; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  th, td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+  }
+  th {
+    background: var(--card-hi);
+    color: var(--muted);
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+  }
+  tr:last-child td { border-bottom: none; }
+
+  .compliance {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 8px;
+  }
+  .check {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 13px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .check::before {
+    content: "✓";
+    color: var(--green);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .alert {
+    background: rgba(255,153,0,0.08);
+    border: 1px solid rgba(255,153,0,0.3);
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 14px;
+    color: #ffd89e;
+    margin-bottom: 24px;
+  }
+  .alert strong { color: var(--gold); }
+
+  footer {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <span class="pill">🏆 Best-Seller · #1 Amazon Kindle</span>
+  <h1>Ads Best-Seller — Vender Importando</h1>
+  <p class="subtitle">Dany Cáceres · 5 ads para capitalizar el #1 en categoría Exportaciones e Importaciones</p>
+  <div class="achievement">
+    <div class="badge">#1</div>
+    <div>
+      <h3>Vender Importando · #1 Best-Seller Amazon Kindle</h3>
+      <p>Categoría Exportaciones e Importaciones · Top 100 pagados · Precio $0.99 USD aún activo</p>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="alert">
+    📌 <strong>Asset hero:</strong> el screenshot real del ranking #1 ES la pieza principal. No requiere generar imagen con IA — la captura verificable vale más como prueba social.
+  </div>
+</section>
+
+<!-- AD 1 -->
+<section>
+  <div class="ad-card">
+    <div class="ad-head">
+      <span class="ad-id">AD 1</span>
+      <span class="ad-name">Trophy puro</span>
+      <span class="ad-tag">Autoridad pura</span>
+    </div>
+    <div class="ad-body">
+      <div>
+        <div class="copy-label">Layout 1:1 / 4:5</div>
+        <div class="layout-mock">┌──────────────────────────┐
+│ [BANDA SUPERIOR ROJA]    │
+│ #1 BEST SELLER · KINDLE  │
+├──────────────────────────┤
+│                          │
+│  [SCREENSHOT ranking #1] │
+│                          │
+├──────────────────────────┤
+│  VENDER IMPORTANDO       │
+│  Top 1 en Exportaciones  │
+└──────────────────────────┘</div>
+      </div>
+      <div class="copy-block">
+        <div class="copy-row">
+          <div class="copy-label">Headline</div>
+          <button class="copy-btn" data-copy="#1 Best-Seller en Amazon Kindle">Copiar</button>
+          <div class="copy-value headline">#1 Best-Seller en Amazon Kindle</div>
+        </div>
+        <div class="copy-row">
+          <div class="copy-label">Primary text</div>
+          <button class="copy-btn" data-copy="Vender Importando llegó al puesto #1 de Amazon en la categoría de Exportaciones e Importaciones.
+
+21 años de comercio internacional, 25 estrategias, $0.99 USD por tiempo limitado.
+
+Si lo querías, este es el momento.">Copiar</button>
+          <div class="copy-value">Vender Importando llegó al puesto #1 de Amazon en la categoría de Exportaciones e Importaciones.
+
+21 años de comercio internacional, 25 estrategias, $0.99 USD por tiempo limitado.
+
+Si lo querías, este es el momento.</div>
+        </div>
+        <div class="copy-row">
+          <div class="copy-label">Description · CTA</div>
+          <div class="copy-value">Top 1 en Amazon Kindle hoy · <strong>Comprar ahora</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AD 2 -->
+<section>
+  <div class="ad-card">
+    <div class="ad-head">
+      <span class="ad-id">AD 2</span>
+      <span class="ad-name">Gracias / momentum (UGC)</span>
+      <span class="ad-tag">UGC autor · R5</span>
+    </div>
+    <div class="ad-body">
+      <div>
+        <div class="copy-label">Layout 1:1 / 4:5</div>
+        <div class="layout-mock">┌──────────────────────────┐
+│  [Foto Dany + libro]     │
+│                          │
+│  Texto sobreimpreso:     │
+│  "LO LOGRAMOS."          │
+│  "#1 en Amazon."         │
+│                          │
+│  [Insert con screenshot] │
+└──────────────────────────┘</div>
+      </div>
+      <div class="copy-block">
+        <div class="copy-row">
+          <div class="copy-label">Headline</div>
+          <button class="copy-btn" data-copy="Lo logramos. #1 en Amazon.">Copiar</button>
+          <div class="copy-value headline">Lo logramos. #1 en Amazon.</div>
+        </div>
+        <div class="copy-row">
+          <div class="copy-label">Primary text</div>
+          <button class="copy-btn" data-copy="Hace pocas horas Vender Importando llegó al puesto #1 de su categoría en Amazon Kindle.
+
+No lo logré yo solo: lo logramos los que entendemos que importar sin saber vender es trabajar para el depósito.
+
+Gracias a los que ya están leyendo. Para los que faltan: sigue a $0.99 USD por tiempo limitado.">Copiar</button>
+          <div class="copy-value">Hace pocas horas Vender Importando llegó al puesto #1 de su categoría en Amazon Kindle.
+
+No lo logré yo solo: lo logramos los que entendemos que importar sin saber vender es trabajar para el depósito.
+
+Gracias a los que ya están leyendo. Para los que faltan: sigue a $0.99 USD por tiempo limitado.</div>
+        </div>
+        <div class="copy-row">
+          <div class="copy-label">Description · CTA</div>
+          <div class="copy-value">Gracias por el empuje · Top 1 · <strong>Más información</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AD 3 -->
+<section>
+  <div class="ad-card">
+    <div class="ad-head">
+      <span class="ad-id">AD 3</span>
+      <span class="ad-name">Última oportunidad post-#1</span>
+      <span class="ad-tag">Urgencia + prueba</span>
+    </div>
+    <div class="ad-body">
+      <div>
+        <div class="copy-label">Layout 1:1 / 4:5</div>
+        <div class="layout-mock">┌──────────────────────────┐
+│  [SCREENSHOT ranking #1] │
+│   ocupa 60% superior     │
+├──────────────────────────┤
+│  YA ES #1.               │
+│  Y TODAVÍA ESTÁ A $0.99  │
+├──────────────────────────┤
+│  [Tapa libro] +          │
+│  "Por tiempo limitado"   │
+└──────────────────────────┘</div>
+      </div>
+      <div class="copy-block">
+        <div class="copy-row">
+          <div class="copy-label">Headline</div>
+          <button class="copy-btn" data-copy="Ya es #1. Y todavía a $0.99.">Copiar</button>
+          <div class="copy-value headline">Ya es #1. Y todavía a $0.99.</div>
+        </div>
+        <div class="copy-row">
+          <div class="copy-label">Primary text</div>
+          <button class="copy-btn" data-copy="Llegó al puesto #1 de Amazon en Exportaciones e Importaciones.
+
+El precio de lanzamiento todavía está activo: $0.99 USD en Kindle, por pocas horas más. Después vuelve a $6.99.
+
+Si dudabas si valía la pena, ahora hay 100 títulos detrás que dicen que sí.">Copiar</button>
+          <div class="copy-value">Llegó al puesto #1 de Amazon en Exportaciones e Importaciones.
+
+El precio de lanzamiento todavía está activo: $0.99 USD en Kindle, por pocas horas más. Después vuelve a $6.99.
+
+Si dudabas si valía la pena, ahora hay 100 títulos detrás que dicen que sí.</div>
+        </div>
+        <div class="copy-row">
+          <div class="copy-label">Description · CTA</div>
+          <div class="copy-value">$0.99 USD · Cierra pronto · <strong>Comprar ahora</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AD 4 -->
+<section>
+  <div class="ad-card">
+    <div class="ad-head">
+      <span class="ad-id">AD 4</span>
+      <span class="ad-name">Comparación silenciosa</span>
+      <span class="ad-tag">Autoridad relativa</span>
+    </div>
+    <div class="ad-body">
+      <div>
+        <div class="copy-label">Layout 1:1 / 4:5</div>
+        <div class="layout-mock">┌──────────────────────────┐
+│ [SCREENSHOT mostrando    │
+│  #1, #2, #3 en lista]    │
+├──────────────────────────┤
+│ ENTRE LOS 100 TÍTULOS    │
+│ MÁS VENDIDOS DE LA       │
+│ CATEGORÍA                │
+│                          │
+│ Vender Importando · #1   │
+└──────────────────────────┘</div>
+      </div>
+      <div class="copy-block">
+        <div class="copy-row">
+          <div class="copy-label">Headline</div>
+          <button class="copy-btn" data-copy="#1 entre 100 títulos de Exportaciones">Copiar</button>
+          <div class="copy-value headline">#1 entre 100 títulos de Exportaciones</div>
+        </div>
+        <div class="copy-row">
+          <div class="copy-label">Primary text</div>
+          <button class="copy-btn" data-copy="En la categoría de Exportaciones e Importaciones de Amazon hay cientos de libros. Vender Importando llegó al primer puesto.
+
+25 estrategias de venta para importadores, en Kindle a $0.99 USD por tiempo limitado.">Copiar</button>
+          <div class="copy-value">En la categoría de Exportaciones e Importaciones de Amazon hay cientos de libros. Vender Importando llegó al primer puesto.
+
+25 estrategias de venta para importadores, en Kindle a $0.99 USD por tiempo limitado.</div>
+        </div>
+        <div class="copy-row">
+          <div class="copy-label">Description · CTA</div>
+          <div class="copy-value">Top 1 · Categoría Importaciones · <strong>Comprar ahora</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AD 5 -->
+<section>
+  <div class="ad-card">
+    <div class="ad-head">
+      <span class="ad-id">AD 5</span>
+      <span class="ad-name">"Si está #1 hay una razón"</span>
+      <span class="ad-tag">Curiosidad</span>
+    </div>
+    <div class="ad-body">
+      <div>
+        <div class="copy-label">Layout 1:1 / 4:5</div>
+        <div class="layout-mock">┌──────────────────────────┐
+│  Fondo plano oscuro      │
+│                          │
+│  "Si está #1 en Amazon,  │
+│   hay una razón."        │
+│                          │
+│  [SCREENSHOT chico]      │
+│  [Tapa libro al lado]    │
+└──────────────────────────┘</div>
+      </div>
+      <div class="copy-block">
+        <div class="copy-row">
+          <div class="copy-label">Headline</div>
+          <button class="copy-btn" data-copy="Si está #1, hay una razón.">Copiar</button>
+          <div class="copy-value headline">Si está #1, hay una razón.</div>
+        </div>
+        <div class="copy-row">
+          <div class="copy-label">Primary text</div>
+          <button class="copy-btn" data-copy="Vender Importando es el libro más vendido en su categoría de Amazon Kindle hoy.
+
+304 páginas. 25 estrategias. 21 años de comercio internacional condensados.
+
+$0.99 USD por tiempo limitado. La razón la descubrís cuando lo abrís.">Copiar</button>
+          <div class="copy-value">Vender Importando es el libro más vendido en su categoría de Amazon Kindle hoy.
+
+304 páginas. 25 estrategias. 21 años de comercio internacional condensados.
+
+$0.99 USD por tiempo limitado. La razón la descubrís cuando lo abrís.</div>
+        </div>
+        <div class="copy-row">
+          <div class="copy-label">Description · CTA</div>
+          <div class="copy-value">El libro más vendido hoy · <strong>Más información</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Brief diseño -->
+<section>
+  <h2>Brief para Isra (diseño) <span class="count">recursos + reglas</span></h2>
+  <p class="section-desc">Lo que Isra necesita para maquetar las 10 piezas (5 ads × 2 formatos) en Canva o Photoshop.</p>
+  <div class="brief-grid">
+    <div class="brief-item"><div class="label">Asset hero</div><div class="value">Screenshot ranking #1 (desktop + mobile)</div></div>
+    <div class="brief-item"><div class="label">Asset secundario</div><div class="value">Tapa de Vender Importando alta resolución</div></div>
+    <div class="brief-item"><div class="label">Foto autor</div><div class="value">Selfie/foto Dany sosteniendo el libro</div></div>
+    <div class="brief-item"><div class="label">Tipografía</div><div class="value">Montserrat / Poppins / Helvetica Black</div></div>
+    <div class="brief-item"><div class="label">Color primario</div><div class="value">#FF9900 (Amazon) o #E63946 (marca)</div></div>
+    <div class="brief-item"><div class="label">Color soporte</div><div class="value">#1A1A1A negro / #F4F1EA crema</div></div>
+    <div class="brief-item"><div class="label">Formato 1</div><div class="value">1:1 · 1080×1080 px (Feed)</div></div>
+    <div class="brief-item"><div class="label">Formato 2</div><div class="value">4:5 · 1080×1350 px (Feed mobile)</div></div>
+    <div class="brief-item"><div class="label">Texto sobre imagen</div><div class="value">Mantener bajo 30%</div></div>
+    <div class="brief-item"><div class="label">Disclaimer obligatorio</div><div class="value">"Categoría Exportaciones e Importaciones · Amazon Kindle"</div></div>
+  </div>
+</section>
+
+<!-- Combinaciones por audiencia -->
+<section>
+  <h2>Combinaciones por audiencia <span class="count">ad × adset</span></h2>
+  <table>
+    <thead>
+      <tr><th>Audiencia</th><th>Ads recomendados</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>TIBIO</strong> — Emprendedor con intención</td><td>Ad 1 (trophy) · Ad 3 (urgencia) · Ad 4 (comparación)</td></tr>
+      <tr><td><strong>CALIENTE</strong> — Importador en marcha</td><td>Ad 2 (UGC) · Ad 5 (curiosidad) · Ad 1 (trophy)</td></tr>
+      <tr><td><strong>Buyers Emprende Importando</strong></td><td>Ad 2 (UGC autor) · Ad 5 (curiosidad)</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>Compliance <span class="count">R1–R10</span></h2>
+  <div class="compliance">
+    <div class="check">R1 · Vender Importando → Amazon ÚNICAMENTE</div>
+    <div class="check">R2 · $0.99 enmarcado como "tiempo limitado"</div>
+    <div class="check">R3 · Destino landing</div>
+    <div class="check">R4 · 5 ángulos distintos</div>
+    <div class="check">R5 · Ad 2 cubre UGC autor</div>
+    <div class="check">R7 · Sin barato/gurú/garantizado/fácil</div>
+    <div class="check">R8 · Sin "3.ª edición"</div>
+    <div class="check">R9 · Un CTA por pieza</div>
+    <div class="check">R10 · Best-seller es hecho documentado</div>
+  </div>
+</section>
+
+<footer>
+  Dardock · campañas/2026-04_VenderImportando_Spike099 · Best-Seller Edition · 2026-05-01
+</footer>
+
+</div>
+
+<script>
+document.querySelectorAll('.copy-btn').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(btn.dataset.copy);
+      const original = btn.textContent;
+      btn.textContent = '✓';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = original;
+        btn.classList.remove('copied');
+      }, 1400);
+    } catch (e) {
+      btn.textContent = 'Error';
+    }
+  });
+});
+</script>
+</body>
+</html>
