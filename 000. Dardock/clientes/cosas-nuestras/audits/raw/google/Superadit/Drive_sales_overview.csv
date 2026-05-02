@@ -1,0 +1,769 @@
+# ----------------------------------------
+# Drive sales overview
+# Account: Cuenta de Google Ads
+# Property: www.cosasnuestras.cl - GA4
+# ----------------------------------------
+#  
+# Start date: 20260101
+# End date: 20260501
+Nth day,Total revenue
+0000,41280.000408
+0001,119958.999861
+0002,15960.000408
+0003,81122.99917
+0004,140732.000059
+0005,19989.999737
+0006,57808.000065
+0007,0
+0008,0
+0009,806639.000159
+0010,47759.000434
+0011,19979.999718
+0012,48460.000082
+0013,26990.000296
+0014,47139.000547
+0015,29279.999572
+0016,80970.000266
+0017,27980.000423
+0018,34419.999844
+0019,92694.999959
+0020,128960.000908
+0021,150995.000038
+0022,73970.00003
+0023,0
+0024,179299.99969
+0025,31293.000181
+0026,53298.000346
+0027,17760.000092
+0028,54673.000256
+0029,88750.000856
+0030,120229.999737
+0031,77459.999577
+0032,57910.000317
+0033,148671.000598
+0034,89358.999382
+0035,75007.000339
+0036,85439.000213
+0037,86000.000459
+0038,64269.999928
+0039,27659.999652
+0040,26990.000013
+0041,0
+0042,25989.99991
+0043,114420.000741
+0044,89468.999757
+0045,0
+0046,65969.999727
+0047,57458.999953
+0048,19989.999892
+0049,74709.000433
+0050,0
+0051,44580.999748
+0052,34280.000237
+0053,0
+0054,0
+0055,104096.999185
+0056,85949.00108
+0057,21849.999971
+0058,164371.999617
+0059,91529.999577
+0060,187037.99877
+0061,59303.000237
+0062,190772.999611
+0063,74850.000396
+0064,68238.999848
+0065,31714.000176
+0066,48720.00008
+0067,137059.000293
+0068,92117.999473
+0069,105487.000386
+0070,76920.000513
+0071,0
+0072,59980.000321
+0073,78448.000468
+0074,81398.999976
+0075,0
+0076,7999.000203
+0077,69562.000209
+0078,259920.999224
+0079,190129.999601
+0080,109887.999202
+0081,139820.000875
+0082,160029.999528
+0083,158987.999996
+0084,70120.000859
+0085,11969.999688
+0086,50080.000515
+0087,20609.999767
+0088,48110.000668
+0089,104439.000334
+0090,92440.000366
+0091,47210.000214
+0092,184759.999273
+0093,84358.000424
+0094,0
+0095,63949.999628
+0096,44335.000359
+0097,120208.99946
+0098,395219.999216
+0099,90300.000504
+0100,102747.999857
+0101,19480.000447
+0102,435839.999818
+0103,134329.999632
+0104,146916.999616
+0105,190718.000946
+0106,104360.000479
+0107,15430.00033
+0108,86530.999732
+0109,334531.999989
+0110,161179.000217
+0111,89919.999923
+0112,66809.99969
+0113,100620.000734
+0114,91548.999595
+0115,123909.999217
+0116,163030.000141
+0117,37714.999604
+0118,102829.999406
+0119,53819.999267
+0120,125156.001149
+
+# Start date: 20260101
+# End date: 20260501
+Nth day,Ecommerce revenue
+0000,41280.000408
+0001,119958.999861
+0002,15960.000408
+0003,81122.99917
+0004,140732.000059
+0005,19989.999737
+0006,57808.000065
+0007,0
+0008,0
+0009,806639.000159
+0010,47759.000434
+0011,19979.999718
+0012,48460.000082
+0013,26990.000296
+0014,47139.000547
+0015,29279.999572
+0016,80970.000266
+0017,27980.000423
+0018,34419.999844
+0019,92694.999959
+0020,128960.000908
+0021,150995.000038
+0022,73970.00003
+0023,0
+0024,179299.99969
+0025,31293.000181
+0026,53298.000346
+0027,17760.000092
+0028,54673.000256
+0029,88750.000856
+0030,120229.999737
+0031,77459.999577
+0032,57910.000317
+0033,148671.000598
+0034,89358.999382
+0035,75007.000339
+0036,85439.000213
+0037,86000.000459
+0038,64269.999928
+0039,27659.999652
+0040,26990.000013
+0041,0
+0042,25989.99991
+0043,114420.000741
+0044,89468.999757
+0045,0
+0046,65969.999727
+0047,57458.999953
+0048,19989.999892
+0049,74709.000433
+0050,0
+0051,44580.999748
+0052,34280.000237
+0053,0
+0054,0
+0055,104096.999185
+0056,85949.00108
+0057,21849.999971
+0058,164371.999617
+0059,91529.999577
+0060,187037.99877
+0061,59303.000237
+0062,190772.999611
+0063,74850.000396
+0064,68238.999848
+0065,31714.000176
+0066,48720.00008
+0067,137059.000293
+0068,92117.999473
+0069,105487.000386
+0070,76920.000513
+0071,0
+0072,59980.000321
+0073,78448.000468
+0074,81398.999976
+0075,0
+0076,7999.000203
+0077,69562.000209
+0078,259920.999224
+0079,190129.999601
+0080,109887.999202
+0081,139820.000875
+0082,160029.999528
+0083,158987.999996
+0084,70120.000859
+0085,11969.999688
+0086,50080.000515
+0087,20609.999767
+0088,48110.000668
+0089,104439.000334
+0090,92440.000366
+0091,47210.000214
+0092,184759.999273
+0093,84358.000424
+0094,0
+0095,63949.999628
+0096,44335.000359
+0097,120208.99946
+0098,395219.999216
+0099,90300.000504
+0100,102747.999857
+0101,19480.000447
+0102,435839.999818
+0103,134329.999632
+0104,146916.999616
+0105,190718.000946
+0106,104360.000479
+0107,15430.00033
+0108,86530.999732
+0109,334531.999989
+0110,161179.000217
+0111,89919.999923
+0112,66809.99969
+0113,100620.000734
+0114,91548.999595
+0115,123909.999217
+0116,163030.000141
+0117,37714.999604
+0118,102829.999406
+0119,53819.999267
+0120,125156.001149
+
+#  
+# Start date: 20260101
+# End date: 20260501
+Nth day,Total purchasers
+0000,2
+0001,3
+0002,1
+0003,4
+0004,5
+0005,1
+0006,4
+0007,0
+0008,0
+0009,1
+0010,2
+0011,1
+0012,2
+0013,1
+0014,2
+0015,2
+0016,2
+0017,2
+0018,1
+0019,5
+0020,4
+0021,5
+0022,3
+0023,0
+0024,5
+0025,1
+0026,3
+0027,1
+0028,2
+0029,3
+0030,4
+0031,2
+0032,2
+0033,5
+0034,4
+0035,2
+0036,3
+0037,4
+0038,2
+0039,2
+0040,1
+0041,0
+0042,1
+0043,3
+0044,6
+0045,0
+0046,3
+0047,2
+0048,1
+0049,2
+0050,0
+0051,2
+0052,2
+0053,0
+0054,0
+0055,3
+0056,3
+0057,1
+0058,2
+0059,4
+0060,8
+0061,2
+0062,5
+0063,3
+0064,3
+0065,1
+0066,3
+0067,6
+0068,5
+0069,4
+0070,3
+0071,0
+0072,1
+0073,3
+0074,4
+0075,0
+0076,1
+0077,3
+0078,5
+0079,7
+0080,4
+0081,5
+0082,2
+0083,6
+0084,3
+0085,1
+0086,2
+0087,1
+0088,3
+0089,4
+0090,6
+0091,2
+0092,5
+0093,5
+0094,0
+0095,2
+0096,1
+0097,5
+0098,7
+0099,5
+0100,5
+0101,2
+0102,3
+0103,5
+0104,5
+0105,6
+0106,3
+0107,1
+0108,3
+0109,6
+0110,6
+0111,3
+0112,4
+0113,3
+0114,3
+0115,3
+0116,5
+0117,3
+0118,4
+0119,3
+0120,5
+
+# Start date: 20260101
+# End date: 20260501
+Nth day,First time purchasers
+0000,2
+0001,3
+0002,1
+0003,4
+0004,5
+0005,1
+0006,4
+0007,0
+0008,0
+0009,1
+0010,2
+0011,1
+0012,2
+0013,1
+0014,2
+0015,2
+0016,2
+0017,2
+0018,1
+0019,5
+0020,4
+0021,4
+0022,3
+0023,0
+0024,5
+0025,1
+0026,3
+0027,1
+0028,2
+0029,3
+0030,4
+0031,2
+0032,2
+0033,4
+0034,4
+0035,2
+0036,2
+0037,4
+0038,2
+0039,2
+0040,1
+0041,0
+0042,1
+0043,3
+0044,6
+0045,0
+0046,2
+0047,2
+0048,1
+0049,2
+0050,0
+0051,2
+0052,2
+0053,0
+0054,0
+0055,3
+0056,3
+0057,1
+0058,2
+0059,4
+0060,5
+0061,2
+0062,4
+0063,2
+0064,3
+0065,1
+0066,3
+0067,6
+0068,5
+0069,4
+0070,3
+0071,0
+0072,1
+0073,3
+0074,3
+0075,0
+0076,1
+0077,3
+0078,4
+0079,6
+0080,4
+0081,5
+0082,1
+0083,6
+0084,3
+0085,1
+0086,2
+0087,1
+0088,3
+0089,4
+0090,6
+0091,2
+0092,5
+0093,5
+0094,0
+0095,2
+0096,1
+0097,5
+0098,6
+0099,5
+0100,5
+0101,2
+0102,3
+0103,5
+0104,4
+0105,6
+0106,3
+0107,1
+0108,2
+0109,6
+0110,6
+0111,3
+0112,4
+0113,3
+0114,3
+0115,3
+0116,4
+0117,3
+0118,4
+0119,3
+0120,5
+
+#  
+# Start date: 20260101
+# End date: 20260501
+Nth day,Average purchase revenue per active user
+0000,90.32822846389496
+0001,312.3932288046875
+0002,45.34091025
+0003,193.61097653937946
+0004,321.30593620776256
+0005,55.527777047222216
+0006,173.59759779279278
+0007,0
+0008,0
+0009,2552.6550637943037
+0010,142.5641804
+0011,61.476922209230764
+0012,141.6959066725146
+0013,82.53822720489296
+0014,138.64411925588234
+0015,82.24718980898876
+0016,229.3767712917847
+0017,74.61333446133334
+0018,93.02702660540541
+0019,244.57783630343008
+0020,431.3043508628762
+0021,498.3333334620462
+0022,268.00724648550727
+0023,0
+0024,569.2063482222222
+0025,96.882353501548
+0026,155.3877561107872
+0027,52.70029700890208
+0028,173.56508017777776
+0029,301.87075121088435
+0030,350.52478057434405
+0031,154.6107775988024
+0032,128.40354837472285
+0033,299.73992055846776
+0034,218.4816610806846
+0035,182.49878427980536
+0036,227.83733390133332
+0037,242.93785440395482
+0038,168.24607310994764
+0039,66.81159336231885
+0040,65.35108961985472
+0041,0
+0042,72.59776511173185
+0043,318.7186650167131
+0044,257.09482688793105
+0045,0
+0046,157.44630006443916
+0047,156.99180315027323
+0048,54.02702673513514
+0049,188.65909200252523
+0050,0
+0051,140.63406860567824
+0052,103.56495539879154
+0053,0
+0054,0
+0055,255.76658276412775
+0056,195.78360154897493
+0057,43.875501949799194
+0058,323.56692837992125
+0059,167.02554667335767
+0060,320.8198949759863
+0061,43.63723343414275
+0062,426.7852340290828
+0063,183.45588332352943
+0064,110.59805485899514
+0065,78.30617327407408
+0066,79.47797729200653
+0067,150.61428603626374
+0068,195.57961671549893
+0069,230.82494614004378
+0070,205.120001368
+0071,0
+0072,159.09814408753314
+0073,182.4372103906977
+0074,208.71538455128206
+0075,0
+0076,10.608753584880636
+0077,149.59569937419354
+0078,393.8196957924243
+0079,76.35742955863454
+0080,45.50227710227743
+0081,145.4942777055151
+0082,244.3206099664122
+0083,285.4362657019749
+0084,60.973913790434786
+0085,8.886414022271715
+0086,89.91023431777379
+0087,36.93548345340501
+0088,107.14922197772829
+0089,195.2130847364486
+0090,179.84435868871597
+0091,109.53596337354988
+0092,418.0090481289593
+0093,179.48510728510638
+0094,0
+0095,123.45559773745173
+0096,76.5716759222798
+0097,206.90017118760758
+0098,555.0842685617978
+0099,104.15224971626299
+0100,212.28925590289256
+0101,24.942382134443022
+0102,1040.190930353222
+0103,268.123751760479
+0104,326.4822213666667
+0105,494.0880853523316
+0106,260.9000011975
+0107,40.928382838196285
+0108,187.70281937527113
+0109,887.352785116711
+0110,377.4683845831382
+0111,212.07547151650945
+0112,153.9400914516129
+0113,267.60638493085105
+0114,219.54196545563548
+0115,185.49401080389222
+0116,336.8388432665289
+0117,65.36395078682843
+0118,220.19271821413275
+0119,113.54430225105486
+0120,389.89408457632396
+
+#  
+# Start date: 20260101
+# End date: 20260501
+Item name,Items purchased
+Dulce Batata Vainilla 500grs.,134
+Bizcochos Don Satur Salados 200grs.,129
+Bizcochos Don Satur Dulces 200grs.,117
+Bizcochos Don Satur Negritos 200grs.,69
+Yerba Mate Kraus Orgánica 500g | 100% Natural y Orgánica 🌿,34
+"Mate Sabio Calabaza con Bombilla | Sistema de Vaciado Rápido | Práctico, Higiénico y Duradero",33
+Alfajores Havanna de Chocolate | 6 Unidades de Sabor Incomparable,32
+Bolso Portatermo Beige | Tela Oxford con Correa Ajustable,27
+Termo 1.2L Acero Inoxidable Negro | Tapa-Mate + Bombilla y Cepillo,24
+Dulce de Batata con Chocolate Orieta 500g,22
+Bolso Matero | Eco Cuero Premium Café Claro | Impermeable y Térmico,21
+Bolso Matero | Eco Cuero Premium Marrón | Impermeable y Térmico,21
+Dulce Batata Dulcor con chocolate lata 700gr,19
+Yerba Mate Canarias 500g | Sabor Amargo e Intenso | 100% Natural,19
+Yerba Mate La Merced de Campo 500g | Sabor Suave y Natural,18
+Yerba Mate Cbsé Hierbas Serranas 500grs,17
+Mate Cocido Rosamonte en Saquitos | 25 Unidades | Sabor Intenso 🌿,16
+Dulce de Leche Havanna 450grs.,15
+Bolso Matero Premium Impermeable | Doble Pared Térmica | Eco Cuero Duradero,14
+Yerba Mate El Buen Pastor 500g | Sabor Tradicional y Natural 🌿,14
+Bolso Matero | Oxford Premium Gris Oscuro | Impermeable y Térmico,13
+Alfajores Havanna Mixto | 6 Unidades |,12
+Mate de Acero Inoxidable Marmolado Azul con Verde,12
+Mate de Vidrio Copa Arpillera | Virola Metálica | 200 ml,12
+Mate Vidrio Copa Eco Carpincho(CAPIBARA),10
+Mate de Acero Inoxidable Símil Madera | Doble Capa Térmica,10
+Mermelada de Naranja Cormillot Dulcor 454 g,10
+"Pack 3 Mates Sabio Bocha | Sistema de Vaciado Rápido | Práctico, Resistente y Moderno | 3x$15.990",10
+Termo 1.2L  Acero Inoxidable Naranja-Cobre | Tapa-Mate + Bombilla y Cepillo,10
+Yerba Mate CBSe Frutos del Bosque 500g | Sabor Dulce y Refrescante 🍓🌿,10
+Yerba Mate Cbsé Guaraná 500grs,10
+Yerba Mate Mañanita 500grs,10
+Mermelada de Higo Cormillot Dulcor 454 g,9
+Pack x2 Mates de Vidrio Camionero Goma Eva | Protección Térmica + Virola de Aluminio,9
+Yerba Mate Canarias Edición Especial 500grs,9
+Yerba Mate Pajarito Tradicional 500g | Sabor Fuerte y Duradero 🌿,9
+Yerba Mate Pipore Clásica 500 gr,9
+Bombilla de Acero Inoxidable 20 cm | Base Palita y Pico de Loro | Ideal para Yerbas Clásicas y Finas,8
+Pack x3 Mates Sabio Calabaza | Innovación Matera con Sistema de Vaciado Rápido | 3x$12.990,8
+Termo 1.2L Acero Inoxidable Rubí |  Tapa-Mate + Bombilla y Cepillo,8
+Yerba Mate Cachamate Compuesta Clásica 500grs,8
+Yerba Mate Cbsé Miel 500grs,8
+Yerba Mate Cbsé Silueta 500grs,8
+BOMBILLA TAMBOR ACERO INOXIDABLE TAMBOR URUGUAYO,7
+Bolso Matero Café Claro Premium | Impermeable y Térmico | Eco Cuero Resistente,7
+Filtros para bombillas universal reunata,7
+Mate de Vidrio Templado Eco Cuero | Virola Metálica | 200 ml,7
+Mermelada Dietética de Higo Cormillot 390 g,7
+Mermelada de Zapallo Cormillot Dulcor 454 g,7
+"Mochila Matera | Premium Negra | Térmica, Acolchada y Súper Versátil",7
+Portatermo Negro Doble Compartimiento – Tela Oxford Aislada,7
+Termo 1.2L Acero Inoxidable Blanco |  Tapa-Mate + Bombilla y Cepillo,7
+Yerba Mate El Buen Pastor Menta Boldo 500grs,7
+Yerba Mate Piporé Suave 500gr,7
+Yerba Mate Taragüi maracuya tropical 500gr.,7
+Bolso Matero | Oxford Premium Gris Claro |  Resistente y Térmico,6
+Kit de Iniciación Todo en Uno | Portatermo + Termo 1.3L con Mate Integrado y Bombilla,6
+Mate de Acero Inoxidable Texturizado Negro | Doble Capa Térmica + Bombilla y Cepillo Incluidos,6
+Mermelada Light de Arándano Cormillot 390 g,6
+Termo Mate Todo en Uno Negro 1.3 L – Acero Inoxidable,6
+Yerba Mate Rosamonte Selección Especial 500 grs,6
+yerba mate la merced  monte 500gr,6
+BOMBILLA ACERO INOXIDABLE TAMBOR PICO DE LORO  20cm,5
+Bolso Matero | Oxford Premium bordo | Impermeable y Térmico,5
+Caja Bizcochos Don Satur Dulces x30,5
+Cepillo Limpiador de Mate y Termos REUNATA | Cerdas Naturales y Cuerpo de Alambre Galvanizado,5
+"Set Completo Bolso Matero + Mate sabio+ Termo 1,3L-*envio gratis en santiago provincia*",5
+Set Matero Acero Inox. Con Mate Y Bombilla negro 1.2 L,5
+Yerba Mate Cachamate Pampeana 500grs,5
+Kit 3 Piezas Torpedo | Mate Acero Inoxidable 250 ml + Bombilla + Cepillo | Diseño Compacto y Reforza,4
+Mate Camionero de Vidrio con Cuero Vaqueta | Virola de Acero Inoxidable | 200 ml,4
+Mate de Vidrio Copa Eco Cuero Guardapampa Rojo | Virola Metálica | 200 ml | Diseño Artesanal,4
+"Mochila Matera | Premium Gris | Térmica, Acolchada y Súper Versátil",4
+"Set Completo de Mate Acero + Termo 1,2L + Bolso Matero *envio gratis en santiago provincia*",4
+Yerba Mate Cachamate Naranja suave 500grs,4
+Yerba Mate Cbsé Jengibre 500grs,4
+Yerba Mate Cbsé Limón 500grs,4
+Yerba Mate Rosamonte Suave 500 grs,4
+Yerba Mate Taragüi Más Energía 500g | Energizante y Natural 🌿⚡,4
+Portatermo Gris Oscuro Compartimiento – Tela Oxford Aislada,3
+Termo Mate Todo en Uno Blanco 1.3 L – Acero Inoxidable,3
+Yerba Mate Cachamate Compuesta Premium 500g | Con Hierbas Naturales,3
+Yerba Mate Pajarito Orgánica 500g | 100% Natural y Sustentable 🌿🍃,3
+Yerba Mate Rosamonte Premium 500g | Sabor Suave y Duradero 🌿,3
+Yerba Mate Taragüi despalada 500gr.,3
+BOMBILLA ACERO INOXIDABLE ESTRIBO,2
+Caja Bizcochos Don Satur Negrito x30,2
+Caja Mayorista x12 Mate Sabio | Kit de Mates con Bombilla | Ideal para Regalos o Emprendimientos,2
+"Kit Primer Mate: Partí bien, sin enredos y con todo lo necesario para disfrutar el mate desde el pri",2
+Mate Sabio Rosado,2
+Mate acero inoxidable 200 ml doble capa térmica,2
+Set Matero Todo en Uno + Mate Bocha,2
+Set mate acero inoxidable 3 piezas con vaso de alta durabilidad,2
+Yerba Mate La Merced Barbacuá 500g | Sabor Intenso Ahumado 🌿🔥,2
+Yerba Mate La Merced Campo Sur 500g | Sabor Suave y Delicado,2
+Yerba Mate La Merced Campo y Monte 500g | Sabor Suave y Vigoroso 🌿,2
+Bolso Matero Gris Premium | Impermeable y Térmico | Eco Cuero Resistente,1
+Bolso Matero | Eco Cuero Premium Gris | Impermeable y Térmico,1
+Dulce Batata vainilla x12,1
+"KIT MATE LISTO ⭐Todo armado en un solo lugar para que salgas con tu mate listo, sin olvidar nada.",1
+"Kit Black Matero: Estilo, diseño y todo listo para llevar tu mate a otro nivel 🖤",1
+"Kit Mate Siempre | Tu mate completo, ordenado y listo para acompañarte todos los días. 👉 Disfruta tu",1
+"Kit Matero | Portatermo + Mate Sabio | 🎁 Bombilla Incluida | Amplio, Resistente y Súper Práctico",1
+Mate Sabio Futbol Oficial San Lorenzo,1
+Mate Vidrio Copa Eco Cuero costuras,1
+Mate acero inoxidable (LG) doble capa térmica,1
+Mate de Vidrio Copa Arpillera Azul | Virola Metálica | 200 ml,1
+Mate de Vidrio Eco Cuero Pedestal II | Virola de Aluminio | Listo para Usar | 200 ml,1
+Mate de Vidrio Eco Cuero con Pedestal | Virola y Base Metálica | Incluye Bombilla | 200 ml,1
+Pack x3 Mates Sabio Calabaza | Innovación Matera con Sistema de Vaciado Rápido | 3x$14540,1
+Set Matero Acero Inox. Con Mate Y Bombilla Naranjo Cobre 1.2 L,1
+Set Matero Acero Inox. Con Mate Y Bombilla blanco 1.2 L,1
+Set Matero Acero Inox. Con Mate Y Bombilla rojo 1.2 L,1
+Set Matero Acero Inoxidable Negro | Mate Doble Capa + Bombilla Pulida | Mantiene la Temperatura Idea,1
+Set Matero Todo en Uno (+ Mate Bocha de Regalo),1
+"Set mate acero con yerba la merced, bombilla y cepillo",1
+Termo Mate Todo en Uno Rosa Pastel 1.3 L – Acero Inoxidable,1
+Vaso de acero inoxidable doble pared 880 ml,1
+Yerba Mate Rosamonte Clásica 500 grs,1
+Yerba Mate union suave 500 gr.,1
+🧉 Kit Matero Negro | Bolso + Termo 1.2L + Mate de Acero + Bombillas,1
+
+#  
+# Start date: 20260101
+# End date: 20260501
+Order coupon,Items purchased
+
+
+#  
+# Start date: 20260101
+# End date: 20260501
+Item list name,Items purchased

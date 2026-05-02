@@ -1,0 +1,21 @@
+# ----------------------------------------
+# Traffic acquisition: Session primary channel group (Default Channel Group)
+# Account: Genera Industrial
+# Property: Genera Industrial GA4 - Dardock
+# ----------------------------------------
+# 
+# All Users
+# Start date: 20260101
+# End date: 20260501
+Session primary channel group (Default Channel Group),Sessions,Engaged sessions,Engagement rate,Average engagement time per session,Events per session,Event count,Key events,Session key event rate,Total revenue
+Paid Search,1021,1018,0.9970617042115573,24.84916748285994,6.05484818805093,6182,5497,0.9980411361410382,0
+Display,685,685,1,40.964963503649635,5.776642335766423,3957,3517,1,0
+Organic Search,439,437,0.9954441913439636,53.783599088838265,7.38496583143508,3242,2495,0.9977220956719818,0
+Cross-network,414,413,0.9975845410628019,21.857487922705314,5.647342995169082,2338,1756,1,0
+Direct,257,243,0.9455252918287937,22.867704280155642,6.494163424124514,1669,1196,0.9416342412451362,0
+Unassigned,63,18,0.2857142857142857,20.92063492063492,3.6666666666666665,231,165,0.873015873015873,0
+Referral,48,48,1,49.75,11.125,534,326,1,0
+Email,45,45,1,13.777777777777779,4.844444444444444,218,194,1,0
+Organic Shopping,34,34,1,44.35294117647059,9.205882352941176,313,203,1,0
+Organic Social,2,2,1,39.5,10,20,18,1,0
+Paid Video,1,1,1,0,3,3,3,1,0

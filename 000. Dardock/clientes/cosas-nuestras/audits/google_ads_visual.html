@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Ads Audit — Cosas Nuestras</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0a0f; color: #e2e8f0; min-height: 100vh; padding: 32px 24px; }
+
+  .header { max-width: 1100px; margin: 0 auto 40px; }
+  .header-tag { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #6366f1; margin-bottom: 8px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: #f1f5f9; margin-bottom: 4px; }
+  .header p { color: #94a3b8; font-size: 14px; }
+
+  .container { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
+
+  /* Score banner */
+  .score-banner { background: #12121a; border: 1px solid #1e1e2e; border-radius: 16px; padding: 28px 32px; display: grid; grid-template-columns: auto 1fr auto; gap: 32px; align-items: center; }
+  .score-circle { width: 88px; height: 88px; border-radius: 50%; background: conic-gradient(#6366f1 0% 48%, #1e1e2e 48%); display: flex; align-items: center; justify-content: center; position: relative; }
+  .score-circle::before { content: ''; position: absolute; width: 68px; height: 68px; border-radius: 50%; background: #12121a; }
+  .score-value { position: relative; z-index: 1; font-size: 22px; font-weight: 800; color: #a5b4fc; }
+  .score-label { font-size: 11px; color: #64748b; margin-top: 2px; text-align: center; }
+  .score-info h2 { font-size: 18px; font-weight: 700; color: #f1f5f9; margin-bottom: 6px; }
+  .score-info p { font-size: 13px; color: #94a3b8; line-height: 1.5; }
+  .score-meta { text-align: right; }
+  .score-meta .period { font-size: 12px; color: #64748b; }
+  .score-meta .spend { font-size: 22px; font-weight: 700; color: #f1f5f9; margin-top: 4px; }
+  .score-meta .spend-label { font-size: 11px; color: #64748b; }
+
+  /* Alert */
+  .alert { border-radius: 12px; padding: 16px 20px; display: flex; gap: 12px; align-items: flex-start; }
+  .alert-critical { background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.2); }
+  .alert-warning { background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.2); }
+  .alert-ok { background: rgba(34,197,94,0.08); border: 1px solid rgba(34,197,94,0.2); }
+  .alert-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+  .alert-content strong { font-size: 14px; font-weight: 600; display: block; margin-bottom: 3px; }
+  .alert-content p { font-size: 13px; color: #94a3b8; line-height: 1.5; }
+  .alert-critical .alert-content strong { color: #fca5a5; }
+  .alert-warning .alert-content strong { color: #fcd34d; }
+  .alert-ok .alert-content strong { color: #86efac; }
+
+  /* Grid */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+
+  /* Card */
+  .card { background: #12121a; border: 1px solid #1e1e2e; border-radius: 14px; padding: 24px; }
+  .card-title { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6366f1; margin-bottom: 16px; }
+
+  /* Campaign row */
+  .campaign-row { display: grid; grid-template-columns: 1fr auto auto auto auto; gap: 16px; align-items: center; padding: 14px 0; border-bottom: 1px solid #1e1e2e; }
+  .campaign-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .campaign-row:first-child { padding-top: 0; }
+  .camp-name { font-size: 14px; font-weight: 600; color: #f1f5f9; }
+  .camp-type { font-size: 11px; color: #64748b; margin-top: 2px; }
+  .camp-stat { text-align: right; }
+  .camp-stat .val { font-size: 15px; font-weight: 700; }
+  .camp-stat .lbl { font-size: 10px; color: #64748b; margin-top: 1px; }
+  .good { color: #4ade80; }
+  .warn { color: #fbbf24; }
+  .bad { color: #f87171; }
+
+  /* Ad group table */
+  .ag-table { width: 100%; border-collapse: collapse; }
+  .ag-table th { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #64748b; text-align: left; padding: 0 12px 10px 0; }
+  .ag-table th:not(:first-child) { text-align: right; }
+  .ag-table td { padding: 10px 12px 10px 0; font-size: 13px; border-top: 1px solid #1e1e2e; vertical-align: middle; }
+  .ag-table td:not(:first-child) { text-align: right; font-variant-numeric: tabular-nums; }
+  .ag-name { font-weight: 600; color: #e2e8f0; }
+  .badge { display: inline-flex; align-items: center; gap: 4px; font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 20px; }
+  .badge-win { background: rgba(74,222,128,0.15); color: #4ade80; }
+  .badge-lose { background: rgba(248,113,113,0.15); color: #f87171; }
+  .badge-warn { background: rgba(251,191,36,0.15); color: #fbbf24; }
+
+  /* IS Gauge */
+  .is-gauge { margin: 16px 0 8px; }
+  .is-label { display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 6px; }
+  .is-label span:first-child { color: #94a3b8; }
+  .is-label span:last-child { font-weight: 700; }
+  .is-bar { height: 8px; background: #1e1e2e; border-radius: 4px; overflow: hidden; }
+  .is-fill { height: 100%; border-radius: 4px; }
+
+  /* Negative list */
+  .neg-list { display: flex; flex-wrap: wrap; gap: 8px; }
+  .neg-tag { background: rgba(248,113,113,0.1); border: 1px solid rgba(248,113,113,0.2); color: #fca5a5; font-size: 12px; padding: 4px 10px; border-radius: 20px; font-family: monospace; }
+
+  /* Action items */
+  .action-list { display: flex; flex-direction: column; gap: 10px; }
+  .action-item { display: flex; gap: 12px; align-items: flex-start; padding: 12px 14px; border-radius: 10px; }
+  .action-urgent { background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.15); }
+  .action-week { background: rgba(245,158,11,0.06); border: 1px solid rgba(245,158,11,0.15); }
+  .action-num { font-size: 12px; font-weight: 700; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .action-urgent .action-num { background: rgba(239,68,68,0.2); color: #f87171; }
+  .action-week .action-num { background: rgba(245,158,11,0.2); color: #fbbf24; }
+  .action-content strong { font-size: 13px; font-weight: 600; color: #f1f5f9; display: block; margin-bottom: 2px; }
+  .action-content span { font-size: 12px; color: #64748b; }
+
+  /* Projection */
+  .proj-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #1e1e2e; }
+  .proj-row:last-child { border-bottom: none; }
+  .proj-metric { font-size: 13px; color: #94a3b8; }
+  .proj-values { display: flex; gap: 20px; align-items: center; }
+  .proj-before { font-size: 14px; font-weight: 600; color: #64748b; text-decoration: line-through; }
+  .proj-arrow { color: #4ade80; font-size: 12px; }
+  .proj-after { font-size: 16px; font-weight: 700; color: #4ade80; }
+
+  /* KPI mini */
+  .kpi-mini { text-align: center; }
+  .kpi-mini .kv { font-size: 26px; font-weight: 800; }
+  .kpi-mini .kl { font-size: 11px; color: #64748b; margin-top: 4px; }
+  .kpi-mini .ks { font-size: 11px; margin-top: 2px; }
+
+  @media (max-width: 768px) {
+    .grid-2 { grid-template-columns: 1fr; }
+    .grid-3 { grid-template-columns: 1fr; }
+    .score-banner { grid-template-columns: 1fr; text-align: center; }
+    .score-meta { text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-tag">Dardock · Audit Google Ads · Mayo 2026</div>
+  <h1>Cosas Nuestras — Google Ads</h1>
+  <p>1 enero → 1 mayo 2026 · Cuenta AW-766753117 · CLP</p>
+</div>
+
+<div class="container">
+
+  <!-- Score + resumen -->
+  <div class="score-banner">
+    <div>
+      <div class="score-circle">
+        <div>
+          <div class="score-value">48</div>
+        </div>
+      </div>
+      <div class="score-label">Score Google</div>
+    </div>
+    <div class="score-info">
+      <h2>Estructura correcta, calibración incorrecta</h2>
+      <p>PMax lleva el 76% del gasto y genera el 81% de las conversiones — trabaja razonablemente bien. Search es la hemorragia: IS &lt;10%, ROAS 2.65×, brand campaign sepultada con los peores grupos. Cuatro acciones esta semana pueden mover el score a 70+.</p>
+    </div>
+    <div class="score-meta">
+      <div class="period">Ene–May 2026</div>
+      <div class="spend">$1.705.977</div>
+      <div class="spend-label">CLP gastados (4 meses)</div>
+    </div>
+  </div>
+
+  <!-- Alerts críticos -->
+  <div class="alert alert-critical">
+    <div class="alert-icon">🚨</div>
+    <div class="alert-content">
+      <strong>Search Impression Share &lt; 10% — 86% de subastas perdidas por ranking</strong>
+      <p>El algoritmo descarta la mayoría de las oportunidades porque el tCPA configurado (8.945 CLP) es demasiado bajo para ganar las subastas, o el Quality Score está por el piso. El presupuesto no es el problema (solo 8% perdido por budget). Resultado: 12.000 CLP/día de presupuesto que básicamente no compite.</p>
+    </div>
+  </div>
+  <div class="alert alert-critical">
+    <div class="alert-icon">💸</div>
+    <div class="alert-content">
+      <strong>Brand "Marca 11/9" (ROAS 26×, CPA $878) enterrada con grupos que pierden plata</strong>
+      <p>El mejor ad group de toda la cuenta — Meta incluida — no tiene campaña propia. Compite por el mismo presupuesto que Bombilla Mate (ROAS 0.84×) y Termos (ROAS 0.53×). Esos dos quemaron 108.000 CLP en 4 meses con ROAS por debajo de break-even.</p>
+    </div>
+  </div>
+  <div class="alert alert-warning">
+    <div class="alert-icon">⚠️</div>
+    <div class="alert-content">
+      <strong>PMax sin tROAS — 192 conversiones y aún optimizando por volumen</strong>
+      <p>Con 192 conversiones acumuladas hay datos más que suficientes para activar Target ROAS. Sin él, PMax prioriza cantidad sobre calidad de conversión — un pedido de 50K vale igual que uno de 10K.</p>
+    </div>
+  </div>
+
+  <!-- KPIs campaña -->
+  <div class="card">
+    <div class="card-title">Campañas activas — performance real</div>
+    <div class="campaign-row">
+      <div>
+        <div class="camp-name">PMax: Shopping CN Inteligente</div>
+        <div class="camp-type">Performance Max · 20.000 CLP/día</div>
+      </div>
+      <div class="camp-stat">
+        <div class="val good">3.97×</div>
+        <div class="lbl">ROAS</div>
+      </div>
+      <div class="camp-stat">
+        <div class="val">$6.703</div>
+        <div class="lbl">CPA</div>
+      </div>
+      <div class="camp-stat">
+        <div class="val">192.57</div>
+        <div class="lbl">Conversiones</div>
+      </div>
+      <div class="camp-stat">
+        <div class="val warn">71.9%</div>
+        <div class="lbl">Opt. Score</div>
+      </div>
+    </div>
+    <div class="campaign-row">
+      <div>
+        <div class="camp-name">Cosas Nuestras A/B [exacta]</div>
+        <div class="camp-type">Search · 12.000 CLP/día · tCPA activo</div>
+      </div>
+      <div class="camp-stat">
+        <div class="val warn">2.65×</div>
+        <div class="lbl">ROAS</div>
+      </div>
+      <div class="camp-stat">
+        <div class="val warn">$8.953</div>
+        <div class="lbl">CPA</div>
+      </div>
+      <div class="camp-stat">
+        <div class="val">46.37</div>
+        <div class="lbl">Conversiones</div>
+      </div>
+      <div class="camp-stat">
+        <div class="val bad">&lt; 10%</div>
+        <div class="lbl">Imp. Share</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IS gauge -->
+  <div class="card">
+    <div class="card-title">Search — Impression Share (el problema de raíz)</div>
+    <div class="grid-3">
+      <div>
+        <div class="is-gauge">
+          <div class="is-label"><span>IS Search</span><span class="bad">&lt; 10%</span></div>
+          <div class="is-bar"><div class="is-fill" style="width:10%; background:#ef4444;"></div></div>
+        </div>
+        <p style="font-size:12px;color:#64748b;">Aparecen en menos de 1 de cada 10 búsquedas relevantes</p>
+      </div>
+      <div>
+        <div class="is-gauge">
+          <div class="is-label"><span>Perdida por ranking</span><span class="bad">86.40%</span></div>
+          <div class="is-bar"><div class="is-fill" style="width:86%; background:#ef4444;"></div></div>
+        </div>
+        <p style="font-size:12px;color:#64748b;">Ad Rank colapsado — tCPA o Quality Score</p>
+      </div>
+      <div>
+        <div class="is-gauge">
+          <div class="is-label"><span>Perdida por presupuesto</span><span class="good">8.38%</span></div>
+          <div class="is-bar"><div class="is-fill" style="width:8%; background:#4ade80;"></div></div>
+        </div>
+        <p style="font-size:12px;color:#64748b;">El presupuesto NO es el cuello de botella</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ad groups -->
+  <div class="card">
+    <div class="card-title">Search — Ad Groups (4 meses)</div>
+    <table class="ag-table">
+      <thead>
+        <tr>
+          <th>Ad Group</th>
+          <th>Spend</th>
+          <th>Conv.</th>
+          <th>CPA</th>
+          <th>ROAS</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="ag-name">⭐ Marca 11/9</span></td>
+          <td class="good">$23.695</td>
+          <td>27.00</td>
+          <td class="good">$878</td>
+          <td class="good">26.03×</td>
+          <td><span class="badge badge-win">🏆 Ganador</span></td>
+        </tr>
+        <tr>
+          <td><span class="ag-name">Porta Termos</span></td>
+          <td>$59.846</td>
+          <td>4.05</td>
+          <td class="warn">$14.789</td>
+          <td class="warn">1.80×</td>
+          <td><span class="badge badge-warn">Marginal</span></td>
+        </tr>
+        <tr>
+          <td><span class="ag-name">Yerba mate (23/1)</span></td>
+          <td>$120.454</td>
+          <td>7.00</td>
+          <td class="warn">$17.208</td>
+          <td class="warn">1.33×</td>
+          <td><span class="badge badge-warn">Bajo break-even</span></td>
+        </tr>
+        <tr>
+          <td><span class="ag-name">Mates</span></td>
+          <td>$102.924</td>
+          <td>4.32</td>
+          <td class="bad">$23.807</td>
+          <td class="bad">1.25×</td>
+          <td><span class="badge badge-warn">Bajo break-even</span></td>
+        </tr>
+        <tr>
+          <td><span class="ag-name">Bombilla Mate</span></td>
+          <td class="bad">$88.111</td>
+          <td>3.00</td>
+          <td class="bad">$29.370</td>
+          <td class="bad">0.84×</td>
+          <td><span class="badge badge-lose">🔴 Pausar</span></td>
+        </tr>
+        <tr>
+          <td><span class="ag-name">Termos</span></td>
+          <td class="bad">$20.124</td>
+          <td>1.00</td>
+          <td class="bad">$20.124</td>
+          <td class="bad">0.53×</td>
+          <td><span class="badge badge-lose">🔴 Pausar</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Negatives + PMax -->
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Negatives a agregar — esta semana</div>
+      <p style="font-size:12px;color:#94a3b8;margin-bottom:12px;">Queries informacionales que consumen impresiones sin convertir:</p>
+      <div class="neg-list">
+        <span class="neg-tag">beneficios del mate</span>
+        <span class="neg-tag">propiedades del mate</span>
+        <span class="neg-tag">en qué ayuda el mate</span>
+        <span class="neg-tag">de qué sirve tomar mate</span>
+        <span class="neg-tag">stanley</span>
+        <span class="neg-tag">tramontina</span>
+        <span class="neg-tag">amazon</span>
+        <span class="neg-tag">anymate</span>
+        <span class="neg-tag">mate animal</span>
+        <span class="neg-tag">mate vaca</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">PMax — estado</div>
+      <div class="grid-3" style="gap:12px;margin-bottom:16px;">
+        <div class="kpi-mini">
+          <div class="kv good">3.97×</div>
+          <div class="kl">ROAS</div>
+          <div class="ks" style="color:#4ade80;">✓ OK</div>
+        </div>
+        <div class="kpi-mini">
+          <div class="kv warn">71.9%</div>
+          <div class="kl">Opt. Score</div>
+          <div class="ks" style="color:#fbbf24;">Pendiente</div>
+        </div>
+        <div class="kpi-mini">
+          <div class="kv bad">Sin</div>
+          <div class="kl">tROAS</div>
+          <div class="ks" style="color:#f87171;">Agregar</div>
+        </div>
+      </div>
+      <div class="alert alert-warning" style="padding:10px 14px;">
+        <div class="alert-icon" style="font-size:14px;">💡</div>
+        <div class="alert-content">
+          <p style="font-size:12px;">192 conversiones = listo para tROAS. Empezar en <strong style="color:#fcd34d;">3.5×</strong> y subir cada 2 semanas según CPA.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Plan de acción -->
+  <div class="card">
+    <div class="card-title">Plan de acción — Google Ads</div>
+    <div class="action-list">
+      <div class="action-item action-urgent">
+        <div class="action-num">1</div>
+        <div class="action-content">
+          <strong>Separar "Marca" en campaña propia → tCPA 900 CLP, budget 5.000/día</strong>
+          <span>El ROAS 26× necesita presupuesto exclusivo. Hoy comparte 12K con grupos de ROAS &lt;1×.</span>
+        </div>
+      </div>
+      <div class="action-item action-urgent">
+        <div class="action-num">2</div>
+        <div class="action-content">
+          <strong>Pausar Bombilla Mate + Termos ad groups</strong>
+          <span>108.000 CLP en 4 meses con ROAS 0.84× y 0.53×. El mejor uso de ese dinero es en PMax.</span>
+        </div>
+      </div>
+      <div class="action-item action-urgent">
+        <div class="action-num">3</div>
+        <div class="action-content">
+          <strong>Agregar tROAS 3.5× a PMax Shopping</strong>
+          <span>Cambia el objetivo de "más conversiones" a "conversiones de mayor valor".</span>
+        </div>
+      </div>
+      <div class="action-item action-urgent">
+        <div class="action-num">4</div>
+        <div class="action-content">
+          <strong>Agregar lista de negative keywords (informacionales + competidores)</strong>
+          <span>Sube Quality Score → mejora Ad Rank → IS sube de &lt;10% a un rango manejable.</span>
+        </div>
+      </div>
+      <div class="action-item action-week">
+        <div class="action-num">5</div>
+        <div class="action-content">
+          <strong>Subir tCPA de Search 20-30% (test)</strong>
+          <span>IS perdida por ranking (86%) indica que el tCPA actual no puede competir. Subirlo da más margen al algoritmo.</span>
+        </div>
+      </div>
+      <div class="action-item action-week">
+        <div class="action-num">6</div>
+        <div class="action-content">
+          <strong>Crear 2-3 grupos de recursos en PMax (Portatermo / Kits / Yerba)</strong>
+          <span>Actualmente todo mezclado en "Intereses". Separar permite optimizar por categoría.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Proyección -->
+  <div class="card">
+    <div class="card-title">Proyección post-fix (acciones 1-4)</div>
+    <div class="proj-row">
+      <div class="proj-metric">Search ROAS</div>
+      <div class="proj-values">
+        <span class="proj-before">2.65×</span>
+        <span class="proj-arrow">→</span>
+        <span class="proj-after">~4.5-5×</span>
+      </div>
+    </div>
+    <div class="proj-row">
+      <div class="proj-metric">PMax ROAS</div>
+      <div class="proj-values">
+        <span class="proj-before">3.97×</span>
+        <span class="proj-arrow">→</span>
+        <span class="proj-after">~4.5×</span>
+      </div>
+    </div>
+    <div class="proj-row">
+      <div class="proj-metric">Google blended ROAS</div>
+      <div class="proj-values">
+        <span class="proj-before">3.65×</span>
+        <span class="proj-arrow">→</span>
+        <span class="proj-after">~4.7×</span>
+      </div>
+    </div>
+    <div class="proj-row">
+      <div class="proj-metric">CPA Google blended</div>
+      <div class="proj-values">
+        <span class="proj-before">$7.140</span>
+        <span class="proj-arrow">→</span>
+        <span class="proj-after">~$5.500</span>
+      </div>
+    </div>
+    <div class="proj-row">
+      <div class="proj-metric">Score Google Ads</div>
+      <div class="proj-values">
+        <span class="proj-before">48</span>
+        <span class="proj-arrow">→</span>
+        <span class="proj-after">~68-72</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;color:#334155;font-size:12px;padding:8px;">
+    Dardock · Google Ads Audit · Cosas Nuestras · Mayo 2026
+  </div>
+
+</div>
+</body>
+</html>

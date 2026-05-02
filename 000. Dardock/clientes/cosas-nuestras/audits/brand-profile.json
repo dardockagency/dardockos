@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "brand_name": "Cosas Nuestras",
+  "website_url": "https://www.cosasnuestras.cl",
+  "extracted_at": "2026-05-02T12:00:00Z",
+  "voice": {
+    "formal_casual": 7,
+    "rational_emotional": 7,
+    "playful_serious": 5,
+    "bold_subtle": 6,
+    "traditional_innovative": 4,
+    "expert_accessible": 8,
+    "descriptors": ["cálido", "evocador", "rioplatense auténtico"],
+    "notes": "Usa 'vos' implícito en copy (argentinismo), tono de complicidad cultural. 'Partí bien, sin enredos' = accesible. 'Tradición que va contigo' = inspirador. Sin jerga técnica. Copy de producto varía: títulos excelentes (ritual), descripciones caen en ficha técnica."
+  },
+  "colors": {
+    "primary": "#4a7c59",
+    "secondary": ["#8b4513", "#f5c842"],
+    "forbidden": ["#ff0000", "#0000ff"],
+    "background": "#ffffff",
+    "text": "#1a1a1a",
+    "notes": "Verde mate como color de identidad. Marrón tierra para complemento cálido. Amarillo en badges de descuento (OFERTA VERANO). Fondo blanco limpio — minimalista ecommerce. Paleta oscura cálida (#1a120a) recomendada para ads nocturnos/rituales."
+  },
+  "typography": {
+    "heading_font": null,
+    "body_font": "system-ui",
+    "pairing_descriptor": "Google Fonts no detectado explícitamente en scrape. Sistema sans-serif estándar. Shopify tema con tipografía limpia y legible."
+  },
+  "imagery": {
+    "style": "professional photography con lifestyle",
+    "subjects": ["mate y accesorios sobre superficie de madera", "termos en contexto de ritual", "kits completos en flat lay", "personas tomando mate"],
+    "composition": "Limpia y bien iluminada. Fondo blanco para producto, lifestyle para ritual. 7 imágenes por producto — variedad producto + contexto.",
+    "forbidden": ["imágenes de stock genéricas sin contexto rioplatense", "fondos corporativos", "modelos sin identidad cultural clara", "imágenes de té o infusiones ajenas al ritual mate"]
+  },
+  "aesthetic": {
+    "mood_keywords": ["ritual", "nostalgia rioplatense", "calor de hogar", "tradición auténtica", "pertenencia cultural"],
+    "texture": "minimal",
+    "negative_space": "moderate"
+  },
+  "brand_values": [
+    "Autenticidad rioplatense — no imitación",
+    "Ritual como experiencia, no como producto",
+    "Comunidad de expats y curiosos del mate"
+  ],
+  "target_audience": {
+    "age_range": "25-55",
+    "profession": "Expats argentinos/uruguayos en Chile (35-50), regaladores (30-55), chilenos curiosos de cultura rioplatense (25-40)",
+    "pain_points": [
+      "No poder recrear el ritual del mate de casa en Chile",
+      "No encontrar productos auténticos rioplatenses en tiendas chilenas",
+      "No saber qué regalar a un argentino/uruguayo"
+    ],
+    "aspirations": [
+      "Mantener la identidad y los rituales de origen aunque estén lejos",
+      "Compartir la cultura del mate con chilenos",
+      "El regalo con significado cultural real, no genérico"
+    ]
+  },
+  "competitive_positioning": {
+    "vs_todomate": "CN tiene identidad de marca rioplatense. Todo Mate es catálogo sin alma.",
+    "vs_mates_cl": "Mates.cl tiene más equipamiento premium y grabado láser. CN gana en autenticidad cultural y nostalgia.",
+    "vs_anahi": "Anahí es B2B distribuidor. CN es directo al consumidor con marca propia.",
+    "whitespace": "Identidad rioplatense como posicionamiento central — nadie lo está usando en el mercado chileno"
+  },
+  "ad_creative_guidelines": {
+    "hook_patterns": [
+      "Pregunta espejo: '¿Cuánto tiempo sin mate de tu casa?'",
+      "Dato de ritual: 'El mate no es una bebida. Es el único momento del día que el cerebro rioplatense usa para frenar.'",
+      "Sabías que: 'Sabías que el mate se toma despacio, con la misma gente, siempre a la misma hora?'"
+    ],
+    "winning_ad_pattern": "Diablo Portatermo — producto en acción (no flat lay), luz natural, sin texto superpuesto en video, ritual implícito",
+    "best_cpa_pattern": "Portatermo Producto — foto limpia sobre fondo neutro, producto como protagonista, precio visible",
+    "copy_formula": "[Momento o ritual evocado] + [Pertenencia / nostalgia] + [El producto como vehículo] + [CTA cálido]",
+    "forbidden_copy": ["barato", "oferta agresiva", "descuento flash", "no te lo pierdas", "precio especial por tiempo limitado"]
+  }
+}
