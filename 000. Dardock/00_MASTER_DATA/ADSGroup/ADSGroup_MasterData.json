@@ -1,0 +1,146 @@
+{
+  "_schema_version": "1.0",
+  "_last_updated": "2026-05-03",
+
+  "cliente": "ADS Group International",
+  "tipo": "lead_gen",
+  "estado": "activo",
+
+  "problema_cliente": "Importadores B2B y personas B2C en LATAM (Chile, Argentina, Perú, Colombia, USA) necesitan un freight forwarder/courier con trazabilidad real, asesor dedicado y tarifas claras. Hoy dependen de DHL/FedEx/Correos que no priorizan al pequeño y dejan al cliente a ciegas.",
+  "audiencia": "Dos perfiles: (A) B2B importadores pequeños/medianos en LATAM que traen mercadería para revender; (B) B2C personas que envían encomiendas internacionales a familia/amigos entre Chile, Argentina, Perú, Colombia y USA. Edad 28-55. Mercados activos: CL · AR · PE · CO · Miami.",
+
+  "sitio_web": "https://adsgroupinternational.com/",
+  "rubro": "Logística internacional · freight forwarder · courier (aéreo, marítimo, terrestre)",
+
+  "contactos": {
+    "comercial": "Por confirmar decisor",
+    "responsable_dardock": "Matías Cáceres",
+    "email_principal": "Por confirmar",
+    "whatsapp": "Por confirmar"
+  },
+
+  "productos": [
+    { "nombre": "Courier internacional B2C (encomiendas LATAM ↔ Miami)", "precio": "Por kg + tarifa fija", "objetivo": "lead → venta recurrente" },
+    { "nombre": "Freight forwarder B2B (carga aérea/marítima)", "precio": "Cotización por volumen", "objetivo": "lead cualificado → contrato corporativo" },
+    { "nombre": "Bodega Miami (recepción + consolidación)", "precio": "Servicio incluido en courier B2C", "objetivo": "diferenciador único — palanca de marca" }
+  ],
+
+  "metricas": {
+    "cpa_target": "$15 USD por formulario real (actual: $48.50 real / $5.13 inflado)",
+    "roas_target": "N/A — modelo lead-gen, cierre off-platform",
+    "crm_target": "150 leads/mes calificados (actual: ~77 leads en 4 meses)",
+    "inversion_actual_mensual": "$918 USD (subdimensionado para 6 mercados)",
+    "inversion_total_4m": "$3,734 USD (1 ene – 2 may 2026 · 122 días)"
+  },
+
+  "plataformas": {
+    "meta_ads": false,
+    "google_ads": true,
+    "tiktok_ads": false,
+    "linkedin_ads": false,
+    "shopify": false,
+    "ghl": false,
+    "mercado_libre": false,
+    "amazon": false,
+    "activecampaign": true
+  },
+
+  "accounts": {
+    "google_customer_id": "974-265-6178",
+    "google_currency": "USD",
+    "email_platform": "ActiveCampaign"
+  },
+
+  "infraestructura_critica": {
+    "tracking_status": "roto — 728 conversiones reportadas vs ~77 reales (inflación 9.5x)",
+    "smart_bidding": "Optimizando contra Local Actions GMB (no formularios) — excluir urgente",
+    "enhanced_conversions": "no activo",
+    "form_submit_gtm": "sin verificar",
+    "gclid_passthrough_crm": "sin verificar",
+    "creativos": "100% rechazados (67 imágenes + 6 sitelinks + 1 nombre empresa)",
+    "keywords": "88% no aptas (261 de 2,111 activas)",
+    "presupuesto": "Todas las campañas limitadas por presupuesto",
+    "bloqueantes_web": [
+      "/empresa/ devuelve 404 — reparar hoy",
+      "H1 home 'CONOCE MÁS DE NOSOTROS' — message match 0% con keywords",
+      "Formulario 9 campos → reducir a 3",
+      "LCP mobile estimado 5-8s (benchmark 2.5s)",
+      "134 scripts en home (WordPress + Avada + Crisp + GTM)"
+    ]
+  },
+
+  "campañas_google": [
+    { "nombre": "Argentina", "cpa": 3.41, "accion": "escalar $6.60 → $12/día" },
+    { "nombre": "Perú", "cpa": 3.60, "accion": "escalar $3.33 → $7/día" },
+    { "nombre": "Colombia", "cpa": 4.11, "accion": "mantener" },
+    { "nombre": "Chile Courier 2024", "cpa": 5.10, "accion": "redirigir a landing B2C" },
+    { "nombre": "Chile Carga 2024", "cpa": 8.29, "accion": "reducir $14.27 → $8/día" },
+    { "nombre": "Miami", "cpa": 3.34, "accion": "reactivar $3/día con copy bodega o pausar" }
+  ],
+
+  "oportunidades_clave": {
+    "argentina_peru": "Mejor CPA del sistema — escalar con presupuesto liberado de Chile Carga.",
+    "bodega_miami": "Diferenciador único vs DHL/FedEx — palanca para reposicionamiento de marca.",
+    "competencia": "24.6% del gasto viene de búsquedas con marca de competidor a CPA $3.84. Ganar vs DHL/FedEx/UPS está validado (35 conv, CPA $3-4).",
+    "aeo_clusters": [
+      "P1 — Importación mayorista LATAM (cómo importar desde Miami)",
+      "P1 — Freight forwarder vs courier",
+      "P2 — Aduana por país (Chile, AR, PE, CO)",
+      "P2 — Bodega Miami (diferenciador único)",
+      "P3 — Costos y tarifas + calculadora"
+    ]
+  },
+
+  "posicionamiento": {
+    "actual": "Low Cost con barniz emocional ('transportamos sueños') — pelea precio vs DHL/FedEx",
+    "objetivo": "Operador con asesor dedicado y trazabilidad real para LATAM. Identidad antes que descuento.",
+    "brand_search_share": "0.2% de búsquedas son de marca propia — sin brand equity construido",
+    "decision_pendiente_cliente": "¿Mantener Low Cost o romper hacia posicionamiento de valor?"
+  },
+
+  "score_capas": {
+    "fecha_ultimo_audit": "2026-05-03",
+    "global": 44,
+    "google_ads": 52,
+    "landing_web": 36,
+    "presupuesto": 47,
+    "tracking": 38,
+    "grade": "D",
+    "status": "warning"
+  },
+
+  "clickup_folder_id": "Por confirmar",
+  "notion_page_id": "Por confirmar",
+  "drive_folder": "Por confirmar",
+
+  "preguntas_pendientes_cliente": [
+    "¿Ticket promedio B2B vs B2C?",
+    "¿Margen bruto por segmento?",
+    "¿Tienen testimonios reales (nombre + foto + caso) de importadores?",
+    "¿Están dispuestos a soltar el posicionamiento Low Cost?",
+    "¿Qué % de clientes recurren en menos de 6 meses?"
+  ],
+
+  "proximos_hitos": [
+    { "fecha": "2026-05-05", "evento": "Presentación Super Audit al cliente — definir Go/No-Go reposicionamiento", "prioridad": "CRITICA" },
+    { "fecha": "2026-05-09", "evento": "Lista roja ejecutada: excluir GMB del Smart Bidding · reparar /empresa/ · negativos [starken] · lazy-load Crisp", "prioridad": "CRITICA" },
+    { "fecha": "2026-05-16", "evento": "Lista amarilla: formulario 9→3 campos · Enhanced Conversions · escalado AR+PE · reducir Chile Carga · landing /cotiza-flete-internacional/", "prioridad": "ALTA" },
+    { "fecha": "2026-06-02", "evento": "Lista azul: landing B2C /courier-internacional/ con calculadora · campaña de marca · schema Organization+LocalBusiness · separar B2B/B2C en cuenta · reactivar Miami", "prioridad": "ALTA" }
+  ],
+
+  "entregables_audit_mayo2026": [
+    "audits/auditoria_ads-group_mayo2026.html — Auditoría Google Ads completa",
+    "audits/superaudit_ads-group_mayo2026.html — Super Audit integral (presentación cliente)",
+    "audits/funnel400_diagnostico_mayo2026.md — Diagnóstico copy y oferta 400%Funnel",
+    "audits/landing_audit_mayo2026.md — Auditoría web como landing de paid traffic",
+    "audits/tracking_plan.md — Plan de limpieza de conversiones",
+    "audits/budget_strategy_mayo2026.md — Estrategia de presupuesto y bidding",
+    "audits/competitor_intelligence_mayo2026.md — Inteligencia competitiva",
+    "audits/web_audit_mayo2026.md — Auditoría técnica web",
+    "audits/creative_brief_mayo2026.md — Brief para nueva ola creativa",
+    "audits/schema_markup_ads-group.md — Plan schema markup",
+    "audits/correo_ejecutivo_mayo2026.md — Email ejecutivo de presentación",
+    "design/redesign_concept_v4.html — Concepto rediseño web",
+    "brand-profile.json — DNA de marca con colores reales del logo"
+  ]
+}

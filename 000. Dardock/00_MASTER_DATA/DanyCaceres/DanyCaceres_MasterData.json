@@ -1,0 +1,158 @@
+{
+  "_schema_version": "1.0",
+  "_last_updated": "2026-05-03",
+
+  "cliente": "Dany Cáceres",
+  "tipo": "marca_personal",
+  "estado": "activo",
+
+  "problema_cliente": "Emprendedores e importadores LATAM no saben cómo importar sin perder dinero ni tiempo. Dany traduce 21 años de experiencia real (CEO ADS Group International) en metodología accionable. Posicionamiento: 'No improvises lo que puede cobrarte caro. Importá con estrategia, vendé con resultado.'",
+  "audiencia": "Emprendedores e importadores latinoamericanos. Predominio Argentina 42-77%. Alcance orgánico: YouTube 105K, Instagram 19K, Facebook 5.8K. Total 126K seguidores.",
+
+  "sitio_web": "danycaceres.com (GoHighLevel)",
+  "rubro": "Educación + comercio internacional · marca personal con ladder de productos",
+
+  "contactos": {
+    "comercial": "Dany Cáceres",
+    "responsable_dardock": "Matías Cáceres (estrategia) · Israel (diseño y publicaciones)",
+    "email_principal": "Por confirmar",
+    "whatsapp": "Por confirmar"
+  },
+
+  "productos": [
+    { "nombre": "PDF 5 Mitos de la Importación", "precio": "Gratis", "objetivo": "lead — captación vía ManyChat" },
+    { "nombre": "Emprende Importando (Kindle)", "precio": "$6.99 USD", "objetivo": "venta — canal BOFU exclusivo: Mercado Libre" },
+    { "nombre": "Emprende Importando (Paperback)", "precio": "$19.90 USD", "objetivo": "venta — canal: Mercado Libre" },
+    { "nombre": "Vender Importando (Kindle)", "precio": "$6.99 USD", "objetivo": "venta — canal exclusivo: Amazon" },
+    { "nombre": "Comunidad WhatsApp", "precio": "<$50 USD/mes", "objetivo": "retención" },
+    { "nombre": "Asesoría 1:1", "precio": "$100+ USD/sesión", "objetivo": "conversión alto valor" },
+    { "nombre": "ADS Group International", "precio": "B2B corporativo", "objetivo": "cliente corporativo de logística (back-end del ladder)" }
+  ],
+
+  "metricas": {
+    "cpa_target": "Por definir tras estabilizar evergreen mayo 2026 — primera lectura limpia esperada con microeventos web instalados",
+    "roas_target": "Imposible medir hoy — 0 purchases atribuidas a campaña Meta (ML cerró pixel dic-2025, fbclid no capturado)",
+    "crm_target": "15 ventas/mes Emprende Importando + 5 leads asesoría/mes desde WhatsApp",
+    "presupuesto_acordado_usd_mes": 750,
+    "presupuesto_real_usd_mes": 1140,
+    "inversion_meta_usd_4m": 1888,
+    "inversion_google_usd_4m": 2673,
+    "leads_4m": 193,
+    "leads_mensual": 48,
+    "purchases_atribuidas_meta": 0
+  },
+
+  "plataformas": {
+    "meta_ads": true,
+    "google_ads": true,
+    "youtube_ads": true,
+    "tiktok_ads": false,
+    "linkedin_ads": false,
+    "shopify": false,
+    "ghl": true,
+    "mercado_libre": true,
+    "amazon": true,
+    "manychat": true
+  },
+
+  "accounts": {
+    "meta_ad_account": "3317452621685038",
+    "meta_currency_note": "CLP (Meta factura en pesos chilenos · tipo cambio referencia 950 CLP/USD)",
+    "ghl_location_id": "559faVEeicApiWS5KPqv",
+    "youtube_subscribers": 105000,
+    "instagram_followers": 19000,
+    "facebook_followers": 5800
+  },
+
+  "infraestructura_critica": {
+    "tracking_status": "roto — 8 conversion events GA4 configurados, 0 firing",
+    "fbclid_capture": "no capturado en landing GHL → 0 purchases atribuidas a Meta (4 meses ciegos)",
+    "capi_status": "activo vía Make.com pero sin fbclid — atribución imposible",
+    "ml_pixel": "cerrado por Mercado Libre dic-2025 (cambio de plataforma)",
+    "purchase_evento": "activo en verde vía API de conversiones — mantener como evento principal",
+    "microeventos_web": "pendientes — clicks, formularios, WhatsApp, scroll/intención sin instalar",
+    "pmax_problema": "1900+ términos en idiomas asiáticos · 84% IS lost by rank — excluir idiomas no-español",
+    "bofu_meta": "inactivo desde 22 abril 2026 — 11+ días sin campaña de conversión activa",
+    "presupuesto_overspend": "+52% sobre acordado ($1140 real vs $750 acordado)",
+    "campañas_cementerio_meta": "7/9 campañas inactivas — 37% budget a campañas sin output",
+    "google_anuncio_rechazado": "1 anuncio activo desde enero sin acción (4 meses)",
+    "landing_principal_problema": "/vender-importando-landing — 86% bounce, 2.1s engagement"
+  },
+
+  "value_ladder": {
+    "regla_R1_plataforma": "Emprende Importando → SIEMPRE Mercado Libre (NUNCA Amazon en BOFU). Vender Importando → SIEMPRE Amazon. Romper esta regla mezcla audiencias y mata el aprendizaje.",
+    "flujo": "Contenido orgánico → Lead Magnet (PDF 5 Mitos vía ManyChat) → Emprende Importando ($6.99 ML) → Vender Importando ($6.99 Amazon) → Comunidad WhatsApp ($50/mes) → Asesoría 1:1 ($100+) → ADS Group International (B2B corporate)"
+  },
+
+  "brand_voice": {
+    "tono_primario": "Profesional + Educativo",
+    "tono_bofu": "Urgente (escasez real: precio, stock, fecha — nunca falsa)",
+    "tono_prohibido": ["Inspirador", "Rebelde", "Divertido"],
+    "palabras_activan": ["importar", "estrategia", "error", "operación", "resultado", "real", "técnico", "experiencia"],
+    "palabras_matan_marca": ["fácil", "rápido", "garantizado", "secreto", "transformar tu vida", "gurú"],
+    "formula": "[Dato/error concreto] + [Por qué importa en la práctica] + [Qué hace Dany diferente] + [CTA directo]",
+    "español": "Neutro LATAM en copy institucional (sin vos/sos/tenés). Primera persona cuando habla Dany."
+  },
+
+  "score_capas": {
+    "fecha_ultimo_audit": "2026-05-03",
+    "global": 57,
+    "oferta": 84,
+    "tracking": 52,
+    "funnel": 38,
+    "campañas": 67,
+    "creativo": 61,
+    "status": "warning",
+    "nota": "Score métricas live. Diagnóstico estratégico anterior: 61 global. Tracking subió de 12 a 52 con Purchase activo vía CAPI."
+  },
+
+  "campañas_activas": [
+    { "id": "C6", "nombre": "Post-launch mensajes compradores → upsell WA", "plataforma": "Meta", "budget_usd": 50, "ventana": "Abr 23-30" },
+    { "id": "C1", "nombre": "TOFU tráfico contenido frío", "plataforma": "Meta", "budget_usd": 25, "estado": "evergreen" },
+    { "id": "C2", "nombre": "MOFU mensajería 5Mitos", "plataforma": "Meta", "budget_usd": 50, "estado": "activar" },
+    { "id": "C3", "nombre": "BOFU ventas retargeting Emprende Importando", "plataforma": "Meta", "budget_usd": 25, "estado": "activar" }
+  ],
+
+  "oportunidades_clave": {
+    "purchase_capi_activo": "Purchase ya está activo en verde — base sólida para sumar microeventos web por GTM/API",
+    "youtube_organico": "105K suscriptores con 99.4% paid dependence — gran palanca si se reduce dependencia de pauta",
+    "ladder_completo": "Ladder de 7 escalones desde lead magnet hasta corporate — pocos competidores tienen este rango",
+    "ads_group_corporate": "Backend B2B (ADS Group International) como cierre del ladder — diferenciador único",
+    "lanzamiento_validado": "Lanzamiento Vender Importando 20 abril ($0.99 promo Kindle) — caso de estudio para evergreen"
+  },
+
+  "reglas_no_reabrir": [
+    "Home es un hub (no landing de conversión)",
+    "Emprende Importando → Mercado Libre exclusivo en BOFU. Nunca Amazon.",
+    "Vender Importando → Amazon exclusivo",
+    "Precio base libros = $6.99 USD (la promo $0.99 fue temporal)",
+    "Nunca mencionar '3.ª Edición' en materiales de venta",
+    "Sin gurú, sin hacerse rico, sin fácil y rápido, sin éxito garantizado"
+  ],
+
+  "equipo": {
+    "estrategia": "Matías (Dardock)",
+    "diseño_publicaciones": "Israel (Isra)",
+    "community_manager_wa": "Por contratar",
+    "video_editor": "Por contratar ($180-250 USD/mes)"
+  },
+
+  "clickup_folder_id": "901315751913",
+  "notion_page_id": "Por confirmar",
+  "drive_folder": "Por confirmar",
+
+  "proximos_hitos": [
+    { "fecha": "2026-05-10", "evento": "Activar C1 + C2 + C3 en modo evergreen ($100/mes)", "prioridad": "ALTA" },
+    { "fecha": "2026-05-10", "evento": "Reporte de resultados lanzamiento Vender Importando para Dany", "prioridad": "ALTA" },
+    { "fecha": "2026-05-17", "evento": "Implementar microeventos web por GTM/API (clicks, formularios, WhatsApp, scroll) y validar en Events Manager", "prioridad": "ALTA" },
+    { "fecha": "2026-05-17", "evento": "Excluir idiomas no-español de PMax + reescribir anuncio Google rechazado", "prioridad": "ALTA" },
+    { "fecha": "2026-05-24", "evento": "Archivar 7 campañas Meta cementerio + estandarizar ventanas atribución 7d click + 1d view", "prioridad": "MEDIA" },
+    { "fecha": "2026-05-31", "evento": "Propuesta estructura campañas junio con data real de mayo + CPA base definido", "prioridad": "MEDIA" }
+  ],
+
+  "historial_reciente": [
+    { "fecha": "2026-04-20", "evento": "Lanzamiento Kindle Vender Importando — promo $0.99" },
+    { "fecha": "2026-04-14", "evento": "Campañas pre-launch activas (C4)" },
+    { "fecha": "2026-04-07", "evento": "Campañas TOFU/MOFU/BOFU evergreen base" }
+  ]
+}

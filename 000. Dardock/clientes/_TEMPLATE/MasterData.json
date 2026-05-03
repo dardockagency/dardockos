@@ -1,0 +1,79 @@
+{
+  "_schema_version": "1.0",
+  "_schema_note": "Schema estandarizado MASTER_DATA Dardock. El archivo real vive en 00_MASTER_DATA/<Cliente>/<Cliente>_MasterData.json. Este es el template de referencia.",
+
+  "cliente": "[Nombre Cliente]",
+  "tipo": "marca_personal | ecommerce | b2b | lead_gen | hibrido",
+  "estado": "onboarding | activo | pausa | pendiente_auditoria | offboarding",
+
+  "problema_cliente": "[1-2 líneas: qué problema real resuelve la marca para su audiencia]",
+  "audiencia": "[Perfil ICP: demografía, geografía, predominio por canal, segmentos rentables]",
+
+  "contactos": {
+    "comercial": "[Nombre + cargo del decisor del lado cliente]",
+    "responsable_dardock": "[Nombre del lead Dardock asignado]",
+    "email_principal": "[email]",
+    "whatsapp": "[+56 9 ...]"
+  },
+
+  "productos": [
+    { "nombre": "[Producto/servicio]", "precio": "[Monto + moneda o 'cotización']", "objetivo": "lead | venta | retención | referido | corporate" }
+  ],
+
+  "metricas": {
+    "cpa_target": "[Costo por adquisición objetivo o 'Por definir']",
+    "roas_target": "[Múltiplo objetivo o N/A si lead-gen sin venta directa]",
+    "crm_target": "[Volumen mensual de leads/ventas esperado]",
+    "emq_target": "[EMQ Meta objetivo si aplica]"
+  },
+
+  "plataformas": {
+    "meta_ads": false,
+    "google_ads": false,
+    "tiktok_ads": false,
+    "linkedin_ads": false,
+    "shopify": false,
+    "ghl": false,
+    "mercado_libre": false,
+    "amazon": false,
+    "manychat": false,
+    "zoho_crm": false,
+    "activecampaign": false
+  },
+
+  "infraestructura_critica": {
+    "_note": "Sólo llenar si hay bloqueantes técnicos activos. Borrar el bloque si no aplica.",
+    "tracking_status": "[ok | parcial | roto + 1 línea de detalle]",
+    "tag_manager": "[GTM ID o 'no instalado']",
+    "ga4": "[GA4 property o 'no configurado']",
+    "pixel_meta": "[ID o estado]",
+    "capi": "[ok | pending | roto]",
+    "crm_integrado": "[true/false + nota]",
+    "bloqueantes_web": ["[Lista de bugs/missing pages que frenan conversión]"]
+  },
+
+  "oportunidades_clave": {
+    "_note": "Bullets de palancas de crecimiento identificadas. Borrar el bloque si todavía no hay diagnóstico.",
+    "palanca_1": "[Descripción + por qué importa]",
+    "palanca_2": "[Descripción + por qué importa]"
+  },
+
+  "score_capas": {
+    "_note": "Último diagnóstico por capas. Actualizar tras cada audit.",
+    "fecha_ultimo_audit": "YYYY-MM-DD",
+    "global": null,
+    "oferta": null,
+    "tracking": null,
+    "funnel": null,
+    "campañas": null,
+    "creativo": null
+  },
+
+  "clickup_folder_id": "[ID de carpeta ClickUp del cliente]",
+  "notion_page_id": "[ID o URL de la página Notion del cliente, si existe]",
+  "drive_folder": "[Path o URL de la carpeta Drive, si existe]",
+
+  "proximos_hitos": [
+    { "fecha": "YYYY-MM-DD", "evento": "[Hito específico]", "prioridad": "CRITICA | ALTA | MEDIA | BAJA" }
+  ]
+}

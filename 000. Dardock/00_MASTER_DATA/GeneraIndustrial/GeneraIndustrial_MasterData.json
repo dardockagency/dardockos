@@ -1,0 +1,129 @@
+{
+  "_schema_version": "1.0",
+  "_last_updated": "2026-05-03",
+
+  "cliente": "Genera Industrial",
+  "tipo": "b2b",
+  "estado": "activo",
+
+  "problema_cliente": "Compradores industriales B2B en Chile necesitan un proveedor técnico confiable con respuesta rápida. El catálogo existe (743 productos), pero el lead engine está roto — los leads entran y se pierden antes del cierre porque GA4 mide ruido, Zoho no está integrado y 31.7% del catálogo está rechazado por Google Merchant.",
+  "audiencia": "Comprador industrial B2B en Chile. Necesita evidencia técnica, respuesta rápida y certeza de que el proveedor entiende su problema. Modelo: intención técnica → cotización → cierre en CRM Zoho. 62% del tráfico es mobile.",
+
+  "sitio_web": "https://generaindustrial.cl",
+  "rubro": "Distribución industrial técnica (instrumentación, control de flujo, componentes críticos, hidrógeno verde, equipos DGA)",
+
+  "contactos": {
+    "comercial": "Clemente Rojas",
+    "responsable_dardock": "Matías Cáceres",
+    "email_principal": "Por confirmar",
+    "whatsapp": "Por confirmar"
+  },
+
+  "productos": [
+    { "nombre": "Equipos DGA 1238 (flowmetro + datalogger certificado)", "precio": "B2B — cotización", "objetivo": "lead — demanda regulatoria urgente 2026-2027" },
+    { "nombre": "Equipos H2V — Hidrógeno Verde (ASME B31.12, SS316L, Rotarex D615/D655)", "precio": "B2B — cotización", "objetivo": "lead — proyectos Antofagasta/Magallanes" },
+    { "nombre": "Catálogo instrumentación (Fluke y similares)", "precio": "B2B — cotización", "objetivo": "lead" },
+    { "nombre": "Catálogo control de flujo", "precio": "B2B — cotización", "objetivo": "lead" },
+    { "nombre": "Catálogo componentes críticos industriales", "precio": "B2B — cotización", "objetivo": "lead" }
+  ],
+
+  "metricas": {
+    "cpa_target": "Por definir — sin trazabilidad hasta cierre actualmente. CPA aparente: CLP 1,789 (DATO FALSO — 64% conversiones contaminadas)",
+    "roas_target": "N/A — modelo B2B por cotización, cierre en Zoho",
+    "crm_target": "15-20 leads cualificados/día (actual: 5-10/día reportados por cliente · invisibles para GA4)",
+    "inversion_actual_mensual_clp": 73109,
+    "inversion_total_4m_clp": 292434,
+    "trafico_actual": "70 visitas/día · 2,855 sesiones/28d (Shopify)"
+  },
+
+  "plataformas": {
+    "meta_ads": false,
+    "google_ads": true,
+    "tiktok_ads": false,
+    "linkedin_ads": false,
+    "shopify": true,
+    "zoho_crm": true,
+    "zoho_salesiq": true,
+    "looker_studio": true
+  },
+
+  "accounts": {
+    "google_mcc": "890-891-4882",
+    "shopify_store": "generaindustrialv3.myshopify.com",
+    "ga4_property": "G-BXTDL4DR60",
+    "gtm_container": "GTM-N2JP28LF"
+  },
+
+  "infraestructura_critica": {
+    "tracking_status": "roto — GA4 Key Events contaminados (5.24 KE/sesión vs target ≤1). Max Conversions optimiza contra ruido.",
+    "ga4_bloqueante": "first_visit, page_view, session_start, user_engagement marcados como Key Event. Solo close_convert_lead debería serlo. Cliente debe desmarcar 4 KE incorrectos.",
+    "zoho_integrado": "false — gap crítico: leads cierran en CRM pero marketing no lo ve",
+    "google_keywords_inactivas": "81% (248 de 306) en estado 'publicación limitada'",
+    "shopify_catalogo_roto": "345 productos a CLP 0 (31.7% del catálogo) — rechazados por Google Merchant Center, excluidos de PMax",
+    "cross_domain": "tienda.generaindustrial.cl no resuelto — 9 links del nav dropdown hardcodeados rompen sesión GA4 en cada click",
+    "whatsapp_sticky": "no existe — sin escalón micro de conversión para el 62% mobile",
+    "leads_invisibles": "5-10 leads/día reportados por el cliente completamente invisibles en GA4 y Google Ads"
+  },
+
+  "campañas_google": {
+    "search_activas": 7,
+    "pmax_activa": true,
+    "campañas_total": 8,
+    "nota": "7 campañas con gasto real. Hoke (CLP 0 gastado) excluida. PMax sin audience signals."
+  },
+
+  "quick_wins": [
+    "QW1 — Excluir Display + Search Partners (-15-20% wasted spend)",
+    "QW2 — Lista de negativos (50+ términos del audit) (-10-15% wasted spend)",
+    "QW3 — Mobile bid adjustment -35% (mejora calidad de conversión)",
+    "QW4 — Ad schedule off 12am-7am (-15% wasted impressions)",
+    "QW5 — Separar campaña brand (proteger IS marca)"
+  ],
+
+  "oportunidades_clave": {
+    "dga_1238": "Demanda regulatoria forzada. Ventana de urgencia 2026-2027. Keyword 'multas DGA 1238' con alta intención de compra.",
+    "h2v": "Proyectos de hidrógeno verde en Antofagasta y Magallanes. Audiencia: Project Directors B2B técnico.",
+    "linkedin_gap": "LinkedIn Ads sin presencia — oportunidad sin competencia para audiencia B2B técnica",
+    "zoho_integration": "Integración GA4 → Zoho (offline conversion import o webhook) destrabaría todo el motor de optimización"
+  },
+
+  "score_capas": {
+    "fecha_ultimo_audit": "2026-05-02",
+    "global": 42,
+    "tracking_ga4": 18,
+    "google_ads": 48,
+    "shopify_cro": 44,
+    "funnel_400": 42,
+    "oferta": 48,
+    "creativo": null,
+    "status": "critical",
+    "nota": "Score real post-audit. Estimado anterior: 52. Caída por hallazgos en GA4 + funnel."
+  },
+
+  "prioridades_mayo_2026": [
+    "1. Datos — limpiar señal de conversión en GA4 + GTM (prerequisito de todo)",
+    "2. Campañas — quick wins + restructura post fix GA4",
+    "3. Sin landings nuevas, sin Shopify CRO, sin creativo nuevo por ahora"
+  ],
+
+  "clickup_folder_id": "901318113254",
+  "notion_page_id": "Por confirmar",
+  "drive_folder": "Por confirmar",
+
+  "proximos_hitos": [
+    { "fecha": "2026-05-10", "evento": "Cliente desmarca 4 Key Events incorrectos en GA4 (first_visit, page_view, session_start, user_engagement)", "prioridad": "CRITICA" },
+    { "fecha": "2026-05-15", "evento": "GTM audit completo + agregar tags whatsapp_click y form_submit", "prioridad": "ALTA" },
+    { "fecha": "2026-05-15", "evento": "Ejecutar QW1-QW5 de campañas (post fix GA4 del cliente)", "prioridad": "ALTA" },
+    { "fecha": "2026-05-22", "evento": "Audit Zoho + propuesta integración GA4 → Zoho (offline conversion import o webhook)", "prioridad": "ALTA" },
+    { "fecha": "2026-05-30", "evento": "Landing pages DGA 1238 y H2V live (oportunidades regulatorias)", "prioridad": "MEDIA" }
+  ],
+
+  "entregables_mayo_2026": [
+    "audits/mini_audit_52_to_70.html — Audit ejecutivo cliente",
+    "audits/SHOPIFY-AUDIT-genera-industrial-may2026.md — Audit Shopify completo",
+    "brand-profile.json — DNA de marca",
+    "research/COMPETITOR-INTELLIGENCE-REPORT.md — Inteligencia competitiva",
+    "research/CUSTOMER-RESEARCH.md — Investigación de cliente",
+    "research/FUNNEL-400-DIAGNOSTICO.md — Diagnóstico funnel 400%"
+  ]
+}
