@@ -1,0 +1,114 @@
+{
+  "_schema_version": "1.0",
+  "_last_updated": "2026-05-03",
+
+  "cliente": "Cosas Nuestras",
+  "tipo": "ecommerce",
+  "estado": "activo",
+
+  "problema_cliente": "Expats rioplatenses en Chile no encuentran sus productos culturales de calidad (mate, yerba, kiosco). La marca vende pertenencia y ritual, no solo el producto físico.",
+  "audiencia": "Expats argentinos y uruguayos en Chile + chilenos curiosos de la cultura rioplatense + regaladores. Segmentos más rentables: regalo + brand (female 55-64, male 65+).",
+
+  "sitio_web": "cosasnosutras.cl (Shopify · tema Woodstock LL)",
+  "rubro": "Ecommerce · productos culturales rioplatenses · mate, yerba, kiosco, regalo",
+
+  "contactos": {
+    "comercial": "Por confirmar",
+    "responsable_dardock": "Matías Cáceres",
+    "email_principal": "Por confirmar",
+    "whatsapp": "Por confirmar"
+  },
+
+  "productos": [
+    { "nombre": "Kits regalo (mate + accesorios)", "precio": "$12.000+ CLP", "objetivo": "venta — high intent, regalo" },
+    { "nombre": "Yerba + accesorios entrada", "precio": "$8.000–15.000 CLP", "objetivo": "venta — volumen" },
+    { "nombre": "Colección Día de la Madre", "precio": "$15.000–30.000 CLP", "objetivo": "venta — estacional activa" },
+    { "nombre": "Mid-ticket / suscripción", "precio": "Por definir", "objetivo": "retención — NO EXISTE AÚN" }
+  ],
+
+  "metricas": {
+    "cpa_target": "Por definir — datos Meta aún sin conectar a cuenta real",
+    "roas_target": "3.0x objetivo (ficticio actual: 1.8x — Pixel desconectado hasta ahora)",
+    "crm_target": "EMQ > 7.0 (actual: 4.2 — CAPI Stape activo, deduplicación pendiente)",
+    "orders_30d": 175,
+    "revenue_30d_clp": 5662361,
+    "aov_clp": 32356,
+    "conversiones_google_4m": 192,
+    "products_active_shopify": 443,
+    "shopify_health_score": 82
+  },
+
+  "plataformas": {
+    "meta_ads": true,
+    "google_ads": true,
+    "tiktok_ads": false,
+    "linkedin_ads": false,
+    "shopify": true,
+    "ghl": false,
+    "mercado_libre": false,
+    "amazon": false,
+    "manychat": false
+  },
+
+  "accounts": {
+    "meta_pixel_id": "764107243964948",
+    "capi_provider": "Stape — 32.000 eventos/7d activos",
+    "shopify_theme": "Woodstock — Versión LL",
+    "shopify_products": 443
+  },
+
+  "infraestructura_critica": {
+    "tracking_status": "parcial — CAPI Stape activo (32K eventos/7d) · deduplicación Pixel+CAPI pendiente · spend Meta no disponible aún",
+    "meta_pixel": "764107243964948 — activo · sincronización catálogo sin verificar",
+    "capi_status": "activo vía Stape · deduplicación sin confirmar",
+    "emq_actual": "4.2 — objetivo > 7.0",
+    "google_ads_status": "PMax activo · 192 conversiones 4 meses · sin auditoría directa",
+    "email_post_compra": "no configurado — S40 FAIL",
+    "upsell_cross_sell": "Vitals instalado sin activar — S20 WARNING",
+    "email_capture_popup": "Vitals popup sin activar — S21 WARNING",
+    "mid_ticket": "no existe — gap crítico en el ladder de valor"
+  },
+
+  "score_capas": {
+    "fecha_ultimo_audit": "2026-05-03",
+    "global": 68,
+    "oferta": 72,
+    "tracking": 52,
+    "funnel": 71,
+    "campañas": 58,
+    "creativo": 74,
+    "status": "warning",
+    "nota": "Shopify sólido (82). Tracking frena lectura real de ROAS y atribución Meta. Mid-ticket y email automático son los gaps más urgentes."
+  },
+
+  "oportunidades_clave": {
+    "dia_de_la_madre": "Colección activa (18 productos). Ventana hasta ~mayo 11. Alto AOV regalo.",
+    "email_flows": "Post-compra y abandono carrito sin configurar — dinero sobre la mesa cada semana",
+    "mid_ticket": "No existe producto entre $15K–$50K CLP — brecha en el ladder",
+    "upsell_vitals": "Vitals instalado · upsell apagado — activar sin costo adicional",
+    "emq_deduplication": "CAPI Stape activo — confirmar deduplicación sube EMQ 4.2 → >7.0"
+  },
+
+  "shopify_audit_scores": {
+    "fecha": "2026-04-30",
+    "velocidad_tecnico": 75,
+    "conversion_cro": 79,
+    "tracking": 75,
+    "catalogo_seo": 95,
+    "health_global": 82,
+    "grade": "B"
+  },
+
+  "clickup_folder_id": "901315752951",
+  "notion_page_id": "Por confirmar",
+  "drive_folder": "Por confirmar",
+
+  "proximos_hitos": [
+    { "fecha": "2026-05-10", "evento": "Confirmar deduplicación Pixel+CAPI → EMQ > 7.0", "prioridad": "CRITICA" },
+    { "fecha": "2026-05-11", "evento": "Cierre temporada Día de la Madre — reporte ventas + AOV", "prioridad": "ALTA" },
+    { "fecha": "2026-05-17", "evento": "Activar email post-compra + abandono carrito", "prioridad": "ALTA" },
+    { "fecha": "2026-05-17", "evento": "Activar upsell/cross-sell en Vitals (ya instalado)", "prioridad": "ALTA" },
+    { "fecha": "2026-05-24", "evento": "Auditoría directa Meta + Google — conectar spend real a reporting", "prioridad": "MEDIA" },
+    { "fecha": "2026-05-31", "evento": "Definir producto mid-ticket + estructura PMAX junio", "prioridad": "MEDIA" }
+  ]
+}
