@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Superaudit Mayo 2026 — Cosas Nuestras × Dardock</title>
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --surface: #111;
+    --surface2: #181818;
+    --border: #222;
+    --accent: #f5a623;
+    --accent2: #e8855a;
+    --red: #e55;
+    --yellow: #f5a623;
+    --blue: #5b9cf6;
+    --green: #4caf82;
+    --text: #e8e8e8;
+    --muted: #666;
+    --muted2: #444;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; line-height: 1.6; }
+
+  /* HEADER */
+  .header { background: linear-gradient(135deg, #111 0%, #1a1208 100%); border-bottom: 1px solid var(--border); padding: 32px 40px 24px; }
+  .header-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; }
+  .logo { font-size: 11px; font-weight: 700; letter-spacing: 3px; color: var(--accent); text-transform: uppercase; }
+  .badge-date { font-size: 11px; color: var(--muted); background: var(--surface2); border: 1px solid var(--border); padding: 4px 10px; border-radius: 4px; }
+  .header h1 { font-size: 28px; font-weight: 700; color: #fff; }
+  .header h1 span { color: var(--accent); }
+  .header-sub { font-size: 13px; color: var(--muted); margin-top: 4px; }
+
+  /* SCORE STRIP */
+  .score-strip { display: grid; grid-template-columns: 180px 1fr; gap: 32px; margin-top: 24px; align-items: center; }
+  .global-score { text-align: center; }
+  .score-circle { width: 120px; height: 120px; border-radius: 50%; background: conic-gradient(var(--accent) 0% 71%, var(--surface2) 71%); display: flex; align-items: center; justify-content: center; margin: 0 auto 8px; position: relative; }
+  .score-circle::before { content: ''; position: absolute; width: 90px; height: 90px; background: var(--bg); border-radius: 50%; }
+  .score-number { position: relative; z-index: 1; font-size: 30px; font-weight: 800; color: var(--accent); }
+  .score-label { font-size: 11px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; }
+  .score-grade { font-size: 13px; color: var(--accent); font-weight: 700; }
+  .capas-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+  .capa-bar { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 12px; cursor: pointer; transition: border-color 0.2s; }
+  .capa-bar:hover { border-color: var(--accent); }
+  .capa-bar.active { border-color: var(--accent); background: #1a1408; }
+  .capa-name { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 6px; }
+  .capa-score-val { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+  .bar-track { height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 2px; transition: width 0.8s ease; }
+  .score-52 { color: var(--red); } .fill-52 { background: var(--red); width: 52%; }
+  .score-58 { color: var(--yellow); } .fill-58 { background: var(--yellow); width: 58%; }
+  .score-71 { color: var(--yellow); } .fill-71 { background: var(--yellow); width: 71%; }
+  .score-72 { color: var(--yellow); } .fill-72 { background: var(--yellow); width: 72%; }
+  .score-74 { color: var(--green); } .fill-74 { background: var(--green); width: 74%; }
+  .score-76 { color: var(--green); } .fill-76 { background: var(--green); width: 76%; }
+
+  /* KPI ROW */
+  .kpi-row { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px; background: var(--border); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .kpi { background: var(--surface); padding: 16px 20px; }
+  .kpi-val { font-size: 20px; font-weight: 800; color: #fff; }
+  .kpi-val span { font-size: 12px; font-weight: 400; color: var(--muted); }
+  .kpi-lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-top: 2px; }
+  .kpi-delta { font-size: 11px; margin-top: 2px; }
+  .up { color: var(--green); } .down { color: var(--red); } .warn { color: var(--yellow); }
+
+  /* MAIN LAYOUT */
+  .main { display: grid; grid-template-columns: 220px 1fr; min-height: calc(100vh - 280px); }
+  .sidebar { background: var(--surface); border-right: 1px solid var(--border); padding: 20px 0; position: sticky; top: 0; height: 100vh; overflow-y: auto; }
+  .nav-section { padding: 0 16px; margin-bottom: 8px; }
+  .nav-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); padding: 12px 8px 6px; }
+  .nav-item { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 6px; cursor: pointer; color: var(--muted); font-size: 13px; transition: all 0.15s; margin-bottom: 2px; }
+  .nav-item:hover { background: var(--surface2); color: var(--text); }
+  .nav-item.active { background: #1a1408; color: var(--accent); border-left: 2px solid var(--accent); }
+  .nav-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .dot-red { background: var(--red); }
+  .dot-yellow { background: var(--yellow); }
+  .dot-green { background: var(--green); }
+
+  /* CONTENT */
+  .content { padding: 28px 32px; }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  /* SECTION */
+  .section-title { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+  .section-sub { font-size: 13px; color: var(--muted); margin-bottom: 24px; }
+  .divider { height: 1px; background: var(--border); margin: 28px 0; }
+
+  /* ALERT BLOCKS */
+  .alert { border-radius: 8px; padding: 14px 16px; margin-bottom: 12px; border-left: 3px solid; }
+  .alert-red { background: rgba(238,85,85,0.08); border-color: var(--red); }
+  .alert-yellow { background: rgba(245,166,35,0.08); border-color: var(--yellow); }
+  .alert-green { background: rgba(76,175,130,0.08); border-color: var(--green); }
+  .alert-blue { background: rgba(91,156,246,0.08); border-color: var(--blue); }
+  .alert-title { font-weight: 700; font-size: 13px; margin-bottom: 4px; }
+  .alert-red .alert-title { color: var(--red); }
+  .alert-yellow .alert-title { color: var(--yellow); }
+  .alert-green .alert-title { color: var(--green); }
+  .alert-blue .alert-title { color: var(--blue); }
+  .alert p { font-size: 12px; color: var(--muted); }
+
+  /* TABLES */
+  table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 12px; }
+  th { text-align: left; padding: 8px 10px; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); border-bottom: 1px solid var(--border); font-weight: 600; }
+  td { padding: 9px 10px; border-bottom: 1px solid #1a1a1a; vertical-align: middle; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #141414; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: 700; letter-spacing: 0.5px; }
+  .tag-pass { background: rgba(76,175,130,0.15); color: var(--green); }
+  .tag-warn { background: rgba(245,166,35,0.15); color: var(--yellow); }
+  .tag-fail { background: rgba(238,85,85,0.15); color: var(--red); }
+  .tag-pause { background: rgba(238,85,85,0.2); color: var(--red); border: 1px solid rgba(238,85,85,0.3); }
+  .tag-action { background: rgba(91,156,246,0.15); color: var(--blue); }
+  .money { font-family: monospace; font-weight: 700; }
+  .good { color: var(--green); font-weight: 700; }
+  .bad { color: var(--red); font-weight: 700; }
+  .neutral { color: var(--muted); }
+
+  /* ACTION CARDS */
+  .action-grid { display: grid; gap: 12px; }
+  .action-card { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 16px; display: flex; gap: 14px; align-items: flex-start; cursor: pointer; transition: border-color 0.2s; }
+  .action-card:hover { border-color: var(--muted2); }
+  .action-card.done { opacity: 0.5; }
+  .action-card.done .action-title { text-decoration: line-through; }
+  .action-num { width: 28px; height: 28px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 12px; flex-shrink: 0; }
+  .num-red { background: rgba(238,85,85,0.15); color: var(--red); }
+  .num-yellow { background: rgba(245,166,35,0.15); color: var(--yellow); }
+  .num-blue { background: rgba(91,156,246,0.15); color: var(--blue); }
+  .action-body { flex: 1; }
+  .action-title { font-weight: 700; font-size: 13px; margin-bottom: 3px; color: #fff; }
+  .action-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+  .action-meta { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+  .chip { font-size: 10px; padding: 2px 8px; border-radius: 20px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+  .chip-acc { border-color: var(--accent); color: var(--accent); }
+
+  /* METRICS CARDS */
+  .metrics-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+  .metric-card { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
+  .metric-card h4 { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 12px; }
+  .metric-row { display: flex; justify-content: space-between; align-items: center; padding: 5px 0; border-bottom: 1px solid #1a1a1a; font-size: 12px; }
+  .metric-row:last-child { border-bottom: none; }
+  .metric-row-label { color: var(--muted); }
+  .metric-row-val { font-weight: 700; }
+
+  /* TIMELINE */
+  .timeline { position: relative; padding-left: 24px; }
+  .timeline::before { content: ''; position: absolute; left: 8px; top: 6px; bottom: 0; width: 1px; background: var(--border); }
+  .tl-item { position: relative; margin-bottom: 20px; }
+  .tl-dot { position: absolute; left: -20px; top: 4px; width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--bg); }
+  .tl-dot-red { background: var(--red); }
+  .tl-dot-yellow { background: var(--yellow); }
+  .tl-dot-blue { background: var(--blue); }
+  .tl-date { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 2px; }
+  .tl-title { font-weight: 700; font-size: 13px; color: #fff; }
+  .tl-sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+  /* COPY EXAMPLES */
+  .copy-block { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 16px; margin-bottom: 12px; }
+  .copy-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 8px; }
+  .copy-bad { background: rgba(238,85,85,0.06); border-color: rgba(238,85,85,0.2); }
+  .copy-good { background: rgba(76,175,130,0.06); border-color: rgba(76,175,130,0.2); }
+  .copy-text { font-size: 13px; line-height: 1.7; color: var(--text); font-style: italic; }
+
+  /* TOGGLE */
+  details { margin-bottom: 8px; }
+  summary { background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 12px 14px; cursor: pointer; font-weight: 600; font-size: 13px; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  summary:hover { border-color: var(--muted2); }
+  summary::after { content: '▾'; color: var(--muted); font-size: 12px; }
+  details[open] summary::after { content: '▴'; }
+  details[open] summary { border-radius: 6px 6px 0 0; border-bottom-color: transparent; }
+  .details-body { border: 1px solid var(--border); border-top: none; border-radius: 0 0 6px 6px; padding: 14px; background: var(--surface); }
+
+  /* PROGRESS PILLS */
+  .progress-pill { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .progress-bar-wrap { flex: 1; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+  .progress-bar-inner { height: 100%; border-radius: 3px; }
+  .pill-label { font-size: 12px; color: var(--muted); min-width: 160px; }
+  .pill-val { font-size: 12px; font-weight: 700; min-width: 40px; text-align: right; }
+
+  /* CHECKLIST */
+  .checklist { list-style: none; }
+  .checklist li { display: flex; gap: 10px; padding: 6px 0; font-size: 12px; border-bottom: 1px solid #151515; align-items: flex-start; }
+  .checklist li:last-child { border-bottom: none; }
+  .check-icon { flex-shrink: 0; margin-top: 1px; }
+
+  /* FOOTER */
+  .footer { background: var(--surface); border-top: 1px solid var(--border); padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: var(--muted); }
+
+  @media print {
+    .sidebar { display: none; }
+    .main { grid-template-columns: 1fr; }
+    .tab-panel { display: block !important; }
+    .content { padding: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-top">
+    <div class="logo">⬡ Dardock Agency OS</div>
+    <div class="badge-date">Superaudit · Mayo 2026 · cosasnuestras.cl</div>
+  </div>
+  <h1>Cosas <span>Nuestras</span></h1>
+  <div class="header-sub">Shopify Ecommerce · Meta Ads + Google Ads · Productos Rioplatenses · Chile</div>
+
+  <div class="score-strip">
+    <div class="global-score">
+      <div class="score-circle"><span class="score-number">71</span></div>
+      <div class="score-label">Score Global</div>
+      <div class="score-grade">B — Warning</div>
+    </div>
+    <div class="capas-grid">
+      <div class="capa-bar active" onclick="switchTab('oferta',this)">
+        <div class="capa-name">Oferta</div>
+        <div class="capa-score-val score-72">72</div>
+        <div class="bar-track"><div class="bar-fill fill-72"></div></div>
+      </div>
+      <div class="capa-bar" onclick="switchTab('tracking',this)">
+        <div class="capa-name">Tracking</div>
+        <div class="capa-score-val score-52">52</div>
+        <div class="bar-track"><div class="bar-fill fill-52"></div></div>
+      </div>
+      <div class="capa-bar" onclick="switchTab('funnel',this)">
+        <div class="capa-name">Funnel · Shopify</div>
+        <div class="capa-score-val score-76">76</div>
+        <div class="bar-track"><div class="bar-fill fill-76"></div></div>
+      </div>
+      <div class="capa-bar" onclick="switchTab('campanas',this)">
+        <div class="capa-name">Campañas</div>
+        <div class="capa-score-val score-58">58</div>
+        <div class="bar-track"><div class="bar-fill fill-58"></div></div>
+      </div>
+      <div class="capa-bar" onclick="switchTab('creativo',this)">
+        <div class="capa-name">Creativo</div>
+        <div class="capa-score-val score-74">74</div>
+        <div class="bar-track"><div class="bar-fill fill-74"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- KPI ROW -->
+<div class="kpi-row">
+  <div class="kpi">
+    <div class="kpi-val">$5.66<span>M CLP</span></div>
+    <div class="kpi-lbl">Revenue 30d</div>
+    <div class="kpi-delta warn">⚠ Meta sin spend real conectado</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-val">175<span> órd.</span></div>
+    <div class="kpi-lbl">Órdenes 30d · Shopify</div>
+    <div class="kpi-delta up">+ WhatsApp recovery activo</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-val">$32.356<span> CLP</span></div>
+    <div class="kpi-lbl">AOV Real</div>
+    <div class="kpi-delta up">↑ regalo y kit dominan</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-val">$6.618<span> CLP</span></div>
+    <div class="kpi-lbl">CPA Meta (blended)</div>
+    <div class="kpi-delta up">ROAS 5.4× — sólido</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-val">$7.140<span> CLP</span></div>
+    <div class="kpi-lbl">CPA Google (blended)</div>
+    <div class="kpi-delta warn">Search 2.65× · PMax 3.97×</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-val">86<span>/100</span></div>
+    <div class="kpi-lbl">Shopify Health Score</div>
+    <div class="kpi-delta up">↑ desde 78 post-audit</div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="nav-section">
+      <div class="nav-label">Capas</div>
+      <div class="nav-item active" onclick="switchTab('oferta',this)" data-tab="oferta">
+        <span class="nav-dot dot-yellow"></span>Oferta · 72
+      </div>
+      <div class="nav-item" onclick="switchTab('tracking',this)" data-tab="tracking">
+        <span class="nav-dot dot-red"></span>Tracking · 52
+      </div>
+      <div class="nav-item" onclick="switchTab('funnel',this)" data-tab="funnel">
+        <span class="nav-dot dot-yellow"></span>Funnel / Shopify · 76
+      </div>
+      <div class="nav-item" onclick="switchTab('campanas',this)" data-tab="campanas">
+        <span class="nav-dot dot-red"></span>Campañas · 58
+      </div>
+      <div class="nav-item" onclick="switchTab('creativo',this)" data-tab="creativo">
+        <span class="nav-dot dot-yellow"></span>Creativo · 74
+      </div>
+      <div class="nav-label">Plan</div>
+      <div class="nav-item" onclick="switchTab('acciones',this)" data-tab="acciones">
+        <span class="nav-dot dot-red"></span>🔴 Acciones urgentes
+      </div>
+      <div class="nav-item" onclick="switchTab('hitos',this)" data-tab="hitos">
+        <span class="nav-dot dot-yellow"></span>Hitos mayo
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENT AREA -->
+  <div class="content">
+
+    <!-- ==================== OFERTA ==================== -->
+    <div class="tab-panel active" id="tab-oferta">
+      <div class="section-title">Capa Oferta — 72/100</div>
+      <div class="section-sub">Framework 400%Funnel · Tipo de oferta + Copy diagnóstico</div>
+
+      <div class="alert alert-green">
+        <div class="alert-title">✅ Tipo de oferta: INSOMNIO — Zona ganadora</div>
+        <p>CN no vende mate. Vende el único lugar donde un expat rioplatense en Chile puede recrear el ritual de casa. Eso no es "fastidio" — es tensión emocional potente: estar lejos de casa. El producto es el vehículo; la identidad rioplatense es lo que compra.</p>
+      </div>
+
+      <div class="alert alert-yellow">
+        <div class="alert-title">⚠ Gap: El copy nombra el ritual sin activarlo</div>
+        <p>"Tradición que va contigo" es una etiqueta de identidad, no una pregunta espejo. El cliente se reconoce pero no siente que lo entendieron. El copy de producto cae en ficha técnica + precio.</p>
+      </div>
+
+      <div class="divider"></div>
+      <div class="section-title" style="font-size:14px;margin-bottom:12px">Quién compra y por qué</div>
+      <table>
+        <tr><th>Segmento</th><th>Lo que cree que compra</th><th>Lo que REALMENTE compra</th><th>Temperatura</th></tr>
+        <tr><td>Expat argentino/uruguayo</td><td>Portatermos, yerba, mates</td><td>Identidad. El momento de estar en casa aunque esté en Santiago.</td><td><span class="tag tag-action">TOFU→BOFU</span></td></tr>
+        <tr><td>Regalador (F 55-64)</td><td>Un regalo práctico</td><td>Conexión. El regalo que dice "me acuerdo de quién sos".</td><td><span class="tag tag-pass">BOFU</span></td></tr>
+        <tr><td>Curioso chileno</td><td>Un mate para probar</td><td>Pertenencia. Ser parte de algo con raíz, no solo moda.</td><td><span class="tag tag-warn">TOFU</span></td></tr>
+      </table>
+
+      <div class="divider"></div>
+      <div class="section-title" style="font-size:14px;margin-bottom:12px">Copy actual vs. propuesto</div>
+
+      <div class="copy-block copy-bad">
+        <div class="copy-label">❌ Copy actual (sin alma — ficha técnica)</div>
+        <div class="copy-text">"Tradición que va contigo" · "Despacho gratis en compras sobre $29.990" · "BPA Free · Atención personalizada · Envíos a todo Chile"</div>
+      </div>
+
+      <div class="copy-block copy-good">
+        <div class="copy-label">✅ Pregunta espejo propuesta (hook TOFU)</div>
+        <div class="copy-text">"¿Cuánto tiempo lleva sin poder tomar un mate como el de tu casa?"</div>
+      </div>
+
+      <div class="copy-block copy-good">
+        <div class="copy-label">✅ Momento AHA</div>
+        <div class="copy-text">"No es que el mate de acá no sea rico. Es que ningún portatermos chileno sabe que el mate se toma despacio, con la misma gente, siempre a la misma hora. Eso no se compra en cualquier lado."</div>
+      </div>
+
+      <div class="copy-block copy-good">
+        <div class="copy-label">✅ Versión anuncio TOFU (video / Reel)</div>
+        <div class="copy-text">Hook: Termo en ventana con lluvia de Santiago.<br>"¿Cuánto tiempo lleva sin poder tomar un mate como el de tu casa? No es lo mismo comprarlo en el supermercado. Cosas Nuestras trae el ritual completo. Como siempre fue." → CTA: Ver el kit →</div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="section-title" style="font-size:14px;margin-bottom:12px">Checks 400%Funnel</div>
+      <table>
+        <tr><th>Principio</th><th>Estado</th><th>Hallazgo</th></tr>
+        <tr><td>Escalones microscópicos</td><td><span class="tag tag-warn">WARN</span></td><td>El carrito pide mucho de una — sin quiz, sin guía de kits, sin comparativa</td></tr>
+        <tr><td>Participación crea posesión</td><td><span class="tag tag-fail">FAIL</span></td><td>Sin polls, sin quiz de segmentación, sin UGC activo en ads</td></tr>
+        <tr><td>Descubrimiento &gt; Venta</td><td><span class="tag tag-fail">FAIL</span></td><td>Copy le dice al cliente que te necesita en vez de llevarlo a descubrirlo</td></tr>
+        <tr><td>Temperatura de audiencia</td><td><span class="tag tag-warn">WARN</span></td><td>Fríos a landing de venta directa — sin contenido TOFU diferenciado</td></tr>
+      </table>
+
+      <div class="alert alert-blue" style="margin-top:16px">
+        <div class="alert-title">💡 Gap de ladder — el hueco más caro</div>
+        <p>No existe producto entre $15K–$50K CLP. La ladder tiene solo dos peldaños: entrada (kits) → recompra. Sin mid-ticket ni suscripción, cada cliente que repite paga el mismo CAC que uno nuevo.</p>
+      </div>
+    </div>
+
+    <!-- ==================== TRACKING ==================== -->
+    <div class="tab-panel" id="tab-tracking">
+      <div class="section-title">Capa Tracking — 52/100</div>
+      <div class="section-sub">Pixel Meta · CAPI Stape · GTM · GA4 · Google Ads · Deduplicación</div>
+
+      <div class="alert alert-red">
+        <div class="alert-title">🔴 Cuello de botella crítico — sin tracking limpio, el ROAS y el CPA son ficticios</div>
+        <p>Tracking es el techo de todo. Si los datos que llegan a Meta y Google son sucios, el algoritmo optimiza mal, el CPA sube y el ROAS se distorsiona. Acá está el mayor leverage de la cuenta.</p>
+      </div>
+
+      <div class="divider"></div>
+      <div class="section-title" style="font-size:14px;margin-bottom:12px">Pixeles activos (3 pixeles vivos)</div>
+
+      <table>
+        <tr><th>Pixel ID</th><th>Nombre</th><th>Browser 7d</th><th>Server 7d</th><th>CAPI</th><th>Estado</th></tr>
+        <tr>
+          <td style="font-family:monospace;font-size:11px">764107243964948</td>
+          <td>Cosas Nuestras Actualizado</td>
+          <td>16,358</td>
+          <td class="good">32,752</td>
+          <td><span class="tag tag-pass">✅ ACTIVO</span></td>
+          <td>Principal — OK</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace;font-size:11px">1136961058496048</td>
+          <td>Pixel Google Tag Manager</td>
+          <td class="bad">20,393</td>
+          <td>0</td>
+          <td><span class="tag tag-fail">❌ SIN CAPI</span></td>
+          <td class="bad">🔴 Riesgo doble conteo</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace;font-size:11px">2094289733994064</td>
+          <td>"no es útil"</td>
+          <td>0</td>
+          <td>0</td>
+          <td>—</td>
+          <td class="neutral">💀 Muerto — desactivar</td>
+        </tr>
+      </table>
+
+      <div class="alert alert-red">
+        <div class="alert-title">🔴 Pixel duplicado — doble conteo activo</div>
+        <p>El pixel GTM dispara 20,393 eventos/7d sin CAPI. Si no hay deduplicación configurada, cada compra se está contando dos veces en el Events Manager. Resultado: ROAS y CPA inflados artificialmente.</p>
+      </div>
+
+      <div class="divider"></div>
+      <div class="section-title" style="font-size:14px;margin-bottom:12px">Funnel de eventos (pixel principal · últimos 7d)</div>
+
+      <div class="progress-pill">
+        <span class="pill-label">PageView</span>
+        <div class="progress-bar-wrap"><div class="progress-bar-inner" style="width:100%;background:var(--blue)"></div></div>
+        <span class="pill-val">28,655</span>
+      </div>
+      <div class="progress-pill">
+        <span class="pill-label">ViewContent</span>
+        <div class="progress-bar-wrap"><div class="progress-bar-inner" style="width:37%;background:var(--blue)"></div></div>
+        <span class="pill-val">10,691</span>
+      </div>
+      <div class="progress-pill">
+        <span class="pill-label">AddToCart</span>
+        <div class="progress-bar-wrap"><div class="progress-bar-inner" style="width:2.8%;background:var(--yellow)"></div></div>
+        <span class="pill-val">812</span>
+      </div>
+      <div class="progress-pill">
+        <span class="pill-label">InitiateCheckout</span>
+        <div class="progress-bar-wrap"><div class="progress-bar-inner" style="width:1.2%;background:var(--yellow)"></div></div>
+        <span class="pill-val">348</span>
+      </div>
+      <div class="progress-pill">
+        <span class="pill-label">AddPaymentInfo</span>
+        <div class="progress-bar-wrap"><div class="progress-bar-inner" style="width:0.5%;background:var(--red)"></div></div>
+        <span class="pill-val">152</span>
+      </div>
+      <div class="progress-pill">
+        <span class="pill-label">Purchase</span>
+        <div class="progress-bar-wrap"><div class="progress-bar-inner" style="width:0.24%;background:var(--red)"></div></div>
+        <span class="pill-val">68</span>
+      </div>
+
+      <div class="divider"></div>
+      <div class="section-title" style="font-size:14px;margin-bottom:12px">Checklist Tracking (48 puntos Shopify)</div>
+      <table>
+        <tr><th>ID</th><th>Check</th><th>Estado</th><th>Acción</th></tr>
+        <tr><td>S29</td><td>Pixel Meta activo en todas las páginas</td><td><span class="tag tag-pass">PASS</span></td><td>—</td></tr>
+        <tr><td>S30</td><td>CAPI activo</td><td><span class="tag tag-pass">PASS</span></td><td>Stape · 32K eventos/7d</td></tr>
+        <tr><td>S31</td><td>Deduplicación Pixel+CAPI</td><td><span class="tag tag-warn">WARN</span></td><td>Confirmar event_id en Events Manager</td></tr>
+        <tr><td>S32</td><td>EMQ ≥ 8.0 en Purchase</td><td><span class="tag tag-warn">WARN</span></td><td>Sin número confirmado — CAPI sugiere &gt;7.0</td></tr>
+        <tr><td>S33</td><td>GTM activo</td><td><span class="tag tag-pass">PASS</span></td><td>Verificado</td></tr>
+        <tr><td>S34</td><td>GA4 eventos estándar</td><td><span class="tag tag-pass">PASS</span></td><td>view_item, add_to_cart, purchase activos</td></tr>
+        <tr><td>S35</td><td>Google Ads conversion tracking</td><td><span class="tag tag-pass">PASS</span></td><td>192 conversiones 4 meses</td></tr>
+        <tr><td>S36</td><td>UTMs en campañas</td><td><span class="tag tag-pass">PASS</span></td><td>Meta + Google con UTMs</td></tr>
+        <tr><td>S37</td><td>Catálogo Meta sincronizado (&lt;48h lag)</td><td><span class="tag tag-warn">WARN</span></td><td>Product Set 524086233589361 — lag no verificado</td></tr>
+        <tr><td>S38</td><td>Google Merchant Center sin errores</td><td><span class="tag tag-warn">WARN</span></td><td>Activo vía PMax — sin auditoría directa</td></tr>
+        <tr><td>S40</td><td>Email post-compra activo</td><td><span class="tag tag-fail">FAIL</span></td><td class="bad">Sin secuencia email post-compra — Active Campaign disponible</td></tr>
+      </table>
+
+      <div class="alert alert-blue" style="margin-top:8px">
+        <div class="alert-title">💡 Active Campaign disponible (ayeleninversiones.activehosted.com)</div>
+        <p>El cliente tiene AC con MCP. Conectar a Shopify vía webhook cubre S40 (email post-compra) + abandono carrito avanzado + segmentación RFM. Acción: diseñar 3 flows esta semana.</p>
+      </div>
+    </div>
+
+    <!-- ==================== FUNNEL / SHOPIFY ==================== -->
+    <div class="tab-panel" id="tab-funnel">
+      <div class="section-title">Capa Funnel / Shopify — 76/100</div>
+      <div class="section-sub">Post-audit mayo 2026 · 567 productos · Woodstock LL · Aplicado en vivo</div>
+
+      <div class="metrics-2col">
+        <div class="metric-card">
+          <h4>Shopify Audit Scores (post-audit)</h4>
+          <div class="metric-row"><span class="metric-row-label">Velocidad / Técnico</span><span class="metric-row-val">75/100</span></div>
+          <div class="metric-row"><span class="metric-row-label">Conversión / CRO</span><span class="metric-row-val good">83/100 ↑</span></div>
+          <div class="metric-row"><span class="metric-row-label">Tracking / Integraciones</span><span class="metric-row-val">75/100</span></div>
+          <div class="metric-row"><span class="metric-row-label">Catálogo / SEO</span><span class="metric-row-val good">99/100 ↑</span></div>
+          <div class="metric-row"><span class="metric-row-label">Health Global</span><span class="metric-row-val good">86/100 B+</span></div>
+        </div>
+        <div class="metric-card">
+          <h4>Métricas Shopify verificadas</h4>
+          <div class="metric-row"><span class="metric-row-label">Órdenes 30d</span><span class="metric-row-val">175</span></div>
+          <div class="metric-row"><span class="metric-row-label">Revenue 30d</span><span class="metric-row-val">$5.662.361 CLP</span></div>
+          <div class="metric-row"><span class="metric-row-label">AOV</span><span class="metric-row-val">$32.356 CLP</span></div>
+          <div class="metric-row"><span class="metric-row-label">Productos activos</span><span class="metric-row-val">567</span></div>
+          <div class="metric-row"><span class="metric-row-label">CVR estimado</span><span class="metric-row-val warn">~1.5%</span></div>
+        </div>
+      </div>
+
+      <div class="section-title" style="font-size:14px;margin-bottom:12px">Aplicado en esta sesión ✅</div>
+      <table>
+        <tr><th>Acción</th><th>ID Shopify</th><th>Impacto</th></tr>
+        <tr><td>Bug Revie reviews corregido (classdescription)</td><td>S18</td><td class="good">Reviews visibles en producto</td></tr>
+        <tr><td>Política devoluciones badge en producto</td><td>S26</td><td class="good">Reduce fricción pre-compra</td></tr>
+        <tr><td>4 redirects 301 URLs rotas</td><td>S07</td><td class="good">SEO + UX mejorado</td></tr>
+        <tr><td>Meta descriptions 343/343 productos</td><td>S42</td><td class="good">SEO orgánico</td></tr>
+        <tr><td>SEO titles 343/343 productos</td><td>S41</td><td class="good">CTR orgánico</td></tr>
+        <tr><td>Alt texts 830/1686 imágenes</td><td>S46</td><td class="good">Accesibilidad + SEO</td></tr>
+        <tr><td>Short descriptions (copy identidad) 567/567</td><td>S28</td><td class="good">Conversión colección ↑</td></tr>
+        <tr><td>Badges 27 productos (🔥 Más Vendido, ⏳ Últimas, 💐 Madre)</td><td>—</td><td class="good">Urgencia + señal social</td></tr>
+        <tr><td>Colección Día de la Madre (18 productos)</td><td>—</td><td class="good">Temporada mayo activa</td></tr>
+        <tr><td>Navegación reestructurada (6 items + submenús)</td><td>—</td><td class="good">UX + descubrimiento</td></tr>
+        <tr><td>Home reestructurado (Madre pos.3, testimonios arriba)</td><td>—</td><td class="good">Conversión homepage ↑</td></tr>
+        <tr><td>Home fixes (Best Seller + Lookbook · placeholders)</td><td>—</td><td class="good">Credibilidad visual</td></tr>
+        <tr><td>Cajón carrito — heading + upsell collection</td><td>—</td><td class="good">AOV ↑</td></tr>
+        <tr><td>ofertas-carrito — 12 productos curados</td><td>—</td><td class="good">Cross-sell activado</td></tr>
+      </table>
+
+      <div class="divider"></div>
+      <div class="section-title" style="font-size:14px;margin-bottom:12px">Pendientes críticos (sin implementar)</div>
+      <table>
+        <tr><th>ID</th><th>Check</th><th>Estado</th><th>Cómo resolverlo</th></tr>
+        <tr><td>S20</td><td>Upsell / cross-sell activo</td><td><span class="tag tag-warn">WARN</span></td><td class="bad">Vitals instalado · módulo apagado → activar gratis esta semana</td></tr>
+        <tr><td>S21</td><td>Email capture popup activo</td><td><span class="tag tag-warn">WARN</span></td><td class="bad">Vitals popup → activar + conectar a AC lista</td></tr>
+        <tr><td>S13</td><td>CVR tienda &gt;2%</td><td><span class="tag tag-warn">WARN</span></td><td>Quiz segmentación + mejor UX colección</td></tr>
+        <tr><td>S14</td><td>Abandono carrito &lt;65%</td><td><span class="tag tag-warn">WARN</span></td><td>Verificar en Admin → Analytics</td></tr>
+        <tr><td>S01–S03</td><td>PageSpeed / LCP mobile</td><td><span class="tag tag-warn">WARN</span></td><td>Medir con PageSpeed Insights — Vitals puede afectar</td></tr>
+      </table>
+
+      <div class="alert alert-yellow">
+        <div class="alert-title">⚠ Vitals — $29.99/mes subutilizado</div>
+        <p>Vitals incluye 40+ apps. Solo se usa tracking básico. Activar Popup builder + Upsell esta semana resuelve S20 y S21 sin costo extra de app. Estimado: +0.3–1% CVR captura email, +8% AOV upsell.</p>
+      </div>
+    </div>
+
+    <!-- ==================== CAMPAÑAS ==================== -->
+    <div class="tab-panel" id="tab-campanas">
+      <div class="section-title">Capa Campañas — 58/100</div>
+      <div class="section-sub">Meta Ads + Google Ads · Datos reales vía Graph API + Google Ads API · Mayo 2026</div>
+
+      <!-- META -->
+      <div class="section-title" style="font-size:14px;margin-bottom:4px">Meta Ads</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:14px">Cuenta act_2186557501595791 · Spend 30d: $641,907 CLP · Balance crítico: 25K CLP (&lt;1 día)</div>
+
+      <div class="alert alert-red">
+        <div class="alert-title">🔴 Balance crítico — $25,036 CLP disponibles (~1 día)</div>
+        <p>Si no se carga el método de pago hoy, las campañas activas se detienen. Verificar Billing en Meta Ads → Configuración de pagos.</p>
+      </div>
+
+      <table>
+        <tr><th>Campaña</th><th>Spend</th><th>Compras</th><th>CPA</th><th>ROAS</th><th>Frec.</th><th>Diagnóstico</th></tr>
+        <tr>
+          <td>Andrómeda 2025 [OCT]</td>
+          <td class="money">311,525</td><td>50</td><td>6,230</td><td class="good">7.09×</td><td>3.51</td>
+          <td><span class="tag tag-warn">Fatiga inicial — rotar</span></td>
+        </tr>
+        <tr>
+          <td>Catálogo BOFU / Compradores</td>
+          <td class="money">238,444</td><td>42</td><td>5,677</td><td>4.52×</td><td class="bad">5.24</td>
+          <td><span class="tag tag-fail">Fatiga severa — refrescar</span></td>
+        </tr>
+        <tr>
+          <td>Andrómeda Copia</td>
+          <td class="money">64,135</td><td>5</td><td class="bad">12,827</td><td class="bad">2.78×</td><td>2.32</td>
+          <td><span class="tag tag-pause">🔴 PAUSAR</span></td>
+        </tr>
+        <tr>
+          <td>TOFU Tráfico 2024</td>
+          <td class="money">27,803</td><td class="bad">0</td><td>—</td><td class="bad">0.00×</td><td>1.10</td>
+          <td><span class="tag tag-pause">🔴 PAUSAR — sangría</span></td>
+        </tr>
+        <tr style="background:#0f0f0f">
+          <td><strong>Ahorro pausando ambas</strong></td>
+          <td class="money bad">91,938/30d</td><td colspan="3" style="color:var(--green)">→ CPA blended baja 6,618 → 5,670 CLP</td><td>—</td><td>—</td>
+        </tr>
+      </table>
+
+      <div class="divider"></div>
+      <div class="section-title" style="font-size:14px;margin-bottom:4px">Google Ads</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:14px">AW-766753117 · Spend 4M: $1,705,977 CLP · CPA blended: $7,140 CLP · ROAS blended: 3.65×</div>
+
+      <table>
+        <tr><th>Campaña</th><th>Tipo</th><th>Budget/día</th><th>Spend 4M</th><th>Conv.</th><th>CPA</th><th>ROAS</th></tr>
+        <tr>
+          <td>PMax Shopping CN</td><td>PMax</td><td>20,000</td>
+          <td class="money">1,290,823</td><td>192.57</td><td>6,703</td><td class="good">3.97×</td>
+        </tr>
+        <tr>
+          <td>Cosas Nuestras A/B [exacta]</td><td>Search</td><td>12,000</td>
+          <td class="money">415,155</td><td>46.37</td><td>8,953</td><td class="bad">2.65×</td>
+        </tr>
+      </table>
+
+      <div class="alert alert-red">
+        <div class="alert-title">🔴 Search — Impression Share &lt;10% · 86% perdido por ranking</div>
+        <p>Están pagando para no aparecer. El tCPA configurado (8,945 CLP) es demasiado bajo para ganar subastas. Cuando aparecen, aparecen arriba (66% top impression) — el problema no es el presupuesto, es el bid.</p>
+      </div>
+
+      <div class="section-title" style="font-size:13px;margin-bottom:12px;margin-top:20px">Search Ad Groups — El dato más importante</div>
+      <table>
+        <tr><th>Ad Group</th><th>Spend 4M</th><th>Conv.</th><th>CPA</th><th>ROAS</th><th>Diagnóstico</th></tr>
+        <tr><td class="good">🥇 Marca 11/9</td><td class="money">23,695</td><td>27.00</td><td class="good">878</td><td class="good">26.03×</td><td>Separar en campaña propia — no compartir budget</td></tr>
+        <tr><td>Porta Termos</td><td class="money">59,846</td><td>4.05</td><td>14,789</td><td class="bad">1.80×</td><td>Marginal — revisar keywords</td></tr>
+        <tr><td>Yerba mate</td><td class="money">120,454</td><td>7.00</td><td>17,208</td><td class="bad">1.33×</td><td>Bajo break-even — reducir bid</td></tr>
+        <tr><td>Mates</td><td class="money">102,924</td><td>4.32</td><td>23,807</td><td class="bad">1.25×</td><td>Bajo break-even — reducir bid</td></tr>
+        <tr><td class="bad">Bombilla Mate</td><td class="money">88,111</td><td>3.00</td><td class="bad">29,370</td><td class="bad">0.84×</td><td><span class="tag tag-pause">🔴 PIERDE DINERO — pausar</span></td></tr>
+        <tr><td class="bad">Termos</td><td class="money">20,124</td><td>1.00</td><td class="bad">20,124</td><td class="bad">0.53×</td><td><span class="tag tag-pause">🔴 PIERDE DINERO — pausar</span></td></tr>
+      </table>
+    </div>
+
+    <!-- ==================== CREATIVO ==================== -->
+    <div class="tab-panel" id="tab-creativo">
+      <div class="section-title">Capa Creativo — 74/100</div>
+      <div class="section-sub">Meta Ads + Google PMax · Formatos · Fatiga · Copy framework</div>
+
+      <div class="metrics-2col">
+        <div class="metric-card">
+          <h4>Creative Health</h4>
+          <div class="metric-row"><span class="metric-row-label">Meta Ads</span><span class="metric-row-val warn">58/100</span></div>
+          <div class="metric-row"><span class="metric-row-label">Google PMax</span><span class="metric-row-val bad">42/100</span></div>
+          <div class="metric-row"><span class="metric-row-label">Formatos activos Meta</span><span class="metric-row-val bad">3 de 6 posibles</span></div>
+          <div class="metric-row"><span class="metric-row-label">UGC activo</span><span class="metric-row-val bad">❌ Ninguno</span></div>
+        </div>
+        <div class="metric-card">
+          <h4>Ad estrella (sin invertir suficiente)</h4>
+          <div class="metric-row"><span class="metric-row-label">Portatermo Producto (foto)</span><span class="metric-row-val good">ROAS 12.35×</span></div>
+          <div class="metric-row"><span class="metric-row-label">Estado</span><span class="metric-row-val bad">Sub-expuesto por algoritmo</span></div>
+          <div class="metric-row"><span class="metric-row-label">Acción</span><span class="metric-row-val">Subir budget / nuevas variantes</span></div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="section-title" style="font-size:14px;margin-bottom:12px">Señales de fatiga Meta</div>
+      <table>
+        <tr><th>Ad</th><th>Frecuencia</th><th>Umbral</th><th>Diagnóstico</th><th>Acción</th></tr>
+        <tr>
+          <td>Catálogo BOFU</td><td class="bad">5.24</td><td>&gt;5.0 = FAIL</td>
+          <td><span class="tag tag-fail">Fatiga severa</span></td>
+          <td>Refrescar audiencia + ampliar lookalike 3%→5%</td>
+        </tr>
+        <tr>
+          <td>Andrómeda 2025</td><td class="warn">3.51</td><td>&gt;4.0 = WARN</td>
+          <td><span class="tag tag-warn">Alerta — 2-3 semanas</span></td>
+          <td>Producir 3 variantes del patrón ganador</td>
+        </tr>
+        <tr>
+          <td>Portatermo Foto</td><td>N/D</td><td>—</td>
+          <td><span class="tag tag-pass">ROAS 12.35× sin escalar</span></td>
+          <td>Aumentar budget · producir 2 variantes</td>
+        </tr>
+      </table>
+
+      <div class="divider"></div>
+      <div class="section-title" style="font-size:14px;margin-bottom:12px">Brecha de formatos Meta</div>
+      <table>
+        <tr><th>Formato</th><th>Estado</th><th>Prioridad</th></tr>
+        <tr><td>Video Feed</td><td><span class="tag tag-pass">✅ Activo</span></td><td>Producir 3 variantes del patrón</td></tr>
+        <tr><td>Foto estática</td><td><span class="tag tag-pass">✅ Activo</span></td><td>Producir 2 variantes — sub-expuesto</td></tr>
+        <tr><td>Catálogo dinámico</td><td><span class="tag tag-pass">✅ Activo</span></td><td>Refrescar audiencia base</td></tr>
+        <tr><td>Carousel</td><td><span class="tag tag-fail">❌ Sin testear</span></td><td class="bad">Alta — Kit comparativo en 5 slides</td></tr>
+        <tr><td>Collection Ad</td><td><span class="tag tag-fail">❌ Sin testear</span></td><td class="bad">Alta — Guía de Regalos → colección</td></tr>
+        <tr><td>Reels nativo 9:16</td><td><span class="tag tag-warn">⚠ Sin confirmar</span></td><td>Crítica — Diablo Portatermo debe existir en 9:16</td></tr>
+        <tr><td>UGC / Testimonial</td><td><span class="tag tag-fail">❌ Sin producir</span></td><td class="bad">Alta — rituales de mate son filmables</td></tr>
+      </table>
+
+      <div class="alert alert-blue" style="margin-top:8px">
+        <div class="alert-title">💡 Oportunidad UGC — rituales de mate</div>
+        <p>La categoría tiene rituales naturalmente filmables: la tarde, el termo en el trabajo, el mate en el balcón con lluvia. 3 videos UGC de clientes con el hook "¿Cuánto tiempo sin tomar un mate como el de tu casa?" pueden desbloquear un ángulo TOFU que hoy no existe.</p>
+      </div>
+    </div>
+
+    <!-- ==================== ACCIONES ==================== -->
+    <div class="tab-panel" id="tab-acciones">
+      <div class="section-title">Plan de Acción — Mayo 2026</div>
+      <div class="section-sub">Ordenado por impacto en revenue. Click para marcar como completado.</div>
+
+      <div style="font-size:12px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px">🔴 Urgente — Esta semana</div>
+      <div class="action-grid" style="margin-bottom:24px">
+
+        <div class="action-card" onclick="this.classList.toggle('done')">
+          <div class="action-num num-red">1</div>
+          <div class="action-body">
+            <div class="action-title">Cargar saldo Meta Ads — balance crítico</div>
+            <div class="action-desc">Balance actual: $25,036 CLP ≈ 1 día. Si no se carga, las campañas activas (Andrómeda + Catálogo BOFU) se detienen. Meta Ads → Configuración → Pagos.</div>
+            <div class="action-meta"><span class="chip chip-acc">Hoy</span><span class="chip">Meta Billing</span><span class="chip">5 min</span></div>
+          </div>
+        </div>
+
+        <div class="action-card" onclick="this.classList.toggle('done')">
+          <div class="action-num num-red">2</div>
+          <div class="action-body">
+            <div class="action-title">Pausar Andrómeda Copia + TOFU 2024</div>
+            <div class="action-desc">Andrómeda Copia: CPA $12,827, ROAS 2.78× (5 compras/64K). TOFU 2024: $27,803 gastado, 0 compras. Pausar ambas libera $91,938 CLP/mes → CPA blended baja de 6,618 → 5,670 CLP sin tocar más nada.</div>
+            <div class="action-meta"><span class="chip chip-acc">Hoy</span><span class="chip">Meta Ads Manager</span><span class="chip">10 min</span></div>
+          </div>
+        </div>
+
+        <div class="action-card" onclick="this.classList.toggle('done')">
+          <div class="action-num num-red">3</div>
+          <div class="action-body">
+            <div class="action-title">Confirmar deduplicación Pixel+CAPI en Events Manager</div>
+            <div class="action-desc">Hay 2 píxeles activos (764107243964948 principal + 1136961058496048 GTM). Si no hay deduplicación, cada Purchase se cuenta doble → ROAS y CPA ficticios. Meta Events Manager → Detalles del dataset → Deduplicación.</div>
+            <div class="action-meta"><span class="chip chip-acc">Esta semana</span><span class="chip">Events Manager</span><span class="chip">30 min</span></div>
+          </div>
+        </div>
+
+        <div class="action-card" onclick="this.classList.toggle('done')">
+          <div class="action-num num-red">4</div>
+          <div class="action-body">
+            <div class="action-title">Pausar Ad Groups que pierden dinero en Search</div>
+            <div class="action-desc">Bombilla Mate: ROAS 0.84× (-$14K en 4M). Termos: ROAS 0.53× (-$10K en 4M). Pausar ambos + separar "Marca 11/9" (ROAS 26×) a campaña propia con budget exclusivo.</div>
+            <div class="action-meta"><span class="chip chip-acc">Esta semana</span><span class="chip">Google Ads</span><span class="chip">20 min</span></div>
+          </div>
+        </div>
+
+        <div class="action-card" onclick="this.classList.toggle('done')">
+          <div class="action-num num-red">5</div>
+          <div class="action-body">
+            <div class="action-title">Activar Popup email capture en Vitals</div>
+            <div class="action-desc">Vitals ya está pagado ($29.99/mes). El módulo popup está apagado. Activar: timed 20s + exit intent. Conectar lista a Active Campaign. Estimado: 0.3–2% CVR de captura de emails gratis.</div>
+            <div class="action-meta"><span class="chip chip-acc">Esta semana</span><span class="chip">Vitals Admin</span><span class="chip">1h</span><span class="chip">$0 costo extra</span></div>
+          </div>
+        </div>
+
+        <div class="action-card" onclick="this.classList.toggle('done')">
+          <div class="action-num num-red">6</div>
+          <div class="action-body">
+            <div class="action-title">Conectar Active Campaign × Shopify — flow abandono carrito</div>
+            <div class="action-desc">Cliente tiene AC en ayeleninversiones.activehosted.com. Conectar vía webhook Shopify + Make. Diseñar flow: carrito abandonado (1h + 24h) + post-compra (D7 + D30). Estimado: +15–25% revenue de email.</div>
+            <div class="action-meta"><span class="chip chip-acc">Esta semana</span><span class="chip">Active Campaign + Make</span><span class="chip">2–4h setup</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="font-size:12px;font-weight:700;color:var(--yellow);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px">🟡 Alta prioridad — Próximas 2 semanas</div>
+      <div class="action-grid" style="margin-bottom:24px">
+
+        <div class="action-card" onclick="this.classList.toggle('done')">
+          <div class="action-num num-yellow">7</div>
+          <div class="action-body">
+            <div class="action-title">Activar Upsell / Cross-sell en Vitals</div>
+            <div class="action-desc">Módulo incluido en Vitals sin costo extra. Configurar: en página de producto + en carrito. Productos sugeridos: bombilla → yerba → kit completo. Estimado: +8% AOV.</div>
+            <div class="action-meta"><span class="chip">Vitals Admin</span><span class="chip">1h</span><span class="chip">$0 costo extra</span></div>
+          </div>
+        </div>
+
+        <div class="action-card" onclick="this.classList.toggle('done')">
+          <div class="action-num num-yellow">8</div>
+          <div class="action-body">
+            <div class="action-title">Refrescar Catálogo BOFU — frecuencia 5.24</div>
+            <div class="action-desc">Audiencia saturada. Ampliar lookalike de 3% → 5% o cambiar a Advantage+ Audience. Refrescar creativos del catálogo con imágenes de temporada (Día de la Madre). CTR debería subir de 2.39% → 3%+.</div>
+            <div class="action-meta"><span class="chip">Meta Ads Manager</span><span class="chip">1–2h</span></div>
+          </div>
+        </div>
+
+        <div class="action-card" onclick="this.classList.toggle('done')">
+          <div class="action-num num-yellow">9</div>
+          <div class="action-body">
+            <div class="action-title">Producir 3 variantes Andrómeda (patrón ganador)</div>
+            <div class="action-desc">Frecuencia 3.51 — 2-3 semanas antes de fatiga. Usar el mismo patrón del video ganador (Diablo Portatermo) con 3 ángulos: expat / regalador / ritual cotidiano. Versión en 9:16 para Reels.</div>
+            <div class="action-meta"><span class="chip">Producción creativa</span><span class="chip">1 semana</span></div>
+          </div>
+        </div>
+
+        <div class="action-card" onclick="this.classList.toggle('done')">
+          <div class="action-num num-yellow">10</div>
+          <div class="action-body">
+            <div class="action-title">PMax → agregar tROAS 4.0× (hoy sin objetivo)</div>
+            <div class="action-desc">PMax corre en "Maximizar conversiones" sin tROAS. Con 192 conversiones en 4M ya tiene datos suficientes para agregar un target. tROAS 4.0× inicial, ajustar en 2 semanas. Cuidado: puede bajar volumen al principio.</div>
+            <div class="action-meta"><span class="chip">Google Ads</span><span class="chip">30 min</span><span class="chip">Esperar 2 semanas de datos</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="font-size:12px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px">🔵 Sprint siguiente — Junio</div>
+      <div class="action-grid">
+        <div class="action-card" onclick="this.classList.toggle('done')">
+          <div class="action-num num-blue">11</div>
+          <div class="action-body">
+            <div class="action-title">Definir producto mid-ticket ($25K–$50K CLP)</div>
+            <div class="action-desc">No existe ningún producto entre los kits de entrada (~$15K) y un hipotético producto premium. El ladder tiene un hueco donde se pierde retention. Opciones: Kit Premium Experiencia Completa, Suscripción mensual yerba, Box regalo curada.</div>
+          </div>
+        </div>
+        <div class="action-card" onclick="this.classList.toggle('done')">
+          <div class="action-num num-blue">12</div>
+          <div class="action-body">
+            <div class="action-title">Testear 3 videos UGC de clientes</div>
+            <div class="action-desc">Solicitar a clientes actuales (Revie + WhatsApp) videos de 15–30s con el mate en el trabajo, en el balcón, en el asado. Hook: "¿Cuánto tiempo sin tomar un mate como el de tu casa?" Testear como Spark Ads.</div>
+          </div>
+        </div>
+        <div class="action-card" onclick="this.classList.toggle('done')">
+          <div class="action-num num-blue">13</div>
+          <div class="action-body">
+            <div class="action-title">Quiz de segmentación en homepage</div>
+            <div class="action-desc">3 preguntas → kit recomendado. "¿Para quién es?" (para mí / para regalar) → "¿Qué usás para tomar mate?" → kit personalizado. Integrar con Vitals o app de quiz. Aumenta CVR al reducir parálisis de decisión.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== HITOS ==================== -->
+    <div class="tab-panel" id="tab-hitos">
+      <div class="section-title">Hitos Mayo 2026</div>
+      <div class="section-sub">Fechas críticas para Cosas Nuestras este mes</div>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot tl-dot-red"></div>
+          <div class="tl-date">7 Mayo · CRÍTICA</div>
+          <div class="tl-title">Conectar Active Campaign × Shopify</div>
+          <div class="tl-sub">Webhook Shopify + Make → diseñar flow abandono carrito + post-compra. AC disponible en ayeleninversiones.activehosted.com.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot tl-dot-red"></div>
+          <div class="tl-date">8 Mayo · ALTA</div>
+          <div class="tl-title">Activar popup email capture Vitals → lista AC</div>
+          <div class="tl-sub">Vitals ya pagado. Popup: timed 20s + exit intent. Conectar a lista de Active Campaign.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot tl-dot-red"></div>
+          <div class="tl-date">10 Mayo · CRÍTICA</div>
+          <div class="tl-title">Confirmar deduplicación Pixel+CAPI → EMQ &gt;7.0</div>
+          <div class="tl-sub">Events Manager → verificar deduplicación. Desactivar pixel GTM duplicado o configurar deduplicación event_id.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot tl-dot-red"></div>
+          <div class="tl-date">11 Mayo · ALTA — Día de la Madre</div>
+          <div class="tl-title">Cierre temporada Día de la Madre</div>
+          <div class="tl-sub">Reporte ventas + AOV por producto. Colección dia-de-la-madre-2026 activa con 18 productos. Sección en home pos. 3.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot tl-dot-yellow"></div>
+          <div class="tl-date">14 Mayo · ALTA</div>
+          <div class="tl-title">Activar upsell/cross-sell en Vitals</div>
+          <div class="tl-sub">Módulo incluido sin costo. Configurar en producto + carrito. Estimado: +8% AOV.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot tl-dot-yellow"></div>
+          <div class="tl-date">17 Mayo · ALTA</div>
+          <div class="tl-title">Activar email post-compra en Active Campaign</div>
+          <div class="tl-sub">3 emails: confirmación ritual (D1) → "cómo usar tu mate" (D7) → recompra (D30). Copy con voz de marca Cosas Nuestras.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot tl-dot-yellow"></div>
+          <div class="tl-date">24 Mayo · MEDIA</div>
+          <div class="tl-title">Auditoría directa Meta + Google — spend real a reporting</div>
+          <div class="tl-sub">Conectar spend Meta real a dashboard. Confirmar número EMQ definitivo.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot tl-dot-yellow"></div>
+          <div class="tl-date">31 Mayo · MEDIA</div>
+          <div class="tl-title">Definir mid-ticket + estructura PMax junio</div>
+          <div class="tl-sub">Propuesta de producto $25K–$50K CLP. PMax: agregar tROAS 4.0× si hay suficiente historial.</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /content -->
+</div><!-- /main -->
+
+<div class="footer">
+  <span>⬡ Dardock Agency OS · Superaudit Cosas Nuestras · Mayo 2026</span>
+  <span>Score Global: 71/100 · Shopify: 86/100 B+ · 567 productos · auditor: Claude Sonnet 4.6</span>
+</div>
+
+<script>
+function switchTab(tabId, clickedEl) {
+  // Hide all panels
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('tab-' + tabId).classList.add('active');
+
+  // Update sidebar nav items
+  document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+  // Find nav item with matching data-tab
+  document.querySelectorAll('[data-tab="' + tabId + '"]').forEach(el => el.classList.add('active'));
+
+  // Update capa bars if click came from them
+  if (clickedEl && clickedEl.classList.contains('capa-bar')) {
+    document.querySelectorAll('.capa-bar').forEach(b => b.classList.remove('active'));
+    clickedEl.classList.add('active');
+  }
+}
+
+// Sync capa bars with tab switches from sidebar
+document.querySelectorAll('.nav-item[data-tab]').forEach(item => {
+  item.addEventListener('click', function() {
+    const tab = this.dataset.tab;
+    const capaMap = {oferta:0, tracking:1, funnel:2, campanas:3, creativo:4};
+    const bars = document.querySelectorAll('.capa-bar');
+    bars.forEach(b => b.classList.remove('active'));
+    if (capaMap[tab] !== undefined) bars[capaMap[tab]].classList.add('active');
+  });
+});
+</script>
+</body>
+</html>

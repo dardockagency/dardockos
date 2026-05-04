@@ -1,0 +1,124 @@
+{
+  "_schema_version": "1.0",
+  "_last_updated": "2026-05-03T20:40:00-04:00",
+
+  "cliente": "Cosas Nuestras",
+  "tipo": "ecommerce",
+  "estado": "activo",
+
+  "problema_cliente": "Expats rioplatenses en Chile no encuentran sus productos culturales de calidad (mate, yerba, kiosco). La marca vende pertenencia y ritual, no solo el producto físico.",
+  "audiencia": "Expats argentinos y uruguayos en Chile + chilenos curiosos de la cultura rioplatense + regaladores. Segmentos más rentables: regalo + brand (female 55-64, male 65+).",
+
+  "sitio_web": "cosasnuestras.cl (Shopify · tema Woodstock LL)",
+  "rubro": "Ecommerce · productos culturales rioplatenses · mate, yerba, kiosco, regalo",
+
+  "contactos": {
+    "comercial": "Por confirmar",
+    "responsable_dardock": "Matías Cáceres",
+    "email_principal": "Por confirmar",
+    "whatsapp": "Por confirmar"
+  },
+
+  "productos": [
+    { "nombre": "Kits regalo (mate + accesorios)", "precio": "$12.000+ CLP", "objetivo": "venta — high intent, regalo" },
+    { "nombre": "Yerba + accesorios entrada", "precio": "$8.000–15.000 CLP", "objetivo": "venta — volumen" },
+    { "nombre": "Colección Día de la Madre", "precio": "$15.000–30.000 CLP", "objetivo": "venta — estacional activa" },
+    { "nombre": "Mid-ticket / suscripción", "precio": "Por definir", "objetivo": "retención — NO EXISTE AÚN" }
+  ],
+
+  "metricas": {
+    "cpa_target": "Por definir — datos Meta aún sin conectar a cuenta real",
+    "roas_target": "3.0x objetivo (ficticio actual: 1.8x — Pixel desconectado hasta ahora)",
+    "crm_target": "EMQ > 7.0 (actual: 4.2 — CAPI Stape activo, deduplicación pendiente)",
+    "orders_30d": 175,
+    "revenue_30d_clp": 5662361,
+    "aov_clp": 32356,
+    "conversiones_google_4m": 192,
+    "products_active_shopify": 567,
+    "shopify_health_score": 86
+  },
+
+  "plataformas": {
+    "meta_ads": true,
+    "google_ads": true,
+    "tiktok_ads": false,
+    "linkedin_ads": false,
+    "shopify": true,
+    "ghl": false,
+    "mercado_libre": false,
+    "amazon": false,
+    "manychat": false
+  },
+
+  "accounts": {
+    "meta_pixel_id": "764107243964948",
+    "capi_provider": "Stape — 32.000 eventos/7d activos",
+    "shopify_theme": "Woodstock — Versión LL",
+    "shopify_products": 567,
+    "active_campaign_url": "ayeleninversiones.activehosted.com",
+    "active_campaign_mcp": "disponible — integración Shopify pendiente de configurar"
+  },
+
+  "infraestructura_critica": {
+    "tracking_status": "parcial — CAPI Stape activo (32K eventos/7d) · deduplicación Pixel+CAPI pendiente · spend Meta no disponible aún",
+    "meta_pixel": "764107243964948 — activo · sincronización catálogo sin verificar",
+    "capi_status": "activo vía Stape · deduplicación sin confirmar",
+    "emq_actual": "4.2 — objetivo > 7.0",
+    "google_ads_status": "PMax activo · 192 conversiones 4 meses · sin auditoría directa",
+    "email_post_compra": "no configurado — S40 FAIL · Active Campaign disponible para conectar",
+    "upsell_cross_sell": "Vitals instalado sin activar — S20 WARNING",
+    "email_capture_popup": "Vitals popup sin activar — S21 WARNING",
+    "mid_ticket": "no existe — gap crítico en el ladder de valor",
+    "home_shopify": "reestructurado mayo-2026 — Día de la Madre pos.3, testimonios arriba, placeholders eliminados (Best Seller + Lookbook hotspot 1)",
+    "short_descriptions": "567/567 productos con copy de identidad — S28 PASS",
+    "badges": "27 productos con badges activos — Más Vendido, Últimas unidades, Día de la Madre",
+    "navegacion": "reestructurada a 6 items limpios con submenús lógicos"
+  },
+
+  "score_capas": {
+    "fecha_ultimo_audit": "2026-05-03",
+    "global": 71,
+    "oferta": 72,
+    "tracking": 52,
+    "funnel": 76,
+    "campañas": 58,
+    "creativo": 74,
+    "status": "warning",
+    "nota": "Shopify subió a 86 post-audit (short descriptions 567/567, home reestructurado, Día de la Madre activo, badges, nav limpia). Tracking sigue siendo el techo — sin spend Meta conectado y deduplicación CAPI pendiente. Email automático y Active Campaign son la palanca más urgente de esta semana."
+  },
+
+  "oportunidades_clave": {
+    "dia_de_la_madre": "Colección activa (18 productos, handle: dia-de-la-madre-2026). Ventana hasta mayo 11. Alto AOV regalo. Home ya prioriza esta colección.",
+    "active_campaign_flows": "AC disponible (ayeleninversiones.activehosted.com). Conectar a Shopify vía webhook/Make: abandono carrito + post-compra + welcome. Estimado: +15–25% revenue email.",
+    "email_flows": "Post-compra y abandono carrito sin configurar (S22 FAIL, S40 FAIL) — dinero sobre la mesa cada semana",
+    "mid_ticket": "No existe producto entre $15K–$50K CLP — brecha en el ladder de valor",
+    "upsell_vitals": "Vitals instalado · upsell apagado — activar sin costo adicional esta semana",
+    "emq_deduplication": "CAPI Stape activo — confirmar deduplicación sube EMQ 4.2 → >7.0",
+    "popup_email_capture": "Vitals popup pendiente de activar — alimenta lista AC automáticamente"
+  },
+
+  "shopify_audit_scores": {
+    "fecha": "2026-04-30",
+    "velocidad_tecnico": 75,
+    "conversion_cro": 83,
+    "tracking": 75,
+    "catalogo_seo": 99,
+    "health_global": 86,
+    "grade": "B+"
+  },
+
+  "clickup_folder_id": "901315752951",
+  "notion_page_id": "Por confirmar",
+  "drive_folder": "Por confirmar",
+
+  "proximos_hitos": [
+    { "fecha": "2026-05-07", "evento": "Conectar Active Campaign × Shopify (webhook/Make) — diseñar flow abandono carrito", "prioridad": "CRITICA" },
+    { "fecha": "2026-05-08", "evento": "Activar popup email capture en Vitals → lista AC", "prioridad": "ALTA" },
+    { "fecha": "2026-05-10", "evento": "Confirmar deduplicación Pixel+CAPI → EMQ > 7.0", "prioridad": "CRITICA" },
+    { "fecha": "2026-05-11", "evento": "Cierre temporada Día de la Madre — reporte ventas + AOV por producto", "prioridad": "ALTA" },
+    { "fecha": "2026-05-14", "evento": "Activar upsell/cross-sell en Vitals (ya instalado, sin costo extra)", "prioridad": "ALTA" },
+    { "fecha": "2026-05-17", "evento": "Activar email post-compra en Active Campaign (3 emails: confirmación → ritual → recompra)", "prioridad": "ALTA" },
+    { "fecha": "2026-05-24", "evento": "Auditoría directa Meta + Google — conectar spend real a reporting", "prioridad": "MEDIA" },
+    { "fecha": "2026-05-31", "evento": "Definir producto mid-ticket ($25K–$50K CLP) + estructura PMAX junio", "prioridad": "MEDIA" }
+  ]
+}

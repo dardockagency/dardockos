@@ -1,0 +1,25 @@
+# ----------------------------------------
+# Events: Event name
+# Account: Cuenta de Google Ads
+# Property: www.cosasnuestras.cl - GA4
+# ----------------------------------------
+# 
+# All Users
+# Start date: 20260101
+# End date: 20260501
+Event name,Event count,Total users,Event count per active user,Total revenue
+page_view,148068,51794,2.8594492294619753,0
+user_engagement,64286,16526,3.9006128268915723,0
+view_item,37460,18973,1.974800991090727,0
+scroll,24573,16994,1.4593775982895831,0
+form_start,16890,4200,4.021428571428571,0
+add_to_cart,3823,1710,2.2356725146198833,0
+begin_checkout,1822,1109,1.644404332129964,0
+session_start,1699,1416,1.3089368258859784,0
+view_search_results,1636,966,1.6935817805383022,0
+form_submit,1622,1007,1.6107249255213505,0
+search,1517,878,1.7277904328018223,0
+add_payment_info,864,554,1.55956678700361,0
+first_visit,371,371,1,0
+purchase,356,337,1.0595238095238095,10875747.003896
+click,321,269,1.1933085501858736,0

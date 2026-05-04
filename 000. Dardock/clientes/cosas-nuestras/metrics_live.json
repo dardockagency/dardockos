@@ -1,0 +1,82 @@
+{
+  "updated_at": "2026-05-03",
+  "period": "2026-04",
+  "source": "audit-api",
+  "platforms": {
+    "meta": {
+      "spend": null,
+      "impressions": null,
+      "clicks": null,
+      "ctr": null,
+      "cpm": null,
+      "cpa": null,
+      "roas": null,
+      "campaigns_active": null,
+      "notes": "Pixel activo (ID 764107243964948). CAPI vía Stape: 32000 eventos/7d. Cuenta exacta pendiente de conectar."
+    },
+    "google": {
+      "spend": null,
+      "impressions": null,
+      "clicks": null,
+      "ctr": null,
+      "cpa": null,
+      "roas": null,
+      "campaigns_active": null,
+      "conversions_4m": 192,
+      "notes": "GTM + GA4 activos. PMax activo. 192 conversiones en 4 meses verificadas. Google Merchant Center activo (sin auditoría directa)."
+    },
+    "shopify": {
+      "orders_30d": 175,
+      "revenue_30d_clp": 5662361,
+      "aov_clp": 32356,
+      "products_active": 443,
+      "cvr_estimated": 1.5,
+      "cart_abandonment": null,
+      "top_product_units": "Dulce Batata Vainilla 500grs (126u) | Bizcochos Don Satur (124u) | Mate Sabio Calabaza (66u)",
+      "theme": "Woodstock — Versión LL",
+      "health_score": 82
+    }
+  },
+  "funnel": {
+    "impressions": null,
+    "clicks": null,
+    "sessions": null,
+    "add_to_cart": null,
+    "checkout": null,
+    "sales": 175
+  },
+  "health": {
+    "score": 82,
+    "grade": "B",
+    "status": "warning",
+    "alerts": [
+      "Email post-compra no configurado (S40 FAIL)",
+      "Upsell/cross-sell sin activar en Vitals (S20 WARNING)",
+      "Email capture popup sin activar en Vitals (S21 WARNING)",
+      "Catálogo Meta — lag de sincronización no verificado (S37 WARNING)",
+      "Deduplicación Pixel+CAPI pendiente de confirmar (S31 WARNING)"
+    ],
+    "fixed_this_session": [
+      "S18 — Bug Revie reviews corregido (classdescription)",
+      "S26 — Política devoluciones visible en producto (badge snippet)",
+      "S07 — 4 redirects 301 creados (URLs rotas)",
+      "S42 — Meta descriptions 343/343 productos",
+      "S41 — SEO titles 343/343 productos",
+      "S46 — Alt texts 830/1686 imágenes (49% faltaban)",
+      "S28 — Short descriptions (copy de identidad) 567/567 productos",
+      "Badges 27 productos (Más Vendido, Últimas unidades, Día de la Madre)",
+      "Colección Día de la Madre creada (18 productos) — handle dia-de-la-madre-2026",
+      "Navegación reestructurada (6 items, menú limpio con submenús lógicos)",
+      "Home reestructurado — sección Día de la Madre en posición 3, testimonios subidos",
+      "Home fixes — Best Seller y Lookbook hotspot corregidos (placeholders eliminados)",
+      "Cajón de carrito — heading y upsell collection actualizados (💐 Perfecto para regalar)",
+      "ofertas-carrito collection — 12 productos curados de alto ticket / impulso"
+    ]
+  },
+  "shopify_audit": {
+    "velocidad_tecnico": { "score": 75, "pass": 8, "warning": 4, "fail": 0 },
+    "conversion_cro":    { "score": 79, "pass": 10,"warning": 4, "fail": 1 },
+    "tracking":          { "score": 75, "pass": 7, "warning": 4, "fail": 1 },
+    "catalogo_seo":      { "score": 95, "pass": 7, "warning": 1, "fail": 0 }
+  }
+}

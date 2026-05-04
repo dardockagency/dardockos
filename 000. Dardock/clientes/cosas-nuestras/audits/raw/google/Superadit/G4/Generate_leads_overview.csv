@@ -1,0 +1,1167 @@
+# ----------------------------------------
+# Generate leads overview
+# Account: Genera Industrial
+# Property: Genera Industrial GA4 - Dardock
+# ----------------------------------------
+#  
+# Start date: 20260101
+# End date: 20260501
+Nth day,New users
+0000,0
+0001,0
+0002,0
+0003,0
+0004,0
+0005,0
+0006,0
+0007,0
+0008,0
+0009,0
+0010,0
+0011,0
+0012,0
+0013,0
+0014,0
+0015,0
+0016,0
+0017,0
+0018,0
+0019,0
+0020,0
+0021,0
+0022,0
+0023,0
+0024,0
+0025,0
+0026,0
+0027,0
+0028,0
+0029,0
+0030,0
+0031,0
+0032,0
+0033,0
+0034,0
+0035,0
+0036,0
+0037,0
+0038,0
+0039,0
+0040,0
+0041,0
+0042,0
+0043,0
+0044,0
+0045,0
+0046,0
+0047,0
+0048,0
+0049,0
+0050,0
+0051,0
+0052,0
+0053,0
+0054,0
+0055,0
+0056,0
+0057,0
+0058,0
+0059,0
+0060,0
+0061,0
+0062,0
+0063,0
+0064,0
+0065,0
+0066,0
+0067,0
+0068,0
+0069,0
+0070,0
+0071,0
+0072,0
+0073,0
+0074,0
+0075,0
+0076,0
+0077,0
+0078,0
+0079,0
+0080,0
+0081,0
+0082,0
+0083,0
+0084,0
+0085,0
+0086,0
+0087,0
+0088,0
+0089,0
+0090,0
+0091,0
+0092,0
+0093,0
+0094,0
+0095,0
+0096,0
+0097,0
+0098,0
+0099,0
+0100,0
+0101,0
+0102,57
+0103,66
+0104,92
+0105,122
+0106,68
+0107,77
+0108,216
+0109,143
+0110,170
+0111,181
+0112,177
+0113,178
+0114,126
+0115,139
+0116,177
+0117,158
+0118,175
+0119,130
+0120,81
+
+# Start date: 20260101
+# End date: 20260501
+Nth day,Returning users
+0000,0
+0001,0
+0002,0
+0003,0
+0004,0
+0005,0
+0006,0
+0007,0
+0008,0
+0009,0
+0010,0
+0011,0
+0012,0
+0013,0
+0014,0
+0015,0
+0016,0
+0017,0
+0018,0
+0019,0
+0020,0
+0021,0
+0022,0
+0023,0
+0024,0
+0025,0
+0026,0
+0027,0
+0028,0
+0029,0
+0030,0
+0031,0
+0032,0
+0033,0
+0034,0
+0035,0
+0036,0
+0037,0
+0038,0
+0039,0
+0040,0
+0041,0
+0042,0
+0043,0
+0044,0
+0045,0
+0046,0
+0047,0
+0048,0
+0049,0
+0050,0
+0051,0
+0052,0
+0053,0
+0054,0
+0055,0
+0056,0
+0057,0
+0058,0
+0059,0
+0060,0
+0061,0
+0062,0
+0063,0
+0064,0
+0065,0
+0066,0
+0067,0
+0068,0
+0069,0
+0070,0
+0071,0
+0072,0
+0073,0
+0074,0
+0075,0
+0076,0
+0077,0
+0078,0
+0079,0
+0080,0
+0081,0
+0082,0
+0083,0
+0084,0
+0085,0
+0086,0
+0087,0
+0088,0
+0089,0
+0090,0
+0091,0
+0092,0
+0093,0
+0094,0
+0095,0
+0096,0
+0097,0
+0098,0
+0099,0
+0100,0
+0101,0
+0102,1
+0103,3
+0104,17
+0105,14
+0106,7
+0107,5
+0108,9
+0109,12
+0110,22
+0111,21
+0112,15
+0113,20
+0114,7
+0115,8
+0116,30
+0117,13
+0118,22
+0119,19
+0120,1
+
+# Start date: 20260101
+# End date: 20260501
+Nth day,Qualified leads
+0000,0
+0001,0
+0002,0
+0003,0
+0004,0
+0005,0
+0006,0
+0007,0
+0008,0
+0009,0
+0010,0
+0011,0
+0012,0
+0013,0
+0014,0
+0015,0
+0016,0
+0017,0
+0018,0
+0019,0
+0020,0
+0021,0
+0022,0
+0023,0
+0024,0
+0025,0
+0026,0
+0027,0
+0028,0
+0029,0
+0030,0
+0031,0
+0032,0
+0033,0
+0034,0
+0035,0
+0036,0
+0037,0
+0038,0
+0039,0
+0040,0
+0041,0
+0042,0
+0043,0
+0044,0
+0045,0
+0046,0
+0047,0
+0048,0
+0049,0
+0050,0
+0051,0
+0052,0
+0053,0
+0054,0
+0055,0
+0056,0
+0057,0
+0058,0
+0059,0
+0060,0
+0061,0
+0062,0
+0063,0
+0064,0
+0065,0
+0066,0
+0067,0
+0068,0
+0069,0
+0070,0
+0071,0
+0072,0
+0073,0
+0074,0
+0075,0
+0076,0
+0077,0
+0078,0
+0079,0
+0080,0
+0081,0
+0082,0
+0083,0
+0084,0
+0085,0
+0086,0
+0087,0
+0088,0
+0089,0
+0090,0
+0091,0
+0092,0
+0093,0
+0094,0
+0095,0
+0096,0
+0097,0
+0098,0
+0099,0
+0100,0
+0101,0
+0102,0
+0103,0
+0104,0
+0105,0
+0106,0
+0107,0
+0108,0
+0109,0
+0110,0
+0111,0
+0112,0
+0113,0
+0114,0
+0115,0
+0116,0
+0117,0
+0118,0
+0119,0
+0120,0
+
+# Start date: 20260101
+# End date: 20260501
+Nth day,Converted leads
+0000,0
+0001,0
+0002,0
+0003,0
+0004,0
+0005,0
+0006,0
+0007,0
+0008,0
+0009,0
+0010,0
+0011,0
+0012,0
+0013,0
+0014,0
+0015,0
+0016,0
+0017,0
+0018,0
+0019,0
+0020,0
+0021,0
+0022,0
+0023,0
+0024,0
+0025,0
+0026,0
+0027,0
+0028,0
+0029,0
+0030,0
+0031,0
+0032,0
+0033,0
+0034,0
+0035,0
+0036,0
+0037,0
+0038,0
+0039,0
+0040,0
+0041,0
+0042,0
+0043,0
+0044,0
+0045,0
+0046,0
+0047,0
+0048,0
+0049,0
+0050,0
+0051,0
+0052,0
+0053,0
+0054,0
+0055,0
+0056,0
+0057,0
+0058,0
+0059,0
+0060,0
+0061,0
+0062,0
+0063,0
+0064,0
+0065,0
+0066,0
+0067,0
+0068,0
+0069,0
+0070,0
+0071,0
+0072,0
+0073,0
+0074,0
+0075,0
+0076,0
+0077,0
+0078,0
+0079,0
+0080,0
+0081,0
+0082,0
+0083,0
+0084,0
+0085,0
+0086,0
+0087,0
+0088,0
+0089,0
+0090,0
+0091,0
+0092,0
+0093,0
+0094,0
+0095,0
+0096,0
+0097,0
+0098,0
+0099,0
+0100,0
+0101,0
+0102,0
+0103,0
+0104,0
+0105,0
+0106,0
+0107,0
+0108,0
+0109,0
+0110,0
+0111,0
+0112,0
+0113,0
+0114,0
+0115,0
+0116,0
+0117,0
+0118,0
+0119,0
+0120,0
+
+#  
+# Start date: 20260101
+# End date: 20260501
+Platform,Key events
+web,15370
+
+#  
+# Start date: 20260101
+# End date: 20260501
+First user primary channel group (Default Channel Group),New users
+Paid Search,939
+Display,642
+Cross-network,352
+Organic Search,314
+Direct,210
+Email,39
+Referral,12
+Organic Shopping,11
+Unassigned,11
+Organic Social,2
+Paid Video,1
+
+# How well do you retain your users?
+# Start date: 20260315
+# End date: 20260425
+Date,Week 0,Week 1,Week 2,Week 3,Week 4,Week 5
+Mar 15 - Mar 21,0,0,0,0,0,0
+Mar 22 - Mar 28,0,0,0,0,0,-1
+Mar 29 - Apr 4,0,0,0,0,-1,-1
+Apr 5 - Apr 11,0,0,0,-1,-1,-1
+Apr 12 - Apr 18,481,13,-1,-1,-1,-1
+Apr 19 - Apr 25,1182,-1,-1,-1,-1,-1
+
+#  
+# Start date: 20260101
+# End date: 20260501
+Audience name,Active users
+All Users,2523
+
+#  
+# Start date: 20260101
+# End date: 20260501
+City,Active users
+Santiago,712
+Concepcion,63
+Antofagasta,44
+Vina del Mar,42
+Caracas,36
+Karachi,32
+Hyderabad,26
+Temuco,26
+Managua,25
+Puerto Montt,24
+New York,23
+Ashburn,22
+Vientiane,22
+Lucknow,21
+Phnom Penh,21
+Lahore,20
+Indore,18
+Chicago,16
+Iquique,15
+Agra,14
+Rancagua,14
+Bogota,13
+Santa Cruz De La Sierra,13
+Valparaiso,13
+Des Moines,12
+Jaipur,12
+Santo Domingo,12
+Ahmedabad,11
+Coronel,11
+Delhi,11
+Nagpur,11
+Talcahuano,11
+Patna,10
+Valencia,10
+Buenos Aires,9
+Chennai,9
+Cochabamba,9
+La Paz,9
+La Serena,9
+Los Angeles,9
+San Jose,9
+Valdivia,9
+Arica,8
+Bengaluru,8
+Calama,8
+Pune,8
+Quito,8
+Bhubaneswar,7
+Faisalabad,7
+Los Andes,7
+Maipu,7
+Santo Domingo Este,7
+Barcelona,6
+Barranquilla,6
+Chillan,6
+Copiapo,6
+Coquimbo,6
+Islamabad,6
+Kanpur,6
+Kolkata,6
+Ludhiana,6
+Medellin,6
+Moses Lake,6
+Mumbai,6
+Peshawar,6
+San Felipe,6
+San Pedro de la Paz,6
+Abidjan,5
+Amman,5
+Bhopal,5
+Curico,5
+Guayaquil,5
+Jakarta,5
+Maracaibo,5
+Mexico City,5
+Multan,5
+Osorno,5
+Penaflor,5
+Punta Arenas,5
+San Bernardo,5
+Santiago De Los Caballeros,5
+Surat,5
+Talca,5
+Varanasi,5
+Amsterdam,4
+Cali,4
+Chicureo,4
+Colombo,4
+Dhaka,4
+Guatemala City,4
+Hualpen,4
+Lagos,4
+Lota,4
+Meerut,4
+Paine,4
+Quilpue,4
+Rajkot,4
+San Javier,4
+Sao Paulo,4
+Sialkot,4
+Singapore,4
+Tangerang,4
+3571,3
+Addis Ababa,3
+Asuncion,3
+Boardman,3
+Dar es Salaam,3
+Dublin,3
+Gorakhpur,3
+Guatire,3
+Guwahati,3
+Maturin,3
+Melipilla,3
+Pirque,3
+Puerto Varas,3
+Rawalpindi,3
+Redmond,3
+Rengo,3
+Riga,3
+San Antonio,3
+Sonipat,3
+Thane,3
+Tripoli,3
+Vijayawada,3
+Visakhapatnam,3
+10th of Ramadan City,2
+Algiers,2
+Anantapur,2
+Angol,2
+Bhilwara,2
+Bishkek,2
+Biskra,2
+Buin,2
+Cabimas,2
+Cabudare,2
+Cartagena Province,2
+Chiguayante,2
+Cirebon,2
+Ciudad Bolivar,2
+Ciudad del Este,2
+Coatzacoalcos,2
+Codegua,2
+Coimbatore,2
+Colina,2
+Concon,2
+Constitucion,2
+Council Bluffs,2
+Cucuta,2
+Cumilla,2
+Dehradun,2
+Durgapur,2
+Dushanbe,2
+El Tigre,2
+Guayana City,2
+Gujranwala,2
+Hanoi,2
+Jammu,2
+Jamshedpur,2
+Jodhpur,2
+Karnal,2
+Kathmandu,2
+Kochi,2
+Kolhapur,2
+La Calera,2
+Lampa,2
+Limache,2
+Linares,2
+Makassar,2
+Mardan,2
+Montemar,2
+Nacimiento,2
+Nanded,2
+Naucalpan de Juarez,2
+New Delhi,2
+Oberspreewald-Lausitz,2
+Olmue,2
+Omdurman,2
+Pachuca,2
+Parral,2
+Pattoki,2
+Phoenix,2
+Piura,2
+Prayagraj,2
+Pudahuel,2
+Salem,2
+San Carlos,2
+San Cristobal,2
+San Fernando,2
+San Francisco de Mostazal,2
+San Salvador,2
+Santa Barbara del Zulia,2
+Siliguri,2
+Surakarta,2
+Sylhet,2
+Tashkent,2
+Tegucigalpa,2
+Tocopilla,2
+Trujillo,2
+Turmero,2
+Victoria,2
+Villa Alemana,2
+Villa Maria,2
+Villavicencio,2
+Villazon,2
+Yerevan,2
+45600,1
+58262,1
+59163,1
+67814,1
+68809,1
+6th of October City,1
+A Coruna,1
+Abuja,1
+Accra,1
+Akola,1
+Algarrobo,1
+Americana,1
+Ampara,1
+Amravati,1
+Anaco,1
+Ancud,1
+Armenia,1
+Ashubah Ash Sharqi,1
+Aspen,1
+Asyut,1
+Baddi,1
+Badlapur,1
+Baghdad,1
+Bamako,1
+Banda Aceh,1
+Bandung,1
+Banjul,1
+Banyuwangi,1
+Barquisimeto,1
+Barrackpore,1
+Barrancabermeja,1
+Barrancas,1
+Batam,1
+Batna,1
+Batu,1
+Bejaia,1
+Bekasi,1
+Belize City,1
+Benghazi,1
+Benin City,1
+Benito Juarez,1
+Bhagalpur,1
+Bhiwadi,1
+Bhiwandi,1
+Bikaner,1
+Boconoito,1
+Bordj Bou Arreridj,1
+Braga,1
+Brasilia,1
+Brebes,1
+Bujumbura,1
+Busan,1
+Cabrero,1
+Calceta,1
+Cancun,1
+Castro,1
+Chandpur,1
+Chascomus,1
+Chattogram,1
+Chhatrapati Sambhajinagar,1
+Chia,1
+Chichawatni,1
+Chiplun,1
+Chlef,1
+Cileungsi,1
+City of Santa Rosa,1
+Ciudad Nezahualcoyotl,1
+Ciudad Ojeda,1
+Codazzi,1
+Cooch Behar,1
+Corrientes,1
+Coventry,1
+Coyhaique,1
+Cuenca,1
+Cuernavaca,1
+Cunco,1
+Dakar,1
+Dallas,1
+Dasmarinas,1
+Depok,1
+Devachuli,1
+Dhanbad,1
+El Bayadh,1
+El Huique,1
+El Paraiso,1
+El Quisco,1
+El Socorro,1
+El Tabo,1
+El Vigia,1
+Encarnacion,1
+Ferozewala,1
+Fontana,1
+Frankfurt am Main,1
+Fuengirola,1
+Fusagasuga,1
+Garupa,1
+Gaspar Hernandez,1
+Gavle,1
+Gdansk,1
+Georgetown,1
+Ghaziabad,1
+Gia Nghia,1
+Giza,1
+Gojra,1
+Granada,1
+Guangzhou,1
+Guarulhos,1
+Gurugram,1
+Gutierrez Zamora,1
+Gwalior,1
+Hanamkonda,1
+Haroonabad,1
+Heroica Veracruz,1
+Hingoli,1
+Hong Kong,1
+Ibague,1
+Ichalkaranji,1
+Irbid,1
+Irvine,1
+Ismailia,1
+Jabalpur,1
+Jambi,1
+Jamundi,1
+Johannesburg,1
+Jos,1
+Juliaca,1
+Kallar Kahar,1
+Kampala,1
+Kazipet,1
+Kendari,1
+Khamgaon,1
+Khammam,1
+Khulna,1
+Kinshasa,1
+Kota,1
+Kozhikode,1
+Krakow,1
+Krasnodar,1
+Kumasi,1
+La Ligua,1
+La Tablada,1
+Lanus,1
+Las Condes,1
+Las Trancas,1
+Latur,1
+Lautaro,1
+Leon,1
+Libertador General San Martin,1
+Limpio,1
+Livermore,1
+Llay-Llay,1
+Loberia,1
+Loma Verde,1
+Lome,1
+Los Teques,1
+Luanda,1
+Luang Prabang,1
+Lubumbashi,1
+Lujan de Cuyo,1
+Macara,1
+Madrid,1
+Madurai,1
+Maheshtala,1
+Malabe,1
+Malambo,1
+Mangalagiri,1
+Manipal,1
+Manta,1
+Maracay,1
+Mariano Damaso Beraun,1
+Maringa,1
+Marrakesh,1
+Menlo Park,1
+Merlo,1
+Minya,1
+Mit Ghamr,1
+Modinagar,1
+Montero,1
+Montes Claros,1
+Montevideo,1
+Montreal,1
+Muzaffarnagar,1
+Narayanganj,1
+Nashik,1
+Natal,1
+Naupala,1
+Nawabganj,1
+Necochea,1
+Neral,1
+New Asyout City,1
+New Cairo City,1
+Nilagiri,1
+Nizamabad,1
+Nogales,1
+Nueva Imperial,1
+October Gardens,1
+Orange Walk,1
+Ouagadougou,1
+Ovalle,1
+Padang,1
+Padre Las Casas,1
+Paipa,1
+Palembang,1
+Parbhani,1
+Paris,1
+Pasay City,1
+Patzcuaro,1
+Pekanbaru,1
+Pelileo,1
+Peralillo,1
+Peumo,1
+Phulpur,1
+Pimpri-Chinchwad,1
+Port Harcourt,1
+Preah Sihanouk,1
+Puebla,1
+Pulkal,1
+Purranque,1
+Quirihue,1
+Raipur,1
+Rasipuram,1
+Requinoa,1
+Rio Bueno,1
+Rio Tercero,1
+Rishikesh,1
+Sabha,1
+Saharanpur,1
+Samana,1
+San Andres Itzapa,1
+San Fernando de Apure,1
+San Francisco de Asis,1
+San Martin,1
+San Mateo,1
+Sangli Miraj Kupwad,1
+Santa Barbara,1
+Santander de Quilichao,1
+Sao Joao del Rei,1
+Sao Jose dos Campos,1
+Savannakhet,1
+Savar,1
+Seoni,1
+Shebeen El-Kom,1
+Sohag,1
+Solapur,1
+Soyapango,1
+Sparta,1
+Srinagar,1
+Sukabumi,1
+Sumberasih,1
+Sundargarh,1
+Tacarigua,1
+Tacna,1
+Talagante,1
+Talkha,1
+Tanta,1
+Teapa,1
+Teluk Ambon,1
+Thies,1
+Tirupati,1
+Toronto,1
+Trinidad,1
+Udaipur,1
+Ullapara,1
+Vadodara,1
+Vallenar,1
+Ventanas,1
+Victor Larco Herrera,1
+Villamontes,1
+Villarrica,1
+Warangal,1
+Weligama,1
+Zanzibar,1
+Zapopan,1
+
+#  
+# Start date: 20260101
+# End date: 20260501
+Session manual source,Sessions
+google,1204
+syndicatedsearch.goog,493
+es.ecer.com,254
+ecer.com,212
+de.ecer.com,53
+email,45
+chatgpt.com,35
+bing,26
+m.everychina.com,14
+youtube.com,12
+ads.google.com,10
+es-ba.iciclecrush.com,9
+googleads.g.doubleclick.net,9
+admin.shopify.com,8
+tagassistant.google.com,7
+cl.search.yahoo.com,5
+senseca.com,3
+28daa8812df07b69d468c6745dc5b308.safeframe.googlesyndication.com,2
+atlas.taboolanews.com,2
+f5820b69bbaa30d640c3179b693d1f92.safeframe.googlesyndication.com,2
+go.deals4tools.com,2
+linkedin.com,2
+spanish.everychina.com,2
+02ab7483754c43b3a6a7b902dd4f2de4.safeframe.googlesyndication.com,1
+05885752379ba76486aba02133f6d100.safeframe.googlesyndication.com,1
+07c594464a5b3950210630e6f178f732.safeframe.googlesyndication.com,1
+0917cfa936011ae45abadba32fc4f0b6.safeframe.googlesyndication.com,1
+0b7520d8d9c7748aaa31918b0e57dfbc.safeframe.googlesyndication.com,1
+0ceba0973e3eebb6e176d2de43dfb7f3.safeframe.googlesyndication.com,1
+121477911c8b531d9cbeb2e4544d7e38.safeframe.googlesyndication.com,1
+13a67a9ccc99a3594b13f2d4dbe7ab1c.safeframe.googlesyndication.com,1
+156a8f33ad4c8e25aae610474b09c3be.safeframe.googlesyndication.com,1
+185f063b2dbcdf61d9e7057a062d6fa0.safeframe.googlesyndication.com,1
+1a22cfbc017b223117adc90b0948544f.safeframe.googlesyndication.com,1
+2060bbb4a140351f242030a21a484acf.safeframe.googlesyndication.com,1
+212b4c0649fc77bd9c7fc965373b2335.safeframe.googlesyndication.com,1
+225e049324e123420d5a300ff7e40baa.safeframe.googlesyndication.com,1
+2475aa74389f7c575ef82df340f44dc2.safeframe.googlesyndication.com,1
+250dbd5714db79f74b299a2925af91b3.safeframe.googlesyndication.com,1
+28de0b7303f8f891049133a0e9b4c4ab.safeframe.googlesyndication.com,1
+2be038665ba4a51de9bbbd250fc3a2b5.safeframe.googlesyndication.com,1
+3037feab329a2ef97c55b08336e6f449.safeframe.googlesyndication.com,1
+335bf3198b5c9e714bcb877464f1dd9a.safeframe.googlesyndication.com,1
+374b33ab1c547a52bb92e01e510379e5.safeframe.googlesyndication.com,1
+37d17a0548123121e5d98c36387bc885.safeframe.googlesyndication.com,1
+38fcb35d87e749ec273894e77e9969c6.safeframe.googlesyndication.com,1
+3a249837670661ea5ca84e028b24a519.safeframe.googlesyndication.com,1
+401af34ab17dbb509abb4f43e46e7c88.safeframe.googlesyndication.com,1
+40d26769fa125d500f563a3c44fc6d41.safeframe.googlesyndication.com,1
+529005f9c1e05b774ceaaf94700903bd.safeframe.googlesyndication.com,1
+52b87e22088c93df1f9f70401c40175d.safeframe.googlesyndication.com,1
+53b92c25695ad7f4f900dbbf3c25bc5f.safeframe.googlesyndication.com,1
+56f22b763c6395077d99565affe2f479.safeframe.googlesyndication.com,1
+58ec223b7593b2596c0bad3e9d6a589d.safeframe.googlesyndication.com,1
+5cb698538cc9291c676050bd2bb4fea5.safeframe.googlesyndication.com,1
+5ce5c680956d0b744ffadbdd5b501563.safeframe.googlesyndication.com,1
+614df4bc24ee73070c4d975832569951.safeframe.googlesyndication.com,1
+615fb9ad25bb8d6664fc2e9bdb2e7634.safeframe.googlesyndication.com,1
+647125599974a001298eaf92106c1e19.safeframe.googlesyndication.com,1
+64bbd9ae7d955c279eae9879e4a8a92b.safeframe.googlesyndication.com,1
+702a7a0f9463d3df96564a868b843fa6.safeframe.googlesyndication.com,1
+7127ac0a88291a013f714792c79ac772.safeframe.googlesyndication.com,1
+750ddcaf9106b738e2b48a7d337cbc69.safeframe.googlesyndication.com,1
+799f63111e89b2c7dc950f1e6be7eb8e.safeframe.googlesyndication.com,1
+7e3a3142417068d7538a5283d6c2213f.safeframe.googlesyndication.com,1
+7ea8eff2158bcd967557f808972e8055.safeframe.googlesyndication.com,1
+846ce107e2eae34ddba833ff01d5ecf4.safeframe.googlesyndication.com,1
+898d54761a12cdff612833347ca8c8b2.safeframe.googlesyndication.com,1
+8a12f23a6311a4779087367548d70ebd.safeframe.googlesyndication.com,1
+8ac39065bc06313305f5dbabceee448f.safeframe.googlesyndication.com,1
+8af61f29f808c332937f1e91b2418e42.safeframe.googlesyndication.com,1
+8eaab07e6e4427ca5cac005d83564fd0.safeframe.googlesyndication.com,1
+93c2f58279009ba8318a034dfeb75cda.safeframe.googlesyndication.com,1
+95315ffbfaa55141f8c799f96d764c1d.safeframe.googlesyndication.com,1
+9f604188985c4231162a4762e23d6daf.safeframe.googlesyndication.com,1
+a2273194ce25dc239ab500d4615a9c21.safeframe.googlesyndication.com,1
+a817a77507ab2df4659907fa81030d0a.safeframe.googlesyndication.com,1
+aba802c3753cbdd4bdd4ef1381971a17.safeframe.googlesyndication.com,1
+ac11263397af4da624bb3f18300f0f72.safeframe.googlesyndication.com,1
+ac2d23ecda25f48a23ebcbddae689993.safeframe.googlesyndication.com,1
+admanager.google.com,1
+b1177c0183d0bd025caf30a3578956c6.safeframe.googlesyndication.com,1
+b7afabf178edc248547af6d3d8c96305.safeframe.googlesyndication.com,1
+ba7f4a36b3d4b9648fc0e100401e763f.safeframe.googlesyndication.com,1
+bb91197a1d882b5ea20a9ce9bf66b2e4.safeframe.googlesyndication.com,1
+bd5e4d9349bb4cc95dc418c7fc04ba19.safeframe.googlesyndication.com,1
+bde80bdc61241a7270dec596e831769c.safeframe.googlesyndication.com,1
+c2084f1f5002e892941623a2d4b81a72.safeframe.googlesyndication.com,1
+c418f7112cb6d8c53c5efd29a142bd49.safeframe.googlesyndication.com,1
+c4f3cd69d4efcf90326c9cf7b0e8f177.safeframe.googlesyndication.com,1
+cab3ccecd02f96956bd27b6e84a42e29.safeframe.googlesyndication.com,1
+cb9fba4cbbb84212e27ac48e33268f00.safeframe.googlesyndication.com,1
+cd2ee0877aa7bbf555f4eeed922f5495.safeframe.googlesyndication.com,1
+cef07566364c450fa925303ec45e99d3.safeframe.googlesyndication.com,1
+d246807e20241e90c58dc1f827f17191.safeframe.googlesyndication.com,1
+d298db14ddaabd60540f6c0503c5ac8e.safeframe.googlesyndication.com,1
+d2d560c239825fd8b59f1bc8b913883a.safeframe.googlesyndication.com,1
+d35f4ad70d51cd540c02f936ed77a97e.safeframe.googlesyndication.com,1
+d3603b4b476a29aa6bc8c037a646f6cb.safeframe.googlesyndication.com,1
+d39d9bdec33aea047468917edafd3830.safeframe.googlesyndication.com,1
+d3a618fb47897a60a8652b30b85e78be.safeframe.googlesyndication.com,1
+d692b5094a4ae8f0d209869ff15c6c72.safeframe.googlesyndication.com,1
+d8c70e7ad886e4602a7794b89fb60a55.safeframe.googlesyndication.com,1
+d983b50fadf0aaa383b2a252fc2ca6aa.safeframe.googlesyndication.com,1
+dc.hindinut.com,1
+dd8afcdb6c31a5ee41eb71b5a0ab3295.safeframe.googlesyndication.com,1
+ddaff505d334050c569cc935882c1f03.safeframe.googlesyndication.com,1
+dff3a888023b4afb3a0fb88d53eaca01.safeframe.googlesyndication.com,1
+dubgtcg.dbz,1
+e5600185a8a52b5fe8c4ff889279d2b2.safeframe.googlesyndication.com,1
+e76dd898988dd1cfe8e94b159917f839.safeframe.googlesyndication.com,1
+e9711d3d6066c9a2af7ed9e81b916b52.safeframe.googlesyndication.com,1
+e99f78820fddf6197bdac1b99a833856.safeframe.googlesyndication.com,1
+eatopiablog.com,1
+ec44194839972300d36e02aa9ef555b8.safeframe.googlesyndication.com,1
+ec4499ffd0889b9758fbb2297d44d45c.safeframe.googlesyndication.com,1
+eldinamo.cl,1
+f2ee142d3999eac435e66fead3e9666e.safeframe.googlesyndication.com,1
+f457f045fd441817018e2b5e057ac7ad.safeframe.googlesyndication.com,1
+f6af6541b328fce6b14edad2f367da82.safeframe.googlesyndication.com,1
+f985edff23bff2351a844b7642a809a7.safeframe.googlesyndication.com,1
+fbcfe8e35db58d75b2973f0fcec9c26a.safeframe.googlesyndication.com,1
+gemini.google.com,1
+inqsta.com,1
+notebooklm.google.com,1
+radioformula.com.mx,1
+similarsitesearch.com,1
+statics.teams.cdn.office.net,1
+tsbbkj.cn:8010,1
+yahoo,1
+
+#  
+# Start date: 20260101
+# End date: 20260501
+Nth day

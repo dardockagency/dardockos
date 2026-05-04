@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vender Importando · Copies Meta Ads</title>
+<style>
+  :root {
+    --bg: #0f0f10;
+    --card: #1a1a1c;
+    --card-hi: #232325;
+    --border: #2a2a2d;
+    --text: #ededed;
+    --muted: #8a8a8f;
+    --accent: #e63946;
+    --gold: #f4b942;
+    --green: #4ade80;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+    padding: 40px 20px 80px;
+  }
+  .container { max-width: 1100px; margin: 0 auto; }
+
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 24px;
+    margin-bottom: 40px;
+  }
+  .pill {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 4px 10px;
+    border-radius: 999px;
+    text-transform: uppercase;
+  }
+  h1 {
+    font-size: 32px;
+    margin: 14px 0 8px;
+    letter-spacing: -0.02em;
+  }
+  .subtitle { color: var(--muted); font-size: 15px; }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .meta-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .meta-item .label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .meta-item .value { font-size: 14px; margin-top: 2px; }
+
+  section { margin-bottom: 48px; }
+  h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  h2 .count {
+    font-size: 12px;
+    background: var(--card-hi);
+    color: var(--muted);
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-weight: 500;
+  }
+  .section-desc { color: var(--muted); font-size: 14px; margin-bottom: 20px; }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin-bottom: 14px;
+    transition: border-color 0.15s;
+    position: relative;
+  }
+  .card:hover { border-color: #3a3a3f; }
+  .card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+  .card-id {
+    background: var(--accent);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 6px;
+    letter-spacing: 0.04em;
+  }
+  .card-tag {
+    font-size: 12px;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 3px 10px;
+    border-radius: 999px;
+  }
+  .card-title { font-size: 18px; font-weight: 600; flex: 1; line-height: 1.35; }
+  .card-body { color: #d8d8d8; font-size: 15px; white-space: pre-line; }
+  .copy-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.15s;
+  }
+  .copy-btn:hover { border-color: var(--text); color: var(--text); }
+  .copy-btn.copied { background: var(--green); border-color: var(--green); color: #0a0a0a; }
+
+  .char-count {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 8px;
+  }
+
+  /* Combinaciones table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  th, td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+  }
+  th {
+    background: var(--card-hi);
+    color: var(--muted);
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+  }
+  tr:last-child td { border-bottom: none; }
+  td .badge {
+    display: inline-block;
+    background: var(--card-hi);
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+
+  /* Compliance grid */
+  .compliance {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 8px;
+  }
+  .check {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 13px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .check::before {
+    content: "✓";
+    color: var(--green);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  footer {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    body { padding: 20px 14px 60px; }
+    h1 { font-size: 24px; }
+    .card { padding: 16px; }
+    .card-head { flex-wrap: wrap; }
+    th, td { padding: 10px; font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <span class="pill">Spike 72h · Amazon</span>
+  <h1>Vender Importando · Copies Meta Ads</h1>
+  <p class="subtitle">Dany Cáceres — Lanzamiento Kindle $0.99 USD · 9 ventas confirmadas, push hacia #1 Amazon</p>
+  <div class="meta-grid">
+    <div class="meta-item"><div class="label">Producto</div><div class="value">Vender Importando · Kindle</div></div>
+    <div class="meta-item"><div class="label">ASIN</div><div class="value">B0DPCQJ5J4</div></div>
+    <div class="meta-item"><div class="label">Precio promo</div><div class="value">$0.99 USD</div></div>
+    <div class="meta-item"><div class="label">Precio normal</div><div class="value">$6.99 USD</div></div>
+    <div class="meta-item"><div class="label">Plataforma</div><div class="value">Meta Ads (FB + IG)</div></div>
+    <div class="meta-item"><div class="label">Audiencias</div><div class="value">Tibio + Caliente</div></div>
+  </div>
+</header>
+
+<section>
+  <h2>Titulares <span class="count">5 headlines</span></h2>
+  <p class="section-desc">Cada uno ataca una palanca distinta: autoridad / pregunta / contraste / continuidad / urgencia.</p>
+
+  <div class="card">
+    <div class="card-head">
+      <span class="card-id">H1</span>
+      <span class="card-tag">Autoridad + oferta</span>
+      <button class="copy-btn" data-copy="21 años de comercio internacional a $0.99">Copiar</button>
+    </div>
+    <div class="card-title">21 años de comercio internacional a $0.99</div>
+    <div class="char-count">41 caracteres</div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <span class="card-id">H2</span>
+      <span class="card-tag">Pregunta directa</span>
+      <button class="copy-btn" data-copy="¿Sabés vender lo que importás?">Copiar</button>
+    </div>
+    <div class="card-title">¿Sabés vender lo que importás?</div>
+    <div class="char-count">30 caracteres</div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <span class="card-id">H3</span>
+      <span class="card-tag">Big idea / contraste</span>
+      <button class="copy-btn" data-copy="Importar no alcanza. Hay que saber vender.">Copiar</button>
+    </div>
+    <div class="card-title">Importar no alcanza. Hay que saber vender.</div>
+    <div class="char-count">42 caracteres</div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <span class="card-id">H4</span>
+      <span class="card-tag">Continuidad / autoridad</span>
+      <button class="copy-btn" data-copy='25 estrategias del autor de "Emprende Importando"'>Copiar</button>
+    </div>
+    <div class="card-title">25 estrategias del autor de "Emprende Importando"</div>
+    <div class="char-count">49 caracteres</div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <span class="card-id">H5</span>
+      <span class="card-tag">Urgencia / precio</span>
+      <button class="copy-btn" data-copy="$0.99 USD en Kindle · Por tiempo limitado">Copiar</button>
+    </div>
+    <div class="card-title">$0.99 USD en Kindle · Por tiempo limitado</div>
+    <div class="char-count">41 caracteres</div>
+  </div>
+</section>
+
+<section>
+  <h2>Textos primarios <span class="count">5 primary texts</span></h2>
+  <p class="section-desc">Cinco entradas distintas a la misma oferta. Sin solapar mensajes.</p>
+
+  <div class="card">
+    <div class="card-head">
+      <span class="card-id">T1</span>
+      <span class="card-tag">Estadística cruda</span>
+      <button class="copy-btn" data-copy="8 de cada 10 emprendimientos no llegan a los 3 años.
+El producto es solo una parte: la planificación de venta decide si el negocio sobrevive.
+
+21 años de comercio internacional resumidos en 25 estrategias para vender lo que importás.
+
+Hoy en Kindle a $0.99 USD. Precio de lanzamiento.">Copiar</button>
+    </div>
+    <div class="card-body">8 de cada 10 emprendimientos no llegan a los 3 años.
+El producto es solo una parte: la planificación de venta decide si el negocio sobrevive.
+
+21 años de comercio internacional resumidos en 25 estrategias para vender lo que importás.
+
+Hoy en Kindle a $0.99 USD. Precio de lanzamiento.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <span class="card-id">T2</span>
+      <span class="card-tag">Voz del autor (UGC)</span>
+      <button class="copy-btn" data-copy='Después de Emprende Importando, este es el segundo pilar. Lo que más me pidieron por mensaje: "ya importé, ahora ¿cómo vendo?".
+
+La respuesta está acá. Sin teoría de escritorio.
+
+Hoy a $0.99 USD en Kindle por tiempo limitado.'>Copiar</button>
+    </div>
+    <div class="card-body">Después de Emprende Importando, este es el segundo pilar. Lo que más me pidieron por mensaje: "ya importé, ahora ¿cómo vendo?".
+
+La respuesta está acá. Sin teoría de escritorio.
+
+Hoy a $0.99 USD en Kindle por tiempo limitado.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <span class="card-id">T3</span>
+      <span class="card-tag">Mito Amazon vende solo</span>
+      <button class="copy-btn" data-copy='"Lo enviás a Amazon y se vende solo." No funciona así.
+Amazon no importa tu producto: es una plataforma B2C. La mayoría pierde el control de la operación sin darse cuenta.
+
+Las 25 estrategias que necesita un importador hoy. Kindle a $0.99 USD.'>Copiar</button>
+    </div>
+    <div class="card-body">"Lo enviás a Amazon y se vende solo." No funciona así.
+Amazon no importa tu producto: es una plataforma B2C. La mayoría pierde el control de la operación sin darse cuenta.
+
+Las 25 estrategias que necesita un importador hoy. Kindle a $0.99 USD.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <span class="card-id">T4</span>
+      <span class="card-tag">Costo de la ignorancia</span>
+      <button class="copy-btn" data-copy="En países con alta restricción aduanera, 3 de cada 4 importadores asumen costos extras por desconocer cómo se mueve el sistema.
+
+No es problema de aduana. Es problema de información.
+
+25 estrategias en Kindle por $0.99 USD. Tiempo limitado.">Copiar</button>
+    </div>
+    <div class="card-body">En países con alta restricción aduanera, 3 de cada 4 importadores asumen costos extras por desconocer cómo se mueve el sistema.
+
+No es problema de aduana. Es problema de información.
+
+25 estrategias en Kindle por $0.99 USD. Tiempo limitado.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <span class="card-id">T5</span>
+      <span class="card-tag">Mecanismo de oferta</span>
+      <button class="copy-btn" data-copy="Vender Importando — el segundo libro de Dany Cáceres — entra al mercado con precio de lanzamiento.
+
+$0.99 USD en Kindle. Después vuelve a $6.99.
+
+25 estrategias de venta para importadores. Disponible ahora en Amazon.">Copiar</button>
+    </div>
+    <div class="card-body">Vender Importando — el segundo libro de Dany Cáceres — entra al mercado con precio de lanzamiento.
+
+$0.99 USD en Kindle. Después vuelve a $6.99.
+
+25 estrategias de venta para importadores. Disponible ahora en Amazon.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Descripciones <span class="count">2 descriptions</span></h2>
+  <p class="section-desc">Una empuja por urgencia, la otra por social proof. Rotan con cualquier headline.</p>
+
+  <div class="card">
+    <div class="card-head">
+      <span class="card-id">A</span>
+      <span class="card-tag">Urgencia</span>
+      <button class="copy-btn" data-copy="Lanzamiento · Kindle por tiempo limitado">Copiar</button>
+    </div>
+    <div class="card-title">Lanzamiento · Kindle por tiempo limitado</div>
+    <div class="char-count">40 caracteres</div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <span class="card-id">B</span>
+      <span class="card-tag">Social proof</span>
+      <button class="copy-btn" data-copy='Por el autor de "Emprende Importando"'>Copiar</button>
+    </div>
+    <div class="card-title">Por el autor de "Emprende Importando"</div>
+    <div class="char-count">37 caracteres</div>
+  </div>
+</section>
+
+<section>
+  <h2>Combinaciones recomendadas <span class="count">imagen × copy</span></h2>
+  <p class="section-desc">Subí cada imagen como un ad separado dentro del mismo adset con la combinación sugerida. Después de 24h Meta indica el ganador — duplicás y matás el resto.</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Imagen</th>
+        <th>Headline</th>
+        <th>Texto</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Img 1</strong> — "Importa con estrategia" + 5★</td>
+        <td><span class="badge">H5</span></td>
+        <td><span class="badge">T5</span></td>
+        <td><span class="badge">A</span></td>
+      </tr>
+      <tr>
+        <td><strong>Img 2</strong> — "El ebook que usan los importadores"</td>
+        <td><span class="badge">H3</span></td>
+        <td><span class="badge">T2</span></td>
+        <td><span class="badge">B</span></td>
+      </tr>
+      <tr>
+        <td><strong>Img 3</strong> — "Oferta exclusiva 24hrs"</td>
+        <td><span class="badge">H5</span></td>
+        <td><span class="badge">T5</span></td>
+        <td><span class="badge">A</span></td>
+      </tr>
+      <tr>
+        <td><strong>Img 4</strong> — "Solo por hoy · ebook que usan los importadores"</td>
+        <td><span class="badge">H1</span></td>
+        <td><span class="badge">T1</span></td>
+        <td><span class="badge">B</span></td>
+      </tr>
+      <tr>
+        <td><strong>Img 5</strong> — "Atención importadores · relanzamiento"</td>
+        <td><span class="badge">H2</span></td>
+        <td><span class="badge">T3</span></td>
+        <td><span class="badge">A</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>Compliance <span class="count">R1–R10</span></h2>
+  <div class="compliance">
+    <div class="check">R1 · Vender Importando → Amazon ÚNICAMENTE</div>
+    <div class="check">R2 · $0.99 enmarcado como "lanzamiento" / "tiempo limitado"</div>
+    <div class="check">R3 · Destino landing, no homepage</div>
+    <div class="check">R4 · 5 ángulos radicalmente distintos</div>
+    <div class="check">R5 · Cubierto por Img 2 (UGC) + T2 (voz autor)</div>
+    <div class="check">R7 · Sin "barato/gurú/garantizado/fácil/millonario"</div>
+    <div class="check">R8 · Sin "3.ª edición"</div>
+    <div class="check">R9 · Un solo CTA por pieza</div>
+    <div class="check">R10 · Sin testimonios inventados</div>
+  </div>
+</section>
+
+<footer>
+  Dardock · campañas/2026-04_VenderImportando_Spike099 · Generado 2026-04-30
+</footer>
+
+</div>
+
+<script>
+document.querySelectorAll('.copy-btn').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(btn.dataset.copy);
+      const original = btn.textContent;
+      btn.textContent = '✓ Copiado';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = original;
+        btn.classList.remove('copied');
+      }, 1400);
+    } catch (e) {
+      btn.textContent = 'Error';
+    }
+  });
+});
+</script>
+</body>
+</html>

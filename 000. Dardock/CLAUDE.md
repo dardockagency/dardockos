@@ -162,6 +162,59 @@ Actualizar los archivos de `/contexto/` en dardock-consejo una vez por mes, idea
 
 ---
 
+## Routines
+
+Estas son instrucciones persistentes que corren automáticamente cuando el usuario usa ciertos triggers. No preguntar — ejecutar directamente.
+
+### Routine: Audit semanal de cliente
+**Trigger:** "audita [cliente] esta semana" / "audit semanal [cliente]" / "genera el informe semanal"
+**Pasos:**
+1. Leer `00_MASTER_DATA/[Cliente]/[Cliente]_MasterData.json` — fuente de verdad del cliente
+2. Leer `clientes/[slug]/Estado_Actual.md` — estado operativo de la semana
+3. Leer los datos del período que el usuario haya pasado (CSV, texto, métricas de plataformas)
+4. Copiar `01_uso_diario/AUDITORIA_SEMANAL_TEMPLATE.html`, llenarlo con datos reales
+5. Guardar como `clientes/[slug]/audits/audit_semanal_[AAAA-MM-DD].html`
+6. Actualizar `score_capas`, `metricas`, `proximos_hitos` y `campañas_activas` en `[Cliente]_MasterData.json`
+7. Actualizar `Estado_Actual.md` con el nuevo estado semanal
+8. Git commit + push → GitHub Action sincroniza automáticamente a Supabase → Dashboard actualizado
+9. Reportar: qué mejoró, qué empeoró, las 3 acciones urgentes de la semana
+
+**Nota API (activo cuando Google Ads API esté aprobada):** antes del paso 3, correr
+`node scripts/pull-platform-data.js [slug]` para traer métricas frescas de Google Ads + GA4 + Meta.
+
+### Routine: Superaudit mensual de cliente
+**Trigger:** "superaudit [cliente]" / "audit mensual [cliente]" / "informe mensual [cliente]"
+**Pasos:**
+1. Leer `00_MASTER_DATA/[Cliente]/[Cliente]_MasterData.json` — estado completo del cliente
+2. Leer los últimos 4 `audits/audit_semanal_*.html` del cliente — tendencia del mes
+3. Leer `clientes/[slug]/Estado_Actual.md` — pendientes y bloqueos activos
+4. Generar análisis profundo por las 5 capas: Oferta · Tracking · Funnel · Campañas · Creativo
+5. Guardar como `clientes/[slug]/audits/superaudit_[AAAA-MM].html`
+6. Actualizar `score_capas.global` y todos los sub-scores en `[Cliente]_MasterData.json`
+7. Actualizar `_last_updated` y `proximos_hitos` para el mes siguiente
+8. Git commit + push → Supabase sync → Dashboard actualizado
+9. Reportar: score global vs mes anterior, los 3 mayores avances, las 3 prioridades del mes siguiente
+
+### Routine: Onboarding nuevo cliente
+**Trigger:** "onboarding [nombre cliente]" / "nuevo cliente [nombre]"
+**Pasos:**
+1. Crear carpeta `clientes/[slug]/` con subcarpetas `audits/`, `design/`, `lead-magnet/`
+2. Copiar `clientes/_TEMPLATE/CLAUDE.md` → llenar con datos del cliente
+3. Copiar `clientes/_TEMPLATE/Estado_Actual.md` → llenar con estado inicial
+4. Crear `00_MASTER_DATA/[Cliente]/[Cliente]_MasterData.json` desde `clientes/_TEMPLATE/MasterData.json`
+5. Git commit + push → cliente aparece en Supabase y en el Dashboard
+6. Confirmar estructura lista para trabajar
+
+### Routine: Actualizar estado de agencia
+**Trigger:** "actualiza el estado de la agencia" / "update lunes"
+**Pasos:**
+1. Leer `01_uso_diario/AGENCIA_ESTADO.md`
+2. Leer los `Estado_Actual.md` de cada cliente activo
+3. Consolidar en una vista de agencia: qué está crítico, qué está bien, qué necesita decisión
+4. Actualizar `AGENCIA_ESTADO.md` con fecha y cambios
+
+---
+
 ## Key decisions (do not revisit without reason)
 
 - **No Next.js until V3** — current stack is Vite + React Router. Next.js eval deferred until backend/auth/persistence are real requirements.

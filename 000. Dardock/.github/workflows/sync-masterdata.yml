@@ -1,0 +1,28 @@
+name: Sync MasterData → Supabase
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "000. Dardock/00_MASTER_DATA/**/*_MasterData.json"
+      - "00_MASTER_DATA/**/*_MasterData.json"
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    name: Sync client MasterData to Supabase
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run sync script
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+        run: node "000. Dardock/scripts/sync-masterdata-to-supabase.js"

@@ -1,0 +1,1935 @@
+# ----------------------------------------
+# Engagement overview
+# Account: Cuenta de Google Ads
+# Property: www.cosasnuestras.cl - GA4
+# ----------------------------------------
+#  
+# Start date: 20260101
+# End date: 20260501
+Nth day,Average engagement time per active user
+0000,30.62363238512035
+0001,48.263020833333336
+0002,28.517045454545453
+0003,36.82338902147971
+0004,38.602739726027394
+0005,36.88333333333333
+0006,49.02102102102102
+0007,39.30792682926829
+0008,40.19718309859155
+0009,40.66139240506329
+0010,19.46268656716418
+0011,37.8
+0012,41.078947368421055
+0013,44.801223241590215
+0014,41.76470588235294
+0015,30.20505617977528
+0016,33.54107648725213
+0017,32.2
+0018,36.2972972972973
+0019,41.39313984168865
+0020,44.247491638795985
+0021,47.68316831683168
+0022,33.56159420289855
+0023,43.62015503875969
+0024,50.93015873015873
+0025,34.1671826625387
+0026,47.14577259475219
+0027,61.12759643916914
+0028,50.11746031746032
+0029,46.74829931972789
+0030,42.819241982507286
+0031,40.89620758483034
+0032,32.829268292682926
+0033,38.828629032258064
+0034,45.98288508557457
+0035,37.413625304136254
+0036,37.22933333333334
+0037,40.59604519774011
+0038,33.57329842931937
+0039,30.606280193236714
+0040,33.00726392251816
+0041,38.54677754677755
+0042,43.29050279329609
+0043,46.532033426183844
+0044,43.264367816091955
+0045,32.73972602739726
+0046,40.57756563245823
+0047,44.18032786885246
+0048,85.97027027027028
+0049,50.02020202020202
+0050,34.310580204778155
+0051,31.318611987381704
+0052,42.59818731117825
+0053,34.26052631578948
+0054,38.14047619047619
+0055,47.103194103194106
+0056,40.16173120728929
+0057,23.542168674698797
+0058,27.216535433070867
+0059,41.14233576642336
+0060,41.16295025728988
+0061,15.440765268579838
+0062,46.1096196868009
+0063,45.77205882352941
+0064,22.13128038897893
+0065,34.565432098765434
+0066,27.580750407830344
+0067,21.667032967032966
+0068,39.87898089171974
+0069,29.65645514223195
+0070,34.92
+0071,30.683646112600535
+0072,32.30769230769231
+0073,33.0046511627907
+0074,37.53076923076923
+0075,25.034666666666666
+0076,14.558355437665783
+0077,35.251612903225805
+0078,42.00454545454546
+0079,11.026506024096385
+0080,12.48033126293996
+0081,24.286160249739854
+0082,34.49312977099237
+0083,45.703770197486534
+0084,15.78608695652174
+0085,14.883444691907943
+0086,41.07360861759425
+0087,32.33870967741935
+0088,39.71492204899777
+0089,36.13271028037383
+0090,48.50194552529183
+0091,27.96751740139211
+0092,49.619909502262445
+0093,54.43404255319149
+0094,30.93320964749536
+0095,42.664092664092664
+0096,35.21070811744387
+0097,44.7039586919105
+0098,39.00702247191011
+0099,21.856978085351788
+0100,40.78512396694215
+0101,27.298335467349553
+0102,60.76133651551313
+0103,47.846307385229544
+0104,52.58222222222222
+0105,59.1139896373057
+0106,58.7575
+0107,49.84880636604775
+0108,51.62039045553146
+0109,50.49336870026525
+0110,60.960187353629976
+0111,72.8372641509434
+0112,52.84101382488479
+0113,51.5
+0114,50.407673860911274
+0115,58.308383233532936
+0116,48.56404958677686
+0117,60.77816291161179
+0118,46.62098501070664
+0119,48.33122362869198
+0120,65.6822429906542
+
+# Start date: 20260101
+# End date: 20260501
+Nth day,Engaged sessions per active user
+0000,0.006564551422319475
+0001,0.018229166666666668
+0002,0.008522727272727272
+0003,0.01909307875894988
+0004,0.0136986301369863
+0005,0.011111111111111112
+0006,0.018018018018018018
+0007,0.012195121951219513
+0008,0.011267605633802818
+0009,0.006329113924050633
+0010,0.005970149253731343
+0011,0
+0012,0.011695906432748537
+0013,0.009174311926605505
+0014,0.0029411764705882353
+0015,0.02247191011235955
+0016,0.0084985835694051
+0017,0.010666666666666666
+0018,0.013513513513513514
+0019,0.013192612137203167
+0020,0.016722408026755852
+0021,0.009900990099009901
+0022,0.0036231884057971015
+0023,0.003875968992248062
+0024,0.009523809523809525
+0025,0.009287925696594427
+0026,0.023323615160349854
+0027,0.02373887240356083
+0028,0.01904761904761905
+0029,0.023809523809523808
+0030,0.008746355685131196
+0031,0.011976047904191617
+0032,0.0066518847006651885
+0033,0.012096774193548387
+0034,0.012224938875305624
+0035,0.0072992700729927005
+0036,0.008
+0037,0.014124293785310734
+0038,0.007853403141361256
+0039,0.007246376811594203
+0040,0.007263922518159807
+0041,0.004158004158004158
+0042,0.01675977653631285
+0043,0.016713091922005572
+0044,0.014367816091954023
+0045,0.0136986301369863
+0046,0.00477326968973747
+0047,0.00819672131147541
+0048,0.021621621621621623
+0049,0.015151515151515152
+0050,0.0034129692832764505
+0051,0.00946372239747634
+0052,0.00906344410876133
+0053,0.010526315789473684
+0054,0.002380952380952381
+0055,0.004914004914004914
+0056,0.002277904328018223
+0057,0.006024096385542169
+0058,0.005905511811023622
+0059,0.010948905109489052
+0060,0.008576329331046312
+0061,0.003679175864606328
+0062,0.0044742729306487695
+0063,0.007352941176470588
+0064,0.0032414910858995136
+0065,0.019753086419753086
+0066,0.01468189233278956
+0067,0.008791208791208791
+0068,0.014861995753715499
+0069,0.015317286652078774
+0070,0.018666666666666668
+0071,0.013404825737265416
+0072,0.002652519893899204
+0073,0.004651162790697674
+0074,0.005128205128205128
+0075,0.010666666666666666
+0076,0.002652519893899204
+0077,0.015053763440860216
+0078,0.013636363636363636
+0079,0.001606425702811245
+0080,0.004140786749482402
+0081,0.002081165452653486
+0082,0.007633587786259542
+0083,0.010771992818671455
+0084,0.0052173913043478265
+0085,0.002969561989606533
+0086,0.01436265709156194
+0087,0.008960573476702509
+0088,0.015590200445434299
+0089,0.007476635514018692
+0090,0.019455252918287938
+0091,0.009280742459396751
+0092,0.0022624434389140274
+0093,0.006382978723404255
+0094,0.011131725417439703
+0095,0.021235521235521235
+0096,0.0069084628670120895
+0097,0.0068846815834767644
+0098,0.012640449438202247
+0099,0.0057670126874279125
+0100,0.02066115702479339
+0101,0.010243277848911651
+0102,0.026252983293556086
+0103,0.027944111776447105
+0104,0.011111111111111112
+0105,0.012953367875647668
+0106,0.01
+0107,0.015915119363395226
+0108,0.004338394793926247
+0109,0.007957559681697613
+0110,0.01639344262295082
+0111,0.01650943396226415
+0112,0.0069124423963133645
+0113,0.018617021276595744
+0114,0.016786570743405275
+0115,0.0074850299401197605
+0116,0.014462809917355372
+0117,0.01733102253032929
+0118,0.01284796573875803
+0119,0.014767932489451477
+0120,0.003115264797507788
+
+# Start date: 20260101
+# End date: 20260501
+Nth day,Average engagement time per session
+0000,28.975155279503106
+0001,43.91706161137441
+0002,26.41578947368421
+0003,34.05960264900662
+0004,35.006211180124225
+0005,33.786259541984734
+0006,43.88172043010753
+0007,36.11484593837535
+0008,35.85427135678392
+0009,38.585585585585584
+0010,18.314606741573034
+0011,36.02639296187683
+0012,36.30232558139535
+0013,40.136986301369866
+0014,38.274932614555254
+0015,26.616336633663366
+0016,30.43701799485861
+0017,29.37956204379562
+0018,33.575
+0019,37.263657957244654
+0020,37.8
+0021,44.048780487804876
+0022,31.188552188552187
+0023,41.992537313432834
+0024,47.6053412462908
+0025,30.570637119113574
+0026,40.528822055137844
+0027,54.641909814323604
+0028,45.89244186046512
+0029,43.0846394984326
+0030,38.5485564304462
+0031,37.66360294117647
+0032,30.278118609406953
+0033,35.998130841121494
+0034,41.979910714285715
+0035,34.323660714285715
+0036,34.051219512195125
+0037,38.01851851851852
+0038,30.755395683453237
+0039,28.095343680709533
+0040,31.337931034482757
+0041,36.14230019493177
+0042,39.23544303797468
+0043,43.27720207253886
+0044,41.13661202185792
+0045,29.949874686716793
+0046,37.61504424778761
+0047,39.925925925925924
+0048,76.83333333333333
+0049,45.43119266055046
+0050,31.415625
+0051,28.86046511627907
+0052,39.166666666666664
+0053,31.371084337349398
+0054,35.59777777777778
+0055,43.769406392694066
+0056,37.03991596638655
+0057,22.288973384030417
+0058,26.13610586011342
+0059,38.40885860306644
+0060,38.33546325878594
+0061,14.914001421464109
+0062,43.946695095948826
+0063,42.3469387755102
+0064,21.07253086419753
+0065,31.317673378076062
+0066,25.500754147812973
+0067,20.36880165289256
+0068,37.267857142857146
+0069,27.269617706237426
+0070,31.478365384615383
+0071,27.77912621359223
+0072,30.526315789473685
+0073,30.652267818574515
+0074,35.10071942446043
+0075,23.707070707070706
+0076,13.859848484848484
+0077,32.20432220039293
+0078,39.04647887323944
+0079,10.754406580493537
+0080,12.11901889827101
+0081,22.81427174975562
+0082,32.09232954545455
+0083,42.008250825082506
+0084,15.16624895572264
+0085,14.485549132947977
+0086,37.69028006589786
+0087,30.075
+0088,36.17038539553752
+0089,32.82003395585738
+0090,43.660245183887916
+0091,26.034557235421165
+0092,45.31404958677686
+0093,49.67766990291262
+0094,28.946180555555557
+0095,37.64906303236797
+0096,31.804992199687987
+0097,39.95846153846154
+0098,36.54342105263158
+0099,20.778508771929825
+0100,36.75977653631285
+0101,25.77992744860943
+0102,54.28358208955224
+0103,42.12829525483304
+0104,47.04174950298211
+0105,52.215102974828376
+0106,51.88300220750552
+0107,45.393719806763286
+0108,46.38791423001949
+0109,44.68544600938967
+0110,53.449691991786445
+0111,63.54526748971193
+0112,47.97698744769875
+0113,45.137529137529135
+0114,44.914529914529915
+0115,53.42935528120713
+0116,43.04945054945055
+0117,52.031157270029674
+0118,41.156899810964084
+0119,43.553231939163496
+0120,61.46938775510204
+
+#  
+# Start date: 20260101
+# End date: 20260501
+Nth day,Views
+0000,1130
+0001,1172
+0002,809
+0003,1159
+0004,1221
+0005,960
+0006,905
+0007,858
+0008,944
+0009,767
+0010,679
+0011,822
+0012,952
+0013,890
+0014,968
+0015,855
+0016,881
+0017,958
+0018,946
+0019,987
+0020,848
+0021,869
+0022,621
+0023,686
+0024,890
+0025,809
+0026,971
+0027,1070
+0028,902
+0029,826
+0030,1017
+0031,1329
+0032,1071
+0033,1303
+0034,1109
+0035,1086
+0036,950
+0037,834
+0038,929
+0039,972
+0040,977
+0041,1169
+0042,984
+0043,1022
+0044,879
+0045,789
+0046,1093
+0047,981
+0048,1126
+0049,1071
+0050,712
+0051,779
+0052,829
+0053,955
+0054,1099
+0055,1161
+0056,1113
+0057,1008
+0058,995
+0059,1571
+0060,1564
+0061,2259
+0062,1314
+0063,1206
+0064,1186
+0065,1012
+0066,1431
+0067,1801
+0068,1184
+0069,1113
+0070,1000
+0071,1070
+0072,914
+0073,1081
+0074,1052
+0075,898
+0076,1292
+0077,1231
+0078,1659
+0079,3536
+0080,3464
+0081,1953
+0082,1611
+0083,1639
+0084,1780
+0085,2028
+0086,1421
+0087,1311
+0088,1199
+0089,1453
+0090,1561
+0091,980
+0092,1323
+0093,1533
+0094,1367
+0095,1460
+0096,1558
+0097,1837
+0098,1759
+0099,1680
+0100,1318
+0101,1705
+0102,1478
+0103,1582
+0104,1369
+0105,1203
+0106,1257
+0107,1027
+0108,1448
+0109,1134
+0110,1479
+0111,1381
+0112,1225
+0113,1059
+0114,1160
+0115,1971
+0116,1495
+0117,1815
+0118,1515
+0119,1411
+0120,1048
+
+# Start date: 20260101
+# End date: 20260501
+Nth day,Event count
+0000,2159
+0001,2515
+0002,1581
+0003,2403
+0004,2592
+0005,1932
+0006,1885
+0007,1725
+0008,1887
+0009,1567
+0010,1312
+0011,1658
+0012,1965
+0013,1883
+0014,2091
+0015,1747
+0016,1741
+0017,1928
+0018,1928
+0019,2013
+0020,1779
+0021,1764
+0022,1265
+0023,1472
+0024,1809
+0025,1580
+0026,2034
+0027,2267
+0028,1928
+0029,1657
+0030,2161
+0031,2790
+0032,2124
+0033,2676
+0034,2232
+0035,2193
+0036,1889
+0037,1721
+0038,1848
+0039,1928
+0040,2039
+0041,2350
+0042,2068
+0043,2103
+0044,1846
+0045,1512
+0046,2220
+0047,2021
+0048,2437
+0049,2251
+0050,1403
+0051,1540
+0052,1649
+0053,1890
+0054,2125
+0055,2278
+0056,2121
+0057,1800
+0058,1809
+0059,3080
+0060,3200
+0061,4127
+0062,2736
+0063,2387
+0064,2172
+0065,1989
+0066,2791
+0067,3563
+0068,2498
+0069,2317
+0070,1971
+0071,2119
+0072,1755
+0073,2109
+0074,2156
+0075,1747
+0076,2298
+0077,2501
+0078,3489
+0079,6940
+0080,6725
+0081,3994
+0082,3428
+0083,3529
+0084,3538
+0085,4099
+0086,3131
+0087,2643
+0088,2442
+0089,3020
+0090,3411
+0091,2038
+0092,2818
+0093,3284
+0094,2747
+0095,3088
+0096,3173
+0097,3892
+0098,3703
+0099,3384
+0100,2759
+0101,3518
+0102,3294
+0103,3433
+0104,2965
+0105,2843
+0106,2753
+0107,2226
+0108,3076
+0109,2513
+0110,3365
+0111,3100
+0112,2716
+0113,2337
+0114,2579
+0115,4339
+0116,3419
+0117,4113
+0118,3287
+0119,3210
+0120,2340
+
+#  
+# Start date: 20260101
+# End date: 20260501
+Event name,Event count
+page_view,148068
+user_engagement,64286
+view_item,37460
+scroll,24573
+form_start,16890
+add_to_cart,3823
+begin_checkout,1822
+session_start,1699
+view_search_results,1636
+form_submit,1622
+search,1517
+add_payment_info,864
+first_visit,371
+purchase,356
+click,321
+
+#  
+# Start date: 20260101
+# End date: 20260501
+Page title and screen class,Views
+Cosas Nuestras,22590
+Mate,10995
+404 No encontrado,9638
+Yerba Mate,6097
+Bolso Matero | Eco Cuero Premium Café Claro | Impermeable y Térmico,4344
+Bolso Matero,3695
+Cyber Days,2965
+Kit y Set de Mate,2964
+Bolso Matero | Eco Cuero Premium Marrón | Impermeable y Térmico,2828
+El Club del Mate,2631
+Novedades,2475
+Termo 1.2L Acero Inoxidable Negro | Tapa-Mate + Bombilla y Cepillo,2315
+Productos,2250
+Termos,2221
+Pantalla de pago - Cosas Nuestras,1908
+Mates y Portatermos Premium - Calidad y Estilo para Amantes del Mate | Cosas Nuestras,1851
+Guía de Regalos de Cosas Nuestras hasta 9.990,1751
+Tu carrito,1657
+Bolso Portatermo Beige | Tela Oxford con Correa Ajustable,1623
+El Kiosco,1607
+? Contraindicaciones de la yerba mate | Yerba Mate en Chile,1539
+"Set Completo de Mate Acero + Termo 1,2L + Bolso Matero *envio gratis e",1439
+Termos y Portatermos | Cosas Nuestras,1421
+Mate para Aventureros – Page 2,1384
+Bolso Matero Café Claro Premium | Impermeable y Térmico | Eco Cuero Re,1376
+Kit 3 Piezas Torpedo | Mate Acero Inoxidable 250 ml + Bombilla + Cepil,1229
+Bolso Matero | Oxford Premium Gris Oscuro | Impermeable y Térmico,1184
+Bolso Matero | Oxford Premium bordo | Impermeable y Térmico,1049
+Termo 1.2L Acero Inoxidable Rubí | Tapa-Mate + Bombilla y Cepillo,1021
+Latas y Yerbera,1014
+"Mochila Matera | Premium Negra | Térmica, Acolchada y Súper Versátil",957
+Dulce Batata Vainilla 500grs.,948
+"Set Completo Bolso Matero + Mate sabio+ Termo 1,3L-*envio gratis en sa",915
+"Mochila Matera | Premium Gris | Térmica, Acolchada y Súper Versátil",911
+Bombilla Mate,898
+Bolso Matero | Oxford Premium Gris Claro | Resistente y Térmico,884
+Termo 1.2L Acero Inoxidable Blanco | Tapa-Mate + Bombilla y Cepillo,835
+Cuenta,775
+Termo 1.2L Acero Inoxidable Naranja-Cobre | Tapa-Mate + Bombilla y Cep,774
+Alfajores,740
+Guía de Regalos de Cosas Nuestras hasta $19.990,723
+Bolso Matero | Eco Cuero Premium Gris | Impermeable y Térmico,690
+"Mate Sabio Bocha | Sistema de Vaciado Rápido | Práctico, Resistente y",680
+Guía de Regalos de Cosas Nuestras hasta $29.990,667
+Kit de Iniciación Todo en Uno | Portatermo + Termo 1.3L con Mate Integ,667
+Panadería y Galletas,653
+Portatermo Negro Doble Compartimiento – Tela Oxford Aislada,634
+Mate de Acero Inoxidable Marmolado Azul con Verde,629
+Set Matero Todo en Uno + Mate Bocha,598
+Bizcochos Don Satur Dulces 200grs.,566
+Mate Sabio Calabaza con Bombilla | Sistema de Vaciado Rápido | Práctic,564
+Chocolates y Golosinas,559
+Salud & Bienestar - Tu mate te cuida,558
+Bizcochos Don Satur Salados 200grs.,528
+Mayoristas,526
+? Cada cuánto cambiar la yerba del Mate | La Mejor Yerba Mate de Chile,525
+Dulces y Condimentos,522
+Termo Mate Todo en Uno Negro 1.3 L – Acero Inoxidable,516
+"Set mate acero con yerba la merced, bombilla y cepillo",485
+Yerba Mate Canarias Edición Especial 500grs,479
+Mate de Acero Inoxidable Símil Madera | Doble Capa Térmica,456
+Mate – Page 3,454
+"Kit Mate Siempre | Tu mate completo, ordenado y listo para acompañarte",447
+? Cuánto mate se puede tomar al día | El Mejor Yerba Mate de Chile,445
+Set Matero Acero Inox. Con Mate Y Bombilla negro 1.2 L,437
+Checkout - Receipt,433
+Yerba Mate Canarias 500g | Sabor Amargo e Intenso | 100% Natural,430
+Bolso Matero Premium Impermeable | Doble Pared Térmica | Eco Cuero Dur,412
+Portatermo Gris Oscuro Compartimiento – Tela Oxford Aislada,408
+MATE VS CAFÉ: ¿Con cuál te quedas? GUÍA para elegir informado,388
+Caja Mayorista x12 Mate Sabio | Kit de Mates con Bombilla | Ideal para,385
+Set Matero Completo Cosas Nuestras | Termo Inox 1L + Yerba Piporé 250g,342
+Yerba Mate Cachamate Compuesta Premium 500g | Con Hierbas Naturales,334
+Mate para Aventureros,312
+Portatermo Azul Doble Compartimiento – Tela Oxford Aislada,301
+"Té, Café y Chocolate",301
+Mate – Page 2,296
+Pack x3 Mates Sabio Calabaza | Innovación Matera con Sistema de Vaciad,294
+🧉 Kit Matero Negro | Bolso + Termo 1.2L + Mate de Acero + Bombillas,292
+Pack x2 Mates de Vidrio Camionero Goma Eva | Protección Térmica + Viro,290
+Termo Mate Todo en Uno Blanco 1.3 L – Acero Inoxidable,263
+Mate de Vidrio Templado Eco Cuero | Virola Metálica | 200 ml,262
+Termo Mate Todo en Uno Rosa Pastel 1.3 L – Acero Inoxidable,262
+Yerba Mate La Merced de Campo 500g | Sabor Suave y Natural,259
+Alfajores Havanna Mixto 6 Unidades - Cosas Nuestras Chile,258
+BOMBILLA ACERO INOXIDABLE TAMBOR PICO DE LORO 20cm,257
+Snacks Salados,256
+Yerba Mate La Merced Barbacuá 500g | Sabor Intenso Ahumado 🌿🔥,242
+"Accesorios de Mate: Bombillas, Bolsos y Más | Cosas Nuestras",239
+Nuestros Clásicos,239
+Set mate acero inoxidable 3 piezas con vaso de alta durabilidad,229
+Yerba Mate CBSe Frutos del Bosque 500g | Sabor Dulce y Refrescante 🍓🌿,229
+Yerba Mate Cbsé Guaraná 500grs,226
+Yerba Mate Kraus Orgánica 500g | 100% Natural y Orgánica 🌿,224
+Yerba Mate Taragüi Más Energía 500g | Energizante y Natural 🌿⚡,213
+KIT MATE LISTO ⭐Todo armado en un solo lugar para que salgas con tu ma,210
+Bombilla Acero inoxidable Futbol Argentina,208
+"Kit Primer Mate: Partí bien, sin enredos y con todo lo necesario para",208
+Yerba Mate – Page 3,203
+"Kit Black Matero: Estilo, diseño y todo listo para llevar tu mate a ot",199
+Política de envío,199
+? Yerba mate para adelgazar: ¿Te hace perder peso? | Yerba Mate Chile,195
+? Consejos para elegir la mejor yerba mate | Yerba Mate en Chile,194
+Liquidadora Mayorista,194
+Mate Vidrio Copa Eco Carpincho(CAPIBARA),194
+Kit Mate Camionero Verde con Bombilla | Vidrio Templado + Protección T,190
+Mate de Vidrio Copa Arpillera | Virola Metálica | 200 ml,187
+"? Propiedades del mate: Energía, buena salud y felicidad | Mate en Chile",181
+Bombilla de Acero Inoxidable 20 cm | Base Palita y Pico de Loro | Idea,179
+Yerba Mate – Page 2,171
+yerba mate Pajarito tradicional 500 grs,170
+Set Regalo Matero: Todo listo para sorprender y disfrutar desde el pri,166
+BOMBILLA TAMBOR ACERO INOXIDABLE TAMBOR URUGUAYO,163
+Mate de Acero Inoxidable Texturizado Negro | Doble Capa Térmica + Bomb,163
+Dulce Batata vainilla x12,160
+Mate acero inoxidable 200 ml doble capa térmica,160
+Bizcochos Don Satur Negritos 200grs.,152
+Mate Sabio Barril | Sistema de Vaciado Rápido | Diseño Ergonómico y Du,152
+Mates y Portatermos Premium - Calidad y Estilo para Amantes del Mate | Cosas Nuestras – Page 2,152
+✔ Las mejores comidas y momentos para ACOMPAÑAR el MATE. ⭐,152
+La Parrilla,151
+"⇨Los Impresionantes Beneficios del mate ⭐ energía, salud y ALEGRÍA",151
+Set Matero Acero Inoxidable Negro | Mate Doble Capa + Bombilla Pulida,150
+Set Matero Acero Inox. Con Mate Y Bombilla Naranjo Cobre 1.2 L,147
+Bolso Matero Gris OSCURO Premium | Impermeable y Térmico | Tela Oxford,144
+Mate Fútbol Argentino | Edición Mate Sabio | Sistema de Vaciado Rápido,144
+Vestimenta y Accesorios,144
+Mate de Vidrio Eco Cuero Pedestal II | Virola de Aluminio | Listo para,142
+El Club del Mate – Page 2,140
+El Buen pastor 500 grs,137
+Novedades – Page 2,136
+Yerba Mate Taragüi maracuya tropical 500gr.,136
+Braseros,135
+Ofertas,134
+Dulce de Leche Havanna 450grs.,131
+Salsas,129
+Yerba Mate Cbsé Silueta 500grs,127
+Dulce Batata Dulcor con chocolate lata 700gr,124
+Ofertas Exclusivas No Acumulables,119
+Vertedor para termo lumilagro,119
+Bolso Matero Gris Claro Premium | Impermeable y Térmico | Tela Oxford,117
+Yerba Mate Cbsé Hierbas Serranas 500grs,115
+YERBA MATE ROSAMONTE CLÁSICA 500 GRS,114
+Crear cuenta,111
+Yerba Mate Piporé Suave 500gr,110
+Set Matero Acero Inox. Con Mate Y Bombilla blanco 1.2 L,109
+Yerba Mate union suave 500 gr.,107
+Accesorios Parrilla,103
+Filtros para bombillas universal reunata,103
+Mate Sabio Rosado,102
+Alfajores Havanna de Chocolate - Cosas Nuestras,100
+Yerba Mate El Buen Pastor Menta Boldo 500grs,97
+Caja Mayorista x12 Mates de Vidrio Eco Carpincho | Diseño Artesanal +,93
+Guía de Regalos de Cosas Nuestras hasta 9.990 – Page 2,92
+Yerba Mate Cachamate Pampeana 500grs,89
+Dulce de Batata con Chocolate Orieta 500g,88
+Mate de Vidrio Eco Cuero con Pedestal | Virola y Base Metálica | Inclu,87
+Tipos de yerba mate ¿Cuál elegir? ?,87
+Yerba Mate Rosamonte Selección Especial 500 grs,87
+Mate Terraza Negro | Diseño Moderno + Alta Resistencia | 200 ml,85
+Novedades – Page 3,85
+Yerba Mate Cachamate Compuesta Clásica 500grs,85
+Cyber Days – Page 2,84
+Productos – Page 2,83
+Mate de Vidrio Copa Eco Cuero Guardapampa Rojo | Virola Metálica | 200,82
+Mate Sabio Clásico | Sistema de Vaciado Rápido | Innovación y Tradició,81
+Mate de Vidrio Copa Arpillera Azul | Virola Metálica | 200 ml,81
+Yerba Mate Cbsé Miel 500grs,81
+Cyber Days – Page 3,79
+Promoción 1 Mate con bombilla + 1 Yerba Mate,79
+Mate acero inoxidable (LG) doble capa térmica,78
+? Puedo tomar mate si estoy amamantando | Yerba Mate en Chile,76
+Bolso Matero Gris Premium | Impermeable y Térmico | Eco Cuero Resisten,75
+Colecciones,75
+yerba mate la merced monte 500gr,75
+Kit Mate Crema con Bombilla | Vidrio Templado con Protección Térmica G,74
+Suscripción Mayorista,74
+Set Matero Acero Inox. Con Mate Y Bombilla rojo 1.2 L,73
+Yerba Mate Piporé Suave 250gr,73
+Set Termo de Acero + Mate Sabio | Tradición y Practicidad en un Solo P,72
+Bolso Matero Tela Oxford Premium | Doble Pared Térmica | Impermeable y,70
+Mate de Acero Inoxidable Marmolado Blanco,69
+rosamonte-mate cocido 25unidades,68
+Mermelada de Higo Cormillot Dulcor 454 g,67
+Yerba Mate Pipore Clásica 500 gr,67
+Parrillas,66
+Direcciones,65
+≫ Beneficios del Mate vs Té Verde ? TODO lo que debes saber,65
+Mate de Vidrio Templado Tipo Camionero Verde | Protección Térmica Goma,64
+Set Matero Todo en Uno (+ Mate Bocha de Regalo),64
+Yerba Mate Rosamonte Premium 500g | Sabor Suave y Duradero 🌿,63
+Yerba Mate La Merced Campo y Monte 500g | Sabor Suave y Vigoroso 🌿,62
+Asadera Para Aves jovifel,61
+Caja Bizcochos Don Satur Dulces x30,53
+"Pack 3 Mates Sabio Bocha | Sistema de Vaciado Rápido | Práctico, Resis",53
+Novedades – Page 4,49
+Yerba Mate Cbsé Jengibre 500grs,49
+? Tomar mate en el embarazo | El Mejor Yerba Mate de Chile,48
+BOMBILLA ACERO INOXIDABLE ESTRIBO,48
+Guía de Regalos de Cosas Nuestras hasta $19.990 – Page 2,48
+"Búsqueda: 42 resultados encontrados para ""termo""",47
+"Kit Matero | Portatermo + Mate Sabio | 🎁 Bombilla Incluida | Amplio, R",46
+Yerba Mate Piporé Naranja 500gr,46
+Mate Sabio Futbol Oficial San Lorenzo,45
+Mate Vidrio Copa Eco Cuero costuras,45
+Vaso de acero inoxidable doble pared 880 ml,40
+Cepillo Limpiador de Mate y Termos REUNATA | Cerdas Naturales y Cuerpo,39
+Productos – Page 3,39
+? Cómo saber si la yerba mate es de buena calidad | Yerba Mate Chile,38
+Yerba Mate Taragüi despalada 500gr.,35
+"Búsqueda: 137 resultados encontrados para ""mate""",34
+Kits Despacho Gratis Región Metropolitana,34
+Uncategorized,34
+"Búsqueda: 14 resultados encontrados para ""bolso""",33
+mix 6 Alfajores cachafaz,33
+"Búsqueda: 43 resultados encontrados para ""termo""",32
+Contacto,32
+Mermelada Dietética de Higo Cormillot 390 g,32
+Restablecer cuenta,32
+El Regalo Perfecto para Mamá 🧉 Set Matero Completo + Envío Gratis en S,31
+"Búsqueda: 134 resultados encontrados para ""mate""",30
+Caja Mayorista 15 Bombillas II,30
+Yerba Mate Mañanita 500grs,30
+"Búsqueda: 15 resultados encontrados para ""bolso""",29
+"✔¿MATE Calabaza, de VIDRIO o PLÁSTICO? Sus características✔",29
+✔ Leyendas de la Yerba Mate - Historias de nuestros ancestros ??,28
+"Búsqueda: 140 resultados encontrados para ""mate""",26
+Dulce de Leche Cachafaz 450g | Sabor Artesanal y Gourmet,25
+Termos y Portatermos | Cosas Nuestras – Page 2,25
+"Búsqueda: 6 resultados encontrados para ""chocolinas""",24
+Productos – Page 4,24
+Truco,24
+"Búsqueda: 19 resultados encontrados para ""termos""",23
+"Búsqueda: 75 resultados encontrados para ""bombilla""",23
+"Búsqueda: 89 resultados encontrados para ""yerba""",23
+Caja Mayorista 12 Bombillas Acero Inoxidable Pala Pico de Loro Larga,23
+Checkout - Stock problems,23
+Historia del alfajor ¿De donde viene? ?,23
+Liquidación de bodega,23
+Mate con Amigos,23
+"Búsqueda: 136 resultados encontrados para ""mate""",22
+"Búsqueda: 73 resultados encontrados para ""bombilla""",22
+Tablas,22
+Yerba Mate La Merced Campo Sur 500g | Sabor Suave y Delicado,22
+Productos – Page 6,21
+"Mate con Amigos – tagged ""Beneficios del yerba mate""",20
+Mermelada de Naranja Cormillot Dulcor 454 g,20
+Mermelada de Zapallo Cormillot Dulcor 454 g,20
+Productos – Page 5,20
+Productos – Page 8,20
+Política de reembolso,19
+"Búsqueda: 138 resultados encontrados para ""mate""",18
+"Búsqueda: 6 resultados encontrados para ""alfajores""",17
+✔ Mate FRÍO: Disfruta tu YERBA MATE en VERANO,17
+"Búsqueda: 95 resultados encontrados para ""yerba""",16
+"Mate con Amigos – tagged ""Cómo tomar yerba mate""",16
+Mermelada Light de Arándano Cormillot 390 g,16
+Productos – Page 9,16
+Set Completo Mamatero -*envio gratis en santiago provincia*,16
+"Búsqueda: 12 resultados encontrados para ""batata""",15
+Ofertas Navidad 2024 | Cosas Nuestras,15
+Para el Hogar,15
+"Búsqueda: 0 resultados encontrados para ""despolvillador""",14
+"Búsqueda: 14 resultados encontrados para ""bolso matero""",14
+"Búsqueda: 46 resultados encontrados para ""matero""",14
+"Cachamate compuesta rosa 500gryerba matecon palo, poleo, boldo, menta",14
+Caja Bizcochos Don Satur Salados x30 Unidades | Venta Mayorista,14
+Caja Mayorista 12 Bombillas tambor larga,14
+Recompensas,14
+"Búsqueda: 132 resultados encontrados para ""mate""",13
+Caja Mayorista 12 Bombillas Tambor Uruguayo,13
+▷ En verano también se toma mate ? Disfruta de un refrescante Terere ◁,13
+"▷ Pan dulce, panetón o pan de Pascua: Su historia - COSAS NUESTRAS",13
+"Búsqueda: 119 resultados encontrados para ""mates""",12
+"Búsqueda: 12 resultados encontrados para ""dulce de batata""",12
+"Búsqueda: 14 resultados encontrados para ""bolsos""",12
+"Búsqueda: 93 resultados encontrados para ""yerba""",12
+"Mate con Amigos – tagged ""Contraindicaciones de la yerba mate""",12
+"Búsqueda: 10 resultados encontrados para ""canarias""",11
+"Búsqueda: 13 resultados encontrados para ""bolsos""",11
+"Búsqueda: 3 resultados encontrados para ""esnaola""",11
+"Búsqueda: 72 resultados encontrados para ""bombilla""",11
+Mate Camionero de Vidrio con Cuero Vaqueta | Virola de Acero Inoxidabl,11
+Términos del servicio,11
+Yerba Mate Cbsé Limón 500grs,11
+▷ Mujeres y MATE: Una relación incondicional | COSAS NUESTRAS,11
+? Polvo de la yerba mate | El Mejor Yerba Mate de Chile,10
+"Búsqueda: 12 resultados encontrados para ""yerbero""",10
+"Búsqueda: 138 resultados encontrados para ""Mate"" – Page 4",10
+"Búsqueda: 41 resultados encontrados para ""termo""",10
+"Búsqueda: 67 resultados encontrados para ""bombilla""",10
+"Búsqueda: 96 resultados encontrados para ""yerba""",10
+? Pastelitos de dulce de batata al horno | Cosas Nuesta en Chile,9
+"Búsqueda: 0 resultados encontrados para ""yerberos""",9
+"Búsqueda: 1 resultado encontrado para ""baldo""",9
+"Búsqueda: 1 resultado encontrado para ""lumilagro""",9
+"Búsqueda: 15 resultados encontrados para ""imperial""",9
+"Búsqueda: 16 resultados encontrados para ""imperial""",9
+"Búsqueda: 18 resultados encontrados para ""dulce de leche""",9
+"Búsqueda: 42 resultados encontrados para ""Termo""",9
+"Búsqueda: 53 resultados encontrados para ""yerbas""",9
+Pedido#30896,9
+Productos – Page 7,9
+Buscar,8
+"CyberDay | Descuentos en Alfajores, Yerbas y Accesorios",8
+⊛ Recetas de empanadas⇨Combina su sabor con el de la YERBA MATE,8
+"Búsqueda: 100 resultados encontrados para ""yerba""",7
+"Búsqueda: 11 resultados encontrados para ""don satur""",7
+"Búsqueda: 124 resultados encontrados para ""mates""",7
+"Búsqueda: 14 resultados encontrados para ""batata""",7
+"Búsqueda: 14 resultados encontrados para ""bolsos materos""",7
+"Búsqueda: 15 resultados encontrados para ""bolsos""",7
+"Búsqueda: 15 resultados encontrados para ""mate imperial""",7
+"Búsqueda: 25 resultados encontrados para ""bombillas""",7
+"Búsqueda: 39 resultados encontrados para ""bolso matero de 36 cm de alto""",7
+"Búsqueda: 7 resultados encontrados para ""cachafaz""",7
+"Búsqueda: 9 resultados encontrados para ""queso""",7
+"Búsqueda: 98 resultados encontrados para ""yerba""",7
+jovifel,7
+set matero,7
+? Recetas caseras con galletitas Don Satur | Cosas Nuestras Chile,6
+"Búsqueda: 0 resultados encontrados para ""casancrem""",6
+"Búsqueda: 10 resultados encontrados para ""alfajor""",6
+"Búsqueda: 11 resultados encontrados para ""pipore""",6
+"Búsqueda: 124 resultados encontrados para ""mate"" – Page 2",6
+"Búsqueda: 138 resultados encontrados para ""Mate""",6
+"Búsqueda: 16 resultados encontrados para ""mate imperial""",6
+"Búsqueda: 26 resultados encontrados para ""set""",6
+"Búsqueda: 28 resultados encontrados para ""kit""",6
+"Búsqueda: 49 resultados encontrados para ""suave""",6
+"Búsqueda: 5 resultados encontrados para ""don satur""",6
+"Búsqueda: 6 resultados encontrados para ""la merced""",6
+"Búsqueda: 97 resultados encontrados para ""yer""",6
+Cosas Nuestras – Page 2,6
+"Mate con Amigos – tagged ""Bajar de peso""",6
+Tarjetas de Regalo,6
+cbse,6
+mate,6
+"Búsqueda: 0 resultados encontrados para ""playadito""",5
+"Búsqueda: 1 resultado encontrado para ""dispensador""",5
+"Búsqueda: 119 resultados encontrados para ""mates"" – Page 3",5
+"Búsqueda: 121 resultados encontrados para ""mates""",5
+"Búsqueda: 125 resultados encontrados para ""mates""",5
+"Búsqueda: 13 resultados encontrados para ""yerbera""",5
+"Búsqueda: 133 resultados encontrados para ""mate""",5
+"Búsqueda: 17 resultados encontrados para ""bolso matero""",5
+"Búsqueda: 18 resultados encontrados para ""hierba mate""",5
+"Búsqueda: 18 resultados encontrados para ""termos""",5
+"Búsqueda: 22 resultados encontrados para ""boca juniors""",5
+"Búsqueda: 24 resultados encontrados para ""set matero""",5
+"Búsqueda: 26 resultados encontrados para ""bombillo""",5
+"Búsqueda: 27 resultados encontrados para ""bombillas""",5
+"Búsqueda: 30 resultados encontrados para ""kit""",5
+"Búsqueda: 45 resultados encontrados para ""matero""",5
+"Búsqueda: 6 resultados encontrados para ""Mochila""",5
+"Búsqueda: 91 resultados encontrados para ""yerba mate""",5
+"Búsqueda: 92 resultados encontrados para ""tarros para yerba""",5
+"Búsqueda: 92 resultados encontrados para ""yerba mate""",5
+"Búsqueda: 97 resultados encontrados para ""yerba mate""",5
+Caja Bizcochos Don Satur Negrito x30,5
+New Arrivals,5
+Yerba Mate Orgánica,5
+? Receta de marquise de chocolate Aguila con salsa de cerezas frescas,4
+"Búsqueda: 0 resultados encontrados para ""Don Omar""",4
+"Búsqueda: 0 resultados encontrados para ""Pack yerbero azucarero""",4
+"Búsqueda: 1 resultado encontrado para ""rei verde""",4
+"Búsqueda: 1 resultado encontrado para ""torpedo""",4
+"Búsqueda: 10 resultados encontrados para ""Canarias""",4
+"Búsqueda: 10 resultados encontrados para ""mate camionero""",4
+"Búsqueda: 10 resultados encontrados para ""porta mate""",4
+"Búsqueda: 11 resultados encontrados para ""yerba mate despalada""",4
+"Búsqueda: 12 resultados encontrados para ""dulce batata""",4
+"Búsqueda: 126 resultados encontrados para ""mates""",4
+"Búsqueda: 135 resultados encontrados para ""Mate""",4
+"Búsqueda: 135 resultados encontrados para ""mate""",4
+"Búsqueda: 136 resultados encontrados para ""Mate""",4
+"Búsqueda: 14 resultados encontrados para ""Bolso""",4
+"Búsqueda: 14 resultados encontrados para ""Bolsos""",4
+"Búsqueda: 15 resultados encontrados para ""bolso matero""",4
+"Búsqueda: 18 resultados encontrados para ""Dulce de leche""",4
+"Búsqueda: 19 resultados encontrados para ""Termos""",4
+"Búsqueda: 19 resultados encontrados para ""bolso mate""",4
+"Búsqueda: 2 resultados encontrados para ""reiverde""",4
+"Búsqueda: 25 resultados encontrados para ""Todos los productos""",4
+"Búsqueda: 39 resultados encontrados para ""matera""",4
+"Búsqueda: 4 resultados encontrados para ""futbol""",4
+"Búsqueda: 5 resultados encontrados para ""alfajores""",4
+"Búsqueda: 5 resultados encontrados para ""galletitas pal mate""",4
+"Búsqueda: 75 resultados encontrados para ""Bombilla""",4
+"Búsqueda: 8 resultados encontrados para ""don satur""",4
+"Búsqueda: 88 resultados encontrados para ""yerba""",4
+"Búsqueda: 96 resultados encontrados para ""yerba mate""",4
+"Búsqueda: 96 resultados encontrados para ""yerba"" – Page 2",4
+CACHAMATE,4
+Mates,4
+Ofertas Carrito,4
+Política de privacidad,4
+▷ El Ritual de MATEAR que perdura hasta el 2019 y por siempre.,4
+? Receta de mousse de dulce de leche La Serenisima | Cosas Nuestras,3
+"Búsqueda: 0 resultados encontrados para ""Termo Repuesto 1 CED Lumilagro""",3
+"Búsqueda: 0 resultados encontrados para ""morral""",3
+"Búsqueda: 0 resultados encontrados para ""twemo""",3
+"Búsqueda: 1 resultado encontrado para ""Lumilagro""",3
+"Búsqueda: 1 resultado encontrado para ""beso dulce""",3
+"Búsqueda: 1 resultado encontrado para ""cabsha""",3
+"Búsqueda: 1 resultado encontrado para ""luminagro""",3
+"Búsqueda: 1 resultado encontrado para ""river""",3
+"Búsqueda: 10 resultados encontrados para ""porta yerba""",3
+"Búsqueda: 10 resultados encontrados para ""yerba baldo""",3
+"Búsqueda: 11 resultados encontrados para ""vaso""",3
+"Búsqueda: 117 resultados encontrados para ""mates""",3
+"Búsqueda: 124 resultados encontrados para ""mate""",3
+"Búsqueda: 128 resultados encontrados para ""mates""",3
+"Búsqueda: 13 resultados encontrados para ""termos""",3
+"Búsqueda: 133 resultados encontrados para ""mate"" – Page 2",3
+"Búsqueda: 133 resultados encontrados para ""mate"" – Page 3",3
+"Búsqueda: 137 resultados encontrados para ""Mate""",3
+"Búsqueda: 14 resultados encontrados para ""queso mantecoso""",3
+"Búsqueda: 16 resultados encontrados para ""Mate imperial""",3
+"Búsqueda: 16 resultados encontrados para ""bolso""",3
+"Búsqueda: 19 resultados encontrados para ""menta""",3
+"Búsqueda: 23 resultados encontrados para ""copa del mundo""",3
+"Búsqueda: 28 resultados encontrados para ""boca""",3
+"Búsqueda: 28 resultados encontrados para ""termo matero""",3
+"Búsqueda: 3 resultados encontrados para ""havanna""",3
+"Búsqueda: 3 resultados encontrados para ""yerba piporr""",3
+"Búsqueda: 38 resultados encontrados para ""materos""",3
+"Búsqueda: 42 resultados encontrados para ""termo"" – Page 2",3
+"Búsqueda: 43 resultados encontrados para ""Termo""",3
+"Búsqueda: 43 resultados encontrados para ""termo"" – Page 2",3
+"Búsqueda: 49 resultados encontrados para ""Te mate""",3
+"Búsqueda: 5 resultados encontrados para ""havanna""",3
+"Búsqueda: 5 resultados encontrados para ""jugo""",3
+"Búsqueda: 6 resultados encontrados para ""kiy""",3
+"Búsqueda: 61 resultados encontrados para ""bombilla mate""",3
+"Búsqueda: 7 resultados encontrados para ""mate galleta""",3
+"Búsqueda: 71 resultados encontrados para ""bombilla""",3
+"Búsqueda: 76 resultados encontrados para ""té""",3
+"Búsqueda: 77 resultados encontrados para ""té""",3
+"Búsqueda: 8 resultados encontrados para ""kot mate""",3
+"Búsqueda: 84 resultados encontrados para ""para hechar yerba""",3
+"Búsqueda: 84 resultados encontrados para ""yerba mate""",3
+"Búsqueda: 86 resultados encontrados para ""yerba""",3
+HAVANNA,3
+"Mate con Amigos – tagged ""Yerba mate para adelgazar""",3
+Nuestra Selección,3
+Pedido#30725,3
+bolso matero,3
+"Búsqueda: 0 resultados encontrados para ""Fainq""",2
+"Búsqueda: 0 resultados encontrados para ""Repuesto 1 CED Lumilagro""",2
+"Búsqueda: 0 resultados encontrados para ""Tapamate""",2
+"Búsqueda: 0 resultados encontrados para ""Terma serrano""",2
+"Búsqueda: 0 resultados encontrados para ""Yerberos""",2
+"Búsqueda: 0 resultados encontrados para ""aficiones""",2
+"Búsqueda: 0 resultados encontrados para ""burro""",2
+"Búsqueda: 0 resultados encontrados para ""canasta matera""",2
+"Búsqueda: 0 resultados encontrados para ""chimarrao""",2
+"Búsqueda: 0 resultados encontrados para ""chocolins""",2
+"Búsqueda: 0 resultados encontrados para ""curso gratis de cebador""",2
+"Búsqueda: 0 resultados encontrados para ""kit latas cosas nuestras""",2
+"Búsqueda: 0 resultados encontrados para ""kurupi""",2
+"Búsqueda: 0 resultados encontrados para ""la vaquita""",2
+"Búsqueda: 0 resultados encontrados para ""laymi""",2
+"Búsqueda: 0 resultados encontrados para ""mate pvc""",2
+"Búsqueda: 0 resultados encontrados para ""messi""",2
+"Búsqueda: 0 resultados encontrados para ""ranchero""",2
+"Búsqueda: 0 resultados encontrados para ""tapon""",2
+"Búsqueda: 0 resultados encontrados para ""yerbero y azucareros""",2
+"Búsqueda: 1 resultado encontrado para ""Baldo""",2
+"Búsqueda: 1 resultado encontrado para ""Fantoche""",2
+"Búsqueda: 1 resultado encontrado para ""Mate de Vidrio Eco Cuero con Pedestal | Virola y Base Metálica""",2
+"Búsqueda: 1 resultado encontrado para ""kalena""",2
+"Búsqueda: 1 resultado encontrado para ""latas""",2
+"Búsqueda: 1 resultado encontrado para ""lumilag""",2
+"Búsqueda: 1 resultado encontrado para ""mantecol""",2
+"Búsqueda: 1 resultado encontrado para ""matcn915""",2
+"Búsqueda: 1 resultado encontrado para ""sets""",2
+"Búsqueda: 1 resultado encontrado para ""termo matero 1 lt""",2
+"Búsqueda: 1 resultado encontrado para ""yerba mate pajarito de menta""",2
+"Búsqueda: 10 resultados encontrados para ""Pipore""",2
+"Búsqueda: 10 resultados encontrados para ""alfajores cachafaz""",2
+"Búsqueda: 10 resultados encontrados para ""bizcocho""",2
+"Búsqueda: 10 resultados encontrados para ""bolsos impermeables""",2
+"Búsqueda: 10 resultados encontrados para ""canaria""",2
+"Búsqueda: 10 resultados encontrados para ""termo Lumilagro""",2
+"Búsqueda: 10 resultados encontrados para ""termo repuesto""",2
+"Búsqueda: 11 resultados encontrados para ""Don Satur""",2
+"Búsqueda: 11 resultados encontrados para ""calab""",2
+"Búsqueda: 11 resultados encontrados para ""organica""",2
+"Búsqueda: 11 resultados encontrados para ""satur""",2
+"Búsqueda: 12 resultados encontrados para ""Cachamate""",2
+"Búsqueda: 12 resultados encontrados para ""bilsos materos""",2
+"Búsqueda: 12 resultados encontrados para ""cachamate""",2
+"Búsqueda: 12 resultados encontrados para ""termo de vidrio""",2
+"Búsqueda: 13 resultados encontrados para ""yerba mate argentina con hierba""",2
+"Búsqueda: 132 resultados encontrados para ""mate"" – Page 2",2
+"Búsqueda: 133 resultados encontrados para ""MATE""",2
+"Búsqueda: 138 resultados encontrados para ""Mate"" – Page 3",2
+"Búsqueda: 138 resultados encontrados para ""mate"" – Page 6",2
+"Búsqueda: 14 resultados encontrados para ""Mate cocido""",2
+"Búsqueda: 14 resultados encontrados para ""kit materos""",2
+"Búsqueda: 14 resultados encontrados para ""mate cocido""",2
+"Búsqueda: 14 resultados encontrados para ""paso""",2
+"Búsqueda: 14 resultados encontrados para ""yerba sara""",2
+"Búsqueda: 140 resultados encontrados para ""Mate""",2
+"Búsqueda: 15 resultados encontrados para ""bolsos materos""",2
+"Búsqueda: 15 resultados encontrados para ""mate con tapa""",2
+"Búsqueda: 16 resultados encontrados para ""bolso matrero""",2
+"Búsqueda: 16 resultados encontrados para ""chocolate""",2
+"Búsqueda: 16 resultados encontrados para ""kit mate""",2
+"Búsqueda: 16 resultados encontrados para ""mate vidrio""",2
+"Búsqueda: 16 resultados encontrados para ""pico""",2
+"Búsqueda: 17 resultados encontrados para ""Bolso matero""",2
+"Búsqueda: 17 resultados encontrados para ""dulce de leche""",2
+"Búsqueda: 17 resultados encontrados para ""kit matero""",2
+"Búsqueda: 17 resultados encontrados para ""mate sabio""",2
+"Búsqueda: 17 resultados encontrados para ""sabio""",2
+"Búsqueda: 18 resultados encontrados para ""calabaza""",2
+"Búsqueda: 18 resultados encontrados para ""kit mate""",2
+"Búsqueda: 18 resultados encontrados para ""yerba uruguaya""",2
+"Búsqueda: 2 resultados encontrados para ""Gaseosa""",2
+"Búsqueda: 2 resultados encontrados para ""Gluten free""",2
+"Búsqueda: 2 resultados encontrados para ""Lata""",2
+"Búsqueda: 2 resultados encontrados para ""Mate Sabio Calabaza con Bombilla""",2
+"Búsqueda: 2 resultados encontrados para ""amanda""",2
+"Búsqueda: 2 resultados encontrados para ""kraus""",2
+"Búsqueda: 2 resultados encontrados para ""yerba mate la merced Barbacui""",2
+"Búsqueda: 21 resultados encontrados para ""boca juniors""",2
+"Búsqueda: 22 resultados encontrados para ""yermo""",2
+"Búsqueda: 26 resultados encontrados para ""set mate""",2
+"Búsqueda: 28 resultados encontrados para ""mate argentino""",2
+"Búsqueda: 29 resultados encontrados para ""argentino""",2
+"Búsqueda: 29 resultados encontrados para ""bebidas""",2
+"Búsqueda: 3 resultados encontrados para ""porta mate auto""",2
+"Búsqueda: 3 resultados encontrados para ""yerba matecpajarito de manta""",2
+"Búsqueda: 31 resultados encontrados para ""termo y mate""",2
+"Búsqueda: 36 resultados encontrados para ""mate de acero""",2
+"Búsqueda: 4 resultados encontrados para ""Arroz""",2
+"Búsqueda: 4 resultados encontrados para ""alfajores""",2
+"Búsqueda: 4 resultados encontrados para ""boldo""",2
+"Búsqueda: 40 resultados encontrados para ""matera""",2
+"Búsqueda: 42 resultados encontrados para ""TERMO""",2
+"Búsqueda: 42 resultados encontrados para ""repuesto de termo""",2
+"Búsqueda: 48 resultados encontrados para ""termi""",2
+"Búsqueda: 5 resultados encontrados para ""Biscocho""",2
+"Búsqueda: 5 resultados encontrados para ""Don satur""",2
+"Búsqueda: 5 resultados encontrados para ""chocolinas""",2
+"Búsqueda: 5 resultados encontrados para ""pajari""",2
+"Búsqueda: 5 resultados encontrados para ""portamate""",2
+"Búsqueda: 5 resultados encontrados para ""satur""",2
+"Búsqueda: 6 resultados encontrados para ""Repuesto""",2
+"Búsqueda: 6 resultados encontrados para ""imperial""",2
+"Búsqueda: 6 resultados encontrados para ""mochila""",2
+"Búsqueda: 6 resultados encontrados para ""repuesto""",2
+"Búsqueda: 6 resultados encontrados para ""sin gluten""",2
+"Búsqueda: 68 resultados encontrados para ""argentina""",2
+"Búsqueda: 7 resultados encontrados para ""Bolso oxford""",2
+"Búsqueda: 7 resultados encontrados para ""mochila""",2
+"Búsqueda: 70 resultados encontrados para ""argent""",2
+"Búsqueda: 74 resultados encontrados para ""bombilla""",2
+"Búsqueda: 76 resultados encontrados para ""bombilla""",2
+"Búsqueda: 77 resultados encontrados para ""bombilla""",2
+"Búsqueda: 8 resultados encontrados para ""alfajor""",2
+"Búsqueda: 8 resultados encontrados para ""kit 3""",2
+"Búsqueda: 88 resultados encontrados para ""Yerba""",2
+"Búsqueda: 88 resultados encontrados para ""Yerba"" – Page 2",2
+"Búsqueda: 88 resultados encontrados para ""yerba mate""",2
+"Búsqueda: 9 resultados encontrados para ""alfajor""",2
+"Búsqueda: 9 resultados encontrados para ""canarias""",2
+"Búsqueda: 9 resultados encontrados para ""don satur""",2
+"Búsqueda: 9 resultados encontrados para ""paso de los toros""",2
+"Búsqueda: 9 resultados encontrados para ""rosamonte""",2
+"Búsqueda: 9 resultados encontrados para ""set completo mate""",2
+"Búsqueda: 91 resultados encontrados para ""Yerba""",2
+"Búsqueda: 94 resultados encontrados para ""yerba mate""",2
+"Búsqueda: 94 resultados encontrados para ""yerba""",2
+"Búsqueda: 95 resultados encontrados para ""yerba mate""",2
+"Búsqueda: 97 resultados encontrados para ""mste""",2
+"Búsqueda: 99 resultados encontrados para ""yerba""",2
+Comparar,2
+Don Satur,2
+"Kit Primer Mate | Partí bien, sin enredos y con todo lo necesario para",2
+LA MERCED,2
+"Mate con Amigos – tagged ""Cosas Nuestras""",2
+"Mate con Amigos – tagged ""calidad de vida""",2
+Pedido#29603,2
+Pedido#30525,2
+Pedido#30919,2
+Yerba Mate Suave y Equilibrada,2
+bombillas,2
+esnaola,2
+taragui,2
+404 Not Found,1
+? 5 Aperitivos de bizcochos Don Satur que puedes preparar,1
+"Búsqueda: 0 resultados encontrados para ""Aruba""",1
+"Búsqueda: 0 resultados encontrados para ""Butter queen""",1
+"Búsqueda: 0 resultados encontrados para ""Chimarrao""",1
+"Búsqueda: 0 resultados encontrados para ""Faina""",1
+"Búsqueda: 0 resultados encontrados para ""Gancia""",1
+"Búsqueda: 0 resultados encontrados para ""Pañales""",1
+"Búsqueda: 0 resultados encontrados para ""Ramuk""",1
+"Búsqueda: 0 resultados encontrados para ""aficciones""",1
+"Búsqueda: 0 resultados encontrados para ""asaso""",1
+"Búsqueda: 0 resultados encontrados para ""azucarero mate""",1
+"Búsqueda: 0 resultados encontrados para ""barro comestible""",1
+"Búsqueda: 0 resultados encontrados para ""bc""",1
+"Búsqueda: 0 resultados encontrados para ""bombilla atletico de madrid""",1
+"Búsqueda: 0 resultados encontrados para ""bosos""",1
+"Búsqueda: 0 resultados encontrados para ""caballo negro""",1
+"Búsqueda: 0 resultados encontrados para ""cachamate coco""",1
+"Búsqueda: 0 resultados encontrados para ""cafe cabrales""",1
+"Búsqueda: 0 resultados encontrados para ""cafe instantaneo""",1
+"Búsqueda: 0 resultados encontrados para ""camionero algarrobo""",1
+"Búsqueda: 0 resultados encontrados para ""cappelletti""",1
+"Búsqueda: 0 resultados encontrados para ""chaulata""",1
+"Búsqueda: 0 resultados encontrados para ""chimarrão""",1
+"Búsqueda: 0 resultados encontrados para ""cremon de laserenisi""",1
+"Búsqueda: 0 resultados encontrados para ""cumbrecita""",1
+"Búsqueda: 0 resultados encontrados para ""desempolvillador""",1
+"Búsqueda: 0 resultados encontrados para ""despovillador""",1
+"Búsqueda: 0 resultados encontrados para ""dispensador yerba""",1
+"Búsqueda: 0 resultados encontrados para ""enlozado""",1
+"Búsqueda: 0 resultados encontrados para ""erva reiVerde""",1
+"Búsqueda: 0 resultados encontrados para ""estuche""",1
+"Búsqueda: 0 resultados encontrados para ""felfont""",1
+"Búsqueda: 0 resultados encontrados para ""fernet""",1
+"Búsqueda: 0 resultados encontrados para ""fronteras""",1
+"Búsqueda: 0 resultados encontrados para ""hola buenas tardes oye busco un mate de cantidad como un litro tienen ustedes ahí pero de fibra de no de calabaza con orejera es de aluminio perdón""",1
+"Búsqueda: 0 resultados encontrados para ""imperiales""",1
+"Búsqueda: 0 resultados encontrados para ""indega""",1
+"Búsqueda: 0 resultados encontrados para ""jerbatero""",1
+"Búsqueda: 0 resultados encontrados para ""juniors""",1
+"Búsqueda: 0 resultados encontrados para ""kachafaz""",1
+"Búsqueda: 0 resultados encontrados para ""krauss saquitos""",1
+"Búsqueda: 0 resultados encontrados para ""kuripi""",1
+"Búsqueda: 0 resultados encontrados para ""la tanquera""",1
+"Búsqueda: 0 resultados encontrados para ""llaita""",1
+"Búsqueda: 0 resultados encontrados para ""los nietitos""",1
+"Búsqueda: 0 resultados encontrados para ""lumilagro""",1
+"Búsqueda: 0 resultados encontrados para ""mate economicos""",1
+"Búsqueda: 0 resultados encontrados para ""mate neopreno""",1
+"Búsqueda: 0 resultados encontrados para ""mate transparente""",1
+"Búsqueda: 0 resultados encontrados para ""mates autocebantes""",1
+"Búsqueda: 0 resultados encontrados para ""mates traslúcido""",1
+"Búsqueda: 0 resultados encontrados para ""matesmates""",1
+"Búsqueda: 0 resultados encontrados para ""mortadela""",1
+"Búsqueda: 0 resultados encontrados para ""nodd""",1
+"Búsqueda: 0 resultados encontrados para ""nuestra raiz""",1
+"Búsqueda: 0 resultados encontrados para ""pepa""",1
+"Búsqueda: 0 resultados encontrados para ""pionero""",1
+"Búsqueda: 0 resultados encontrados para ""pionono""",1
+"Búsqueda: 0 resultados encontrados para ""porta hierba""",1
+"Búsqueda: 0 resultados encontrados para ""rei verd""",1
+"Búsqueda: 0 resultados encontrados para ""repuestos termos""",1
+"Búsqueda: 0 resultados encontrados para ""rey verde soort""",1
+"Búsqueda: 0 resultados encontrados para ""rosquitas muñoz""",1
+"Búsqueda: 0 resultados encontrados para ""sacudador""",1
+"Búsqueda: 0 resultados encontrados para ""sal parrillera""",1
+"Búsqueda: 0 resultados encontrados para ""servilletas""",1
+"Búsqueda: 0 resultados encontrados para ""tapamate""",1
+"Búsqueda: 0 resultados encontrados para ""tapamte""",1
+"Búsqueda: 0 resultados encontrados para ""te oolong""",1
+"Búsqueda: 0 resultados encontrados para ""teipack""",1
+"Búsqueda: 0 resultados encontrados para ""terma serrano""",1
+"Búsqueda: 0 resultados encontrados para ""termi bala""",1
+"Búsqueda: 0 resultados encontrados para ""termo campeones del.mudn""",1
+"Búsqueda: 0 resultados encontrados para ""termo luminagro""",1
+"Búsqueda: 0 resultados encontrados para ""translate on inglush""",1
+"Búsqueda: 0 resultados encontrados para ""vauquita""",1
+"Búsqueda: 0 resultados encontrados para ""vitina""",1
+"Búsqueda: 0 resultados encontrados para ""yerba moncayo""",1
+"Búsqueda: 0 resultados encontrados para ""yiyi""",1
+"Búsqueda: 1 resultado encontrado para ""Bizcochos Don Satur Dulces 200grs""",1
+"Búsqueda: 1 resultado encontrado para ""Bizcochos Don Satur Negritos 200grs""",1
+"Búsqueda: 1 resultado encontrado para ""Dulce Batata Dulcor con chocolate lata 700gr""",1
+"Búsqueda: 1 resultado encontrado para ""Dulce Batata vainilla x12""",1
+"Búsqueda: 1 resultado encontrado para ""Kit Primer Mate: Partí bien, sin enredos y con todo lo necesario para disfrutar el mate desde el primer día.""",1
+"Búsqueda: 1 resultado encontrado para ""Lumi""",1
+"Búsqueda: 1 resultado encontrado para ""Mate de Vidrio Eco Cuero con Pedestal | Virola y Base Metálica | Incluye Bombilla |""",1
+"Búsqueda: 1 resultado encontrado para ""Repuesto termo Lumilagro""",1
+"Búsqueda: 1 resultado encontrado para ""Serrano""",1
+"Búsqueda: 1 resultado encontrado para ""Torpedo""",1
+"Búsqueda: 1 resultado encontrado para ""alfajor arroz""",1
+"Búsqueda: 1 resultado encontrado para ""aureva""",1
+"Búsqueda: 1 resultado encontrado para ""biscochos""",1
+"Búsqueda: 1 resultado encontrado para ""burrito""",1
+"Búsqueda: 1 resultado encontrado para ""caballo""",1
+"Búsqueda: 1 resultado encontrado para ""cabarias""",1
+"Búsqueda: 1 resultado encontrado para ""cachamate compuesta premium""",1
+"Búsqueda: 1 resultado encontrado para ""chimarrão""",1
+"Búsqueda: 1 resultado encontrado para ""colo colo""",1
+"Búsqueda: 1 resultado encontrado para ""copao o rumpa""",1
+"Búsqueda: 1 resultado encontrado para ""esmeralda""",1
+"Búsqueda: 1 resultado encontrado para ""facturas""",1
+"Búsqueda: 1 resultado encontrado para ""fel fort""",1
+"Búsqueda: 1 resultado encontrado para ""galletero""",1
+"Búsqueda: 1 resultado encontrado para ""giacomo""",1
+"Búsqueda: 1 resultado encontrado para ""hierbera""",1
+"Búsqueda: 1 resultado encontrado para ""kiosco""",1
+"Búsqueda: 1 resultado encontrado para ""lumiala""",1
+"Búsqueda: 1 resultado encontrado para ""maroc""",1
+"Búsqueda: 1 resultado encontrado para ""mate rosa monte""",1
+"Búsqueda: 1 resultado encontrado para ""mate""",1
+"Búsqueda: 1 resultado encontrado para ""mermelada zapallo""",1
+"Búsqueda: 1 resultado encontrado para ""mostaza""",1
+"Búsqueda: 1 resultado encontrado para ""mundial""",1
+"Búsqueda: 1 resultado encontrado para ""pajarito menta""",1
+"Búsqueda: 1 resultado encontrado para ""rosquitas""",1
+"Búsqueda: 1 resultado encontrado para ""serena""",1
+"Búsqueda: 1 resultado encontrado para ""shot""",1
+"Búsqueda: 1 resultado encontrado para ""tarro""",1
+"Búsqueda: 1 resultado encontrado para ""termo de 1/2 litro""",1
+"Búsqueda: 1 resultado encontrado para ""torpedos""",1
+"Búsqueda: 1 resultado encontrado para ""tortitas""",1
+"Búsqueda: 10 resultados encontrados para ""Baldo yerba""",1
+"Búsqueda: 10 resultados encontrados para ""Brasil""",1
+"Búsqueda: 10 resultados encontrados para ""dulce de leche chimbote""",1
+"Búsqueda: 10 resultados encontrados para ""dulze de batata""",1
+"Búsqueda: 10 resultados encontrados para ""filtro""",1
+"Búsqueda: 10 resultados encontrados para ""galletitas""",1
+"Búsqueda: 10 resultados encontrados para ""mate autocebante""",1
+"Búsqueda: 10 resultados encontrados para ""mate cosido""",1
+"Búsqueda: 10 resultados encontrados para ""mate imperial""",1
+"Búsqueda: 10 resultados encontrados para ""matecocido""",1
+"Búsqueda: 10 resultados encontrados para ""personalizado""",1
+"Búsqueda: 10 resultados encontrados para ""porta termo""",1
+"Búsqueda: 10 resultados encontrados para ""queso""",1
+"Búsqueda: 10 resultados encontrados para ""repuesto termo""",1
+"Búsqueda: 10 resultados encontrados para ""repuestos termo""",1
+"Búsqueda: 10 resultados encontrados para ""seleccion argentina""",1
+"Búsqueda: 10 resultados encontrados para ""tamizador""",1
+"Búsqueda: 10 resultados encontrados para ""tapa cebadora""",1
+"Búsqueda: 10 resultados encontrados para ""taragui""",1
+"Búsqueda: 10 resultados encontrados para ""teemos""",1
+"Búsqueda: 10 resultados encontrados para ""termolar""",1
+"Búsqueda: 10 resultados encontrados para ""thermos""",1
+"Búsqueda: 10 resultados encontrados para ""toro""",1
+"Búsqueda: 10 resultados encontrados para ""vaso térmico""",1
+"Búsqueda: 10 resultados encontrados para ""vertedor""",1
+"Búsqueda: 10 resultados encontrados para ""yerba cana""",1
+"Búsqueda: 10 resultados encontrados para ""yerba pipore 1kg""",1
+"Búsqueda: 10 resultados encontrados para ""yerba playadito""",1
+"Búsqueda: 11 resultados encontrados para ""bolso portatermo""",1
+"Búsqueda: 11 resultados encontrados para ""cuchara""",1
+"Búsqueda: 11 resultados encontrados para ""galleta""",1
+"Búsqueda: 11 resultados encontrados para ""galletas de Arroz""",1
+"Búsqueda: 11 resultados encontrados para ""galletitas""",1
+"Búsqueda: 11 resultados encontrados para ""mochila matera""",1
+"Búsqueda: 11 resultados encontrados para ""mundo""",1
+"Búsqueda: 11 resultados encontrados para ""pico vertedor""",1
+"Búsqueda: 11 resultados encontrados para ""termo 1 litro""",1
+"Búsqueda: 11 resultados encontrados para ""yerberas""",1
+"Búsqueda: 12 resultados encontrados para ""Bolso Portatermo""",1
+"Búsqueda: 12 resultados encontrados para ""Yerbero""",1
+"Búsqueda: 12 resultados encontrados para ""campeon del mundo""",1
+"Búsqueda: 12 resultados encontrados para ""cbse""",1
+"Búsqueda: 12 resultados encontrados para ""cbsé""",1
+"Búsqueda: 12 resultados encontrados para ""dulce de membrillo""",1
+"Búsqueda: 12 resultados encontrados para ""juego de mate""",1
+"Búsqueda: 12 resultados encontrados para ""termo 1 lt""",1
+"Búsqueda: 12 resultados encontrados para ""yerba la merced""",1
+"Búsqueda: 124 resultados encontrados para ""Mate de loza""",1
+"Búsqueda: 127 resultados encontrados para ""mates""",1
+"Búsqueda: 13 resultados encontrados para ""CBSE""",1
+"Búsqueda: 13 resultados encontrados para ""bolso matw""",1
+"Búsqueda: 13 resultados encontrados para ""caja""",1
+"Búsqueda: 13 resultados encontrados para ""cbse""",1
+"Búsqueda: 13 resultados encontrados para ""crema""",1
+"Búsqueda: 13 resultados encontrados para ""gelatina sin sabor""",1
+"Búsqueda: 13 resultados encontrados para ""mate de vidrio""",1
+"Búsqueda: 13 resultados encontrados para ""mate vidrio templado""",1
+"Búsqueda: 13 resultados encontrados para ""vaso mate""",1
+"Búsqueda: 13 resultados encontrados para ""vaso matero""",1
+"Búsqueda: 13 resultados encontrados para ""yerba mate 250 grs""",1
+"Búsqueda: 13 resultados encontrados para ""yerberA""",1
+"Búsqueda: 130 resultados encontrados para ""mate""",1
+"Búsqueda: 131 resultados encontrados para ""mate""",1
+"Búsqueda: 132 resultados encontrados para ""mate"" – Page 3",1
+"Búsqueda: 134 resultados encontrados para ""Mate""",1
+"Búsqueda: 134 resultados encontrados para ""mate"" – Page 4",1
+"Búsqueda: 136 resultados encontrados para ""mate"" – Page 3",1
+"Búsqueda: 139 resultados encontrados para ""mate""",1
+"Búsqueda: 14 resultados encontrados para ""Bolsos materos""",1
+"Búsqueda: 14 resultados encontrados para ""Recipiente mate""",1
+"Búsqueda: 14 resultados encontrados para ""amargo""",1
+"Búsqueda: 14 resultados encontrados para ""bolso materi""",1
+"Búsqueda: 14 resultados encontrados para ""chocolate""",1
+"Búsqueda: 14 resultados encontrados para ""galleta""",1
+"Búsqueda: 14 resultados encontrados para ""marroc""",1
+"Búsqueda: 14 resultados encontrados para ""mate vidrio templado""",1
+"Búsqueda: 14 resultados encontrados para ""pan dulce""",1
+"Búsqueda: 14 resultados encontrados para ""termos""",1
+"Búsqueda: 15 resultados encontrados para ""Bolso matero""",1
+"Búsqueda: 15 resultados encontrados para ""Galletas""",1
+"Búsqueda: 15 resultados encontrados para ""Mate imperial""",1
+"Búsqueda: 15 resultados encontrados para ""cho""",1
+"Búsqueda: 15 resultados encontrados para ""kit m""",1
+"Búsqueda: 15 resultados encontrados para ""kit mate""",1
+"Búsqueda: 16 resultados encontrados para ""Hierbas""",1
+"Búsqueda: 16 resultados encontrados para ""MARRO""",1
+"Búsqueda: 16 resultados encontrados para ""acero imperial""",1
+"Búsqueda: 16 resultados encontrados para ""al por mayor""",1
+"Búsqueda: 16 resultados encontrados para ""bolso materos""",1
+"Búsqueda: 16 resultados encontrados para ""choco""",1
+"Búsqueda: 16 resultados encontrados para ""termos""",1
+"Búsqueda: 16 resultados encontrados para ""yerba cbse""",1
+"Búsqueda: 17 resultados encontrados para ""Galletas""",1
+"Búsqueda: 17 resultados encontrados para ""Tapa""",1
+"Búsqueda: 17 resultados encontrados para ""bizcochitos de grasa""",1
+"Búsqueda: 17 resultados encontrados para ""dulce leche""",1
+"Búsqueda: 17 resultados encontrados para ""galletas""",1
+"Búsqueda: 17 resultados encontrados para ""porta""",1
+"Búsqueda: 17 resultados encontrados para ""tapa""",1
+"Búsqueda: 17 resultados encontrados para ""vidrio""",1
+"Búsqueda: 18 resultados encontrados para ""Hierba mate""",1
+"Búsqueda: 18 resultados encontrados para ""bolso mate""",1
+"Búsqueda: 18 resultados encontrados para ""matepa""",1
+"Búsqueda: 18 resultados encontrados para ""termo kit""",1
+"Búsqueda: 19 resultados encontrados para ""calabaza""",1
+"Búsqueda: 19 resultados encontrados para ""portatermo""",1
+"Búsqueda: 19 resultados encontrados para ""thermo""",1
+"Búsqueda: 2 resultados encontrados para ""Panet""",1
+"Búsqueda: 2 resultados encontrados para ""TERMO SAN LORENZO""",1
+"Búsqueda: 2 resultados encontrados para ""aguila""",1
+"Búsqueda: 2 resultados encontrados para ""alfajoree""",1
+"Búsqueda: 2 resultados encontrados para ""bottle""",1
+"Búsqueda: 2 resultados encontrados para ""capsulas""",1
+"Búsqueda: 2 resultados encontrados para ""cerealitas""",1
+"Búsqueda: 2 resultados encontrados para ""cosito""",1
+"Búsqueda: 2 resultados encontrados para ""descuento codigo""",1
+"Búsqueda: 2 resultados encontrados para ""dulce camote""",1
+"Búsqueda: 2 resultados encontrados para ""dulce de lache chimbote""",1
+"Búsqueda: 2 resultados encontrados para ""erba mate reiverde nativa""",1
+"Búsqueda: 2 resultados encontrados para ""esnaola""",1
+"Búsqueda: 2 resultados encontrados para ""futbol argentino""",1
+"Búsqueda: 2 resultados encontrados para ""lata""",1
+"Búsqueda: 2 resultados encontrados para ""manjar""",1
+"Búsqueda: 2 resultados encontrados para ""mate criollo""",1
+"Búsqueda: 2 resultados encontrados para ""mates metalicos""",1
+"Búsqueda: 2 resultados encontrados para ""nuez""",1
+"Búsqueda: 2 resultados encontrados para ""papaya""",1
+"Búsqueda: 2 resultados encontrados para ""regaliz""",1
+"Búsqueda: 2 resultados encontrados para ""reiVerde""",1
+"Búsqueda: 2 resultados encontrados para ""sin tacc""",1
+"Búsqueda: 2 resultados encontrados para ""termo san lorenzo""",1
+"Búsqueda: 2 resultados encontrados para ""yerba mate kra""",1
+"Búsqueda: 2 resultados encontrados para ""yerba pipore 250 grs""",1
+"Búsqueda: 20 resultados encontrados para ""Copa del mundo""",1
+"Búsqueda: 20 resultados encontrados para ""boca juniors""",1
+"Búsqueda: 20 resultados encontrados para ""yerba mate rey verde""",1
+"Búsqueda: 22 resultados encontrados para ""hierba""",1
+"Búsqueda: 22 resultados encontrados para ""mate calabaza""",1
+"Búsqueda: 23 resultados encontrados para ""Bombillas""",1
+"Búsqueda: 23 resultados encontrados para ""bombillas""",1
+"Búsqueda: 23 resultados encontrados para ""bombillon""",1
+"Búsqueda: 23 resultados encontrados para ""mate boca juniors""",1
+"Búsqueda: 23 resultados encontrados para ""set matero""",1
+"Búsqueda: 24 resultados encontrados para ""bombillon""",1
+"Búsqueda: 25 resultados encontrados para ""Matzos""",1
+"Búsqueda: 25 resultados encontrados para ""Todos los productos"" – Page 2",1
+"Búsqueda: 25 resultados encontrados para ""mate mayor""",1
+"Búsqueda: 25 resultados encontrados para ""set matero guitarra""",1
+"Búsqueda: 26 resultados encontrados para ""boca""",1
+"Búsqueda: 26 resultados encontrados para ""bombillas""",1
+"Búsqueda: 27 resultados encontrados para ""aceto""",1
+"Búsqueda: 27 resultados encontrados para ""limpiador de bombillas""",1
+"Búsqueda: 28 resultados encontrados para ""bol""",1
+"Búsqueda: 28 resultados encontrados para ""hoerba mate""",1
+"Búsqueda: 28 resultados encontrados para ""origen""",1
+"Búsqueda: 29 resultados encontrados para ""mate rosa""",1
+"Búsqueda: 3 resultados encontrados para ""BON O BON""",1
+"Búsqueda: 3 resultados encontrados para ""Caja Bizcochos Don Satur""",1
+"Búsqueda: 3 resultados encontrados para ""Havana""",1
+"Búsqueda: 3 resultados encontrados para ""Mar de plata""",1
+"Búsqueda: 3 resultados encontrados para ""Pomelo""",1
+"Búsqueda: 3 resultados encontrados para ""SAN LORENZO""",1
+"Búsqueda: 3 resultados encontrados para ""YERBA MATE ZINC""",1
+"Búsqueda: 3 resultados encontrados para ""alcayota""",1
+"Búsqueda: 3 resultados encontrados para ""babacua""",1
+"Búsqueda: 3 resultados encontrados para ""camionero""",1
+"Búsqueda: 3 resultados encontrados para ""cebador""",1
+"Búsqueda: 3 resultados encontrados para ""codigo""",1
+"Búsqueda: 3 resultados encontrados para ""dulce beso""",1
+"Búsqueda: 3 resultados encontrados para ""gocha""",1
+"Búsqueda: 3 resultados encontrados para ""mate futbol""",1
+"Búsqueda: 3 resultados encontrados para ""membrillo""",1
+"Búsqueda: 3 resultados encontrados para ""playa""",1
+"Búsqueda: 3 resultados encontrados para ""pomelo""",1
+"Búsqueda: 3 resultados encontrados para ""porta mate para auto""",1
+"Búsqueda: 3 resultados encontrados para ""saladix""",1
+"Búsqueda: 3 resultados encontrados para ""san lorenzo""",1
+"Búsqueda: 31 resultados encontrados para ""dulce""",1
+"Búsqueda: 33 resultados encontrados para ""herbal""",1
+"Búsqueda: 34 resultados encontrados para ""Mate en sobre""",1
+"Búsqueda: 34 resultados encontrados para ""cafe en granos""",1
+"Búsqueda: 34 resultados encontrados para ""set de hierbas mates""",1
+"Búsqueda: 35 resultados encontrados para ""cafe""",1
+"Búsqueda: 35 resultados encontrados para ""lata para hierba""",1
+"Búsqueda: 35 resultados encontrados para ""terma""",1
+"Búsqueda: 38 resultados encontrados para ""hierba mate cruz de malta""",1
+"Búsqueda: 39 resultados encontrados para ""bebida""",1
+"Búsqueda: 39 resultados encontrados para ""porta hierba mate""",1
+"Búsqueda: 4 resultados encontrados para ""Futbol""",1
+"Búsqueda: 4 resultados encontrados para ""La merced del campo""",1
+"Búsqueda: 4 resultados encontrados para ""POLLO""",1
+"Búsqueda: 4 resultados encontrados para ""Pollo""",1
+"Búsqueda: 4 resultados encontrados para ""auto""",1
+"Búsqueda: 4 resultados encontrados para ""criollo""",1
+"Búsqueda: 4 resultados encontrados para ""havanna""",1
+"Búsqueda: 4 resultados encontrados para ""la serenisima""",1
+"Búsqueda: 4 resultados encontrados para ""laerced""",1
+"Búsqueda: 4 resultados encontrados para ""repuesto""",1
+"Búsqueda: 4 resultados encontrados para ""yerba mate sara""",1
+"Búsqueda: 41 resultados encontrados para ""BOLSITO PARA TERMO""",1
+"Búsqueda: 42 resultados encontrados para ""Termo"" – Page 2",1
+"Búsqueda: 44 resultados encontrados para ""dispensador de hierba""",1
+"Búsqueda: 5 resultados encontrados para ""Bizcochos Don Satur""",1
+"Búsqueda: 5 resultados encontrados para ""Matero camionero rustico""",1
+"Búsqueda: 5 resultados encontrados para ""aceto balsamico""",1
+"Búsqueda: 5 resultados encontrados para ""alfajore""",1
+"Búsqueda: 5 resultados encontrados para ""asado""",1
+"Búsqueda: 5 resultados encontrados para ""biscochitos""",1
+"Búsqueda: 5 resultados encontrados para ""bombilla pico de loro""",1
+"Búsqueda: 5 resultados encontrados para ""buenas y santas""",1
+"Búsqueda: 5 resultados encontrados para ""coca""",1
+"Búsqueda: 5 resultados encontrados para ""donde queda la tienda""",1
+"Búsqueda: 5 resultados encontrados para ""mate organico""",1
+"Búsqueda: 5 resultados encontrados para ""matza""",1
+"Búsqueda: 5 resultados encontrados para ""pajarito""",1
+"Búsqueda: 5 resultados encontrados para ""pico dulce""",1
+"Búsqueda: 5 resultados encontrados para ""repuestos""",1
+"Búsqueda: 5 resultados encontrados para ""tes""",1
+"Búsqueda: 5 resultados encontrados para ""u de chile""",1
+"Búsqueda: 5 resultados encontrados para ""vainilla""",1
+"Búsqueda: 51 resultados encontrados para ""termi""",1
+"Búsqueda: 55 resultados encontrados para ""yerbas""",1
+"Búsqueda: 56 resultados encontrados para ""Sal""",1
+"Búsqueda: 6 resultados encontrados para ""Chocolinas""",1
+"Búsqueda: 6 resultados encontrados para ""bizcochos""",1
+"Búsqueda: 6 resultados encontrados para ""chocolates""",1
+"Búsqueda: 6 resultados encontrados para ""criollita""",1
+"Búsqueda: 6 resultados encontrados para ""criollitas""",1
+"Búsqueda: 6 resultados encontrados para ""dulce de ba""",1
+"Búsqueda: 6 resultados encontrados para ""set dia del padre""",1
+"Búsqueda: 6 resultados encontrados para ""yerba mate cachamate""",1
+"Búsqueda: 66 resultados encontrados para ""argentina""",1
+"Búsqueda: 7 resultados encontrados para ""bizcocho""",1
+"Búsqueda: 7 resultados encontrados para ""copa""",1
+"Búsqueda: 7 resultados encontrados para ""gluten""",1
+"Búsqueda: 7 resultados encontrados para ""mermeladas""",1
+"Búsqueda: 7 resultados encontrados para ""miel de caña""",1
+"Búsqueda: 7 resultados encontrados para ""miel""",1
+"Búsqueda: 7 resultados encontrados para ""termos""",1
+"Búsqueda: 73 resultados encontrados para ""bom""",1
+"Búsqueda: 73 resultados encontrados para ""bombilla"" – Page 3",1
+"Búsqueda: 75 resultados encontrados para ""bombilla"" – Page 3",1
+"Búsqueda: 76 resultados encontrados para ""te""",1
+"Búsqueda: 77 resultados encontrados para ""Te""",1
+"Búsqueda: 8 resultados encontrados para ""Don Satur""",1
+"Búsqueda: 8 resultados encontrados para ""Pañales adulto""",1
+"Búsqueda: 8 resultados encontrados para ""Pipore suave""",1
+"Búsqueda: 8 resultados encontrados para ""chocolina""",1
+"Búsqueda: 8 resultados encontrados para ""datur""",1
+"Búsqueda: 8 resultados encontrados para ""dulce de lechw""",1
+"Búsqueda: 8 resultados encontrados para ""porta yerba plastico""",1
+"Búsqueda: 8 resultados encontrados para ""rosamonte""",1
+"Búsqueda: 8 resultados encontrados para ""son satur""",1
+"Búsqueda: 8 resultados encontrados para ""terere""",1
+"Búsqueda: 86 resultados encontrados para ""yerba mate""",1
+"Búsqueda: 89 resultados encontrados para ""yerba mate la merced babacui""",1
+"Búsqueda: 89 resultados encontrados para ""yerba mate la mwr""",1
+"Búsqueda: 9 resultados encontrados para ""Paso los toros""",1
+"Búsqueda: 9 resultados encontrados para ""Rosamonte""",1
+"Búsqueda: 9 resultados encontrados para ""Vasos mate""",1
+"Búsqueda: 9 resultados encontrados para ""bizcochos""",1
+"Búsqueda: 9 resultados encontrados para ""caja Don Satur""",1
+"Búsqueda: 9 resultados encontrados para ""canaria""",1
+"Búsqueda: 9 resultados encontrados para ""cbse""",1
+"Búsqueda: 9 resultados encontrados para ""madera""",1
+"Búsqueda: 9 resultados encontrados para ""taragui""",1
+"Búsqueda: 90 resultados encontrados para ""yerba""",1
+"Búsqueda: 91 resultados encontrados para ""yerba""",1
+"Búsqueda: 93 resultados encontrados para ""despolvillador de yerba""",1
+"Búsqueda: 94 resultados encontrados para ""yerba mate"" – Page 2",1
+"Búsqueda: 97 resultados encontrados para ""yerba""",1
+Direcciones – Page 2,1
+El Club del Mate – Page 3,1
+El poder antioxidante del mate: Una infusión poderosa ?,1
+Ha habido un problema al cargar los resultados de búsqueda. Actualiza la página o vuelve a intentarlo más tarde.,1
+Inicio 2024,1
+KRAUS,1
+Mate Sabio,1
+Mate con Amigos – Page 2,1
+Mate con Amigos – Page 3,1
+"Mate con Amigos – tagged ""MATE""",1
+"Mate con Amigos – tagged ""Mate con Amigos""",1
+"Mate con Amigos – tagged ""Mate con Amigos"" – Page 2",1
+"Mate con Amigos – tagged ""Yerba Mate""",1
+"Mate con Amigos – tagged ""bienestar""",1
+"Mate con Amigos – tagged ""propiedades del Mate""",1
+Mis puntos,1
+Nosotros,1
+Pedido#29129,1
+Pedido#29975,1
+Pedido#30196,1
+Pedido#30486,1
+Pedido#30581,1
+Pedido#30585,1
+Pedido#30718,1
+Pedido#30824,1
+Pedido#30937,1
+Pedido53253,1
+"Recetas Nuestras – tagged ""Cosas Nuestras""",1
+"Recetas Nuestras – tagged ""Empanadas""",1
+"Recetas Nuestras – tagged ""MATE""",1
+"Recetas Nuestras – tagged ""Mate con Amigos""",1
+"Recetas Nuestras – tagged ""club del mate""",1
+"Recetas Nuestras – tagged ""mates""",1
+"Sin categoría – tagged ""Sin categoría""",1
+"Uncategorized – tagged ""Beneficios del yerba mate""",1
+"Uncategorized – tagged ""Cómo tomar yerba mate""",1
+Yerbas Mate Taragüi despalada 500gr.,1
+Yerbas y Productos Sin Gluten: Tu Elección Saludable para el Cuerpo y,1
+cachamate,1
+mate sabio,1
+pipore,1
+rosamonte,1
+
+# How are active users trending?
+# Start date: 20260101
+# End date: 20260501
+Nth day,30 days,7 days,1 day
+0000,15560,2703,457
+0001,15326,2640,384
+0002,15070,2630,352
+0003,14873,2632,419
+0004,14800,2606,438
+0005,14547,2570,360
+0006,14274,2556,333
+0007,13943,2434,328
+0008,13691,2408,355
+0009,13472,2374,316
+0010,13233,2301,335
+0011,12940,2196,325
+0012,12689,2174,342
+0013,12267,2170,327
+0014,11868,2180,340
+0015,11495,2177,356
+0016,11217,2212,353
+0017,11120,2245,375
+0018,10963,2281,370
+0019,10679,2325,379
+0020,10286,2296,299
+0021,10037,2268,303
+0022,9868,2195,276
+0023,9464,2117,258
+0024,9393,2051,315
+0025,9368,2005,323
+0026,9287,1970,343
+0027,9155,2013,337
+0028,9082,2014,315
+0029,9072,2033,294
+0030,8973,2114,343
+0031,9108,2298,501
+0032,9166,2414,451
+0033,9238,2548,496
+0034,9204,2617,409
+0035,9266,2713,411
+0036,9305,2779,375
+0037,9365,2788,354
+0038,9354,2688,382
+0039,9507,2658,414
+0040,9562,2572,413
+0041,9705,2651,481
+0042,9764,2597,358
+0043,9817,2589,359
+0044,9808,2602,348
+0045,9823,2604,365
+0046,9861,2611,419
+0047,9881,2567,366
+0048,9899,2462,370
+0049,9897,2496,396
+0050,9930,2422,293
+0051,9941,2386,317
+0052,9986,2347,331
+0053,10085,2308,380
+0054,10184,2342,420
+0055,10215,2367,407
+0056,10260,2405,439
+0057,10439,2604,498
+0058,10635,2795,508
+0059,10899,3014,548
+0060,11140,3215,583
+0061,11965,4154,1359
+0062,12000,4203,447
+0063,11889,4175,408
+0064,12125,4285,617
+0065,12096,4162,405
+0066,12308,4215,613
+0067,12776,4542,910
+0068,12849,3658,471
+0069,12913,3647,457
+0070,12868,3620,375
+0071,12806,3392,373
+0072,12871,3379,377
+0073,12917,3201,430
+0074,12893,2694,390
+0075,12850,2600,375
+0076,13184,2899,754
+0077,13299,2985,465
+0078,13590,3262,660
+0079,15639,5367,2490
+0080,17596,7312,2415
+0081,18231,7908,961
+0082,18475,8153,655
+0083,18705,7955,557
+0084,19401,8658,1150
+0085,20281,9354,1347
+0086,20449,7402,557
+0087,20488,5574,558
+0088,20453,5045,449
+0089,20441,4919,535
+0090,20424,4893,514
+0091,19488,4192,431
+0092,19447,3308,442
+0093,19498,3228,470
+0094,19364,3202,539
+0095,19557,3271,518
+0096,19561,3306,579
+0097,19230,3361,581
+0098,19448,3628,712
+0099,19876,4034,867
+0100,20003,4052,484
+0101,20380,4311,781
+0102,20479,4205,419
+0103,20508,4129,501
+0104,20684,4004,450
+0105,20659,3672,386
+0106,20290,3199,400
+0107,20192,3097,377
+0108,20026,2775,461
+0109,17869,2740,377
+0110,15957,2676,427
+0111,15474,2642,424
+0112,15208,2698,434
+0113,15096,2676,376
+0114,14343,2707,417
+0115,13661,2898,668
+0116,13525,2982,484
+0117,13501,3122,577
+0118,13447,3137,467
+0119,13363,3176,474
+0120,13143,3134,321
+
+#  
+# Start date: 20260101
+# End date: 20260501
+Nth day,DAU / MAU,DAU / WAU,WAU / MAU
+0000,0.02937017994858612,0.16907140214576397,0.1737146529562982
+0001,0.025055461307581888,0.14545454545454545,0.17225629648962548
+0002,0.02335766423357664,0.1338403041825095,0.1745189117451891
+0003,0.02817185503933302,0.15919452887537994,0.17696497008001075
+0004,0.029594594594594594,0.16807367613200308,0.1760810810810811
+0005,0.024747370591874613,0.14007782101167315,0.17666872894754931
+0006,0.023329129886506934,0.13028169014084506,0.17906683480453972
+0007,0.02352434913576705,0.13475760065735415,0.17456788352578353
+0008,0.02592944269958367,0.14742524916943522,0.17588196625520414
+0009,0.02345605700712589,0.13310867733782644,0.17621733966745842
+0010,0.025315499130960477,0.14558887440243373,0.17388347313534347
+0011,0.02511591962905719,0.14799635701275046,0.16970633693972179
+0012,0.02695247852470644,0.15731370745170192,0.17132949799038538
+0013,0.026656884323795548,0.15069124423963134,0.17689736691937719
+0014,0.028648466464442197,0.1559633027522936,0.18368722615436467
+0015,0.030969986950848193,0.16352779053743685,0.18938668986515877
+0016,0.031470090041900683,0.1595840867992767,0.19720067754301507
+0017,0.03372302158273381,0.16703786191536749,0.2018884892086331
+0018,0.033749885980114934,0.16220955721174923,0.20806348627200583
+0019,0.03549021443955427,0.16301075268817206,0.2177170147017511
+0020,0.029068636982306047,0.13022648083623695,0.22321602177717287
+0021,0.030188303277871874,0.1335978835978836,0.22596393344624888
+0022,0.027969193352249695,0.12574031890660592,0.22243615727604377
+0023,0.027261200338123414,0.1218705715635333,0.22368977176669486
+0024,0.033535611625678696,0.15358361774744028,0.2183540934738635
+0025,0.03447907771135782,0.16109725685785536,0.2140264730999146
+0026,0.0369333476903198,0.17411167512690356,0.21212447507268226
+0027,0.03681048607318405,0.16741182314952807,0.2198798470780994
+0028,0.034683990310504294,0.1564051638530288,0.2217573221757322
+0029,0.032407407407407406,0.14461387112641416,0.22409611992945327
+0030,0.038225788476540734,0.16225165562913907,0.2355956759166388
+0031,0.055006587615283264,0.21801566579634465,0.2523056653491436
+0032,0.04920357844206851,0.1868268434134217,0.26336460833515163
+0033,0.053691275167785234,0.1946624803767661,0.2758172764667677
+0034,0.04443720121686223,0.15628582346197936,0.2843328987396784
+0035,0.044355709043816104,0.15149281238481385,0.29279084826246493
+0036,0.04030091348737238,0.13494062612450522,0.2986566362170876
+0037,0.037800320341697814,0.12697274031563846,0.2977042178323545
+0038,0.04083814410947188,0.14211309523809523,0.2873636946760744
+0039,0.04354686020826759,0.15575620767494355,0.2795834648153992
+0040,0.04319180087847731,0.16057542768273717,0.26898138464756327
+0041,0.04956208140133952,0.18144096567333082,0.27315816589386915
+0042,0.03666530110610405,0.13785136696187908,0.2659770585825481
+0043,0.03656921666496893,0.13866357667052917,0.2637261892635225
+0044,0.035481239804241435,0.1337432744043044,0.26529363784665577
+0045,0.037157691133055074,0.1401689708141321,0.26509213071363125
+0046,0.042490619612615355,0.16047491382612025,0.2647804482304026
+0047,0.037040785345612795,0.14257888585897935,0.2597915190770165
+0048,0.0373775128800889,0.1502843216896832,0.24871199111021317
+0049,0.040012124886329194,0.15865384615384615,0.2521976356471658
+0050,0.029506545820745217,0.12097440132122213,0.24390735146022155
+0051,0.03188814002615431,0.13285834031852473,0.24001609496026557
+0052,0.03314640496695374,0.14103110353642948,0.23502904065691968
+0053,0.03767972235994051,0.16464471403812825,0.228854734754586
+0054,0.04124116260801257,0.17933390264731,0.22996857816182248
+0055,0.039843367596671564,0.17194761301225178,0.23171806167400882
+0056,0.042787524366471735,0.18253638253638255,0.23440545808966862
+0057,0.047705718938595654,0.1912442396313364,0.24944918095603028
+0058,0.04776680771039022,0.1817531305903399,0.2628114715561824
+0059,0.050279842187356635,0.18181818181818182,0.2765391320304615
+0060,0.052333931777378814,0.18133748055987559,0.2885996409335727
+0061,0.11358127872962809,0.32715454983148773,0.3471792728792311
+0062,0.03725,0.10635260528194147,0.35025
+0063,0.03431743628564219,0.09772455089820359,0.35116494238371604
+0064,0.05088659793814433,0.14399066511085182,0.3534020618556701
+0065,0.033482142857142856,0.09730898606439212,0.34408068783068785
+0066,0.04980500487487813,0.1454329774614472,0.34246018849528764
+0067,0.07122730118973075,0.20035226772346984,0.3555103318722605
+0068,0.0366565491477936,0.12875888463641333,0.28469141567437156
+0069,0.03539069155115,0.1253084727173019,0.2824285603655231
+0070,0.02914205781784271,0.10359116022099447,0.2813179981349083
+0071,0.029126971732000625,0.10996462264150944,0.26487583945025767
+0072,0.029290653406883693,0.11157147084936371,0.26252816408981433
+0073,0.033289463497716186,0.13433302093095909,0.24781295966555703
+0074,0.030248972310556115,0.1447661469933185,0.2089505933452261
+0075,0.029182879377431907,0.14423076923076922,0.20233463035019456
+0076,0.05719053398058253,0.2600896860986547,0.2198877427184466
+0077,0.03496503496503497,0.15577889447236182,0.22445296638845025
+0078,0.04856512141280353,0.2023298589822195,0.24002943340691685
+0079,0.15921734126222906,0.4639463387367244,0.34318051026280455
+0080,0.1372471016140032,0.3302789934354486,0.415548988406456
+0081,0.05271241292304317,0.12152250885179565,0.43376666118150403
+0082,0.03545331529093369,0.0803385256960628,0.44129905277401893
+0083,0.029778134188719593,0.07001885606536769,0.42528735632183906
+0084,0.05927529508788207,0.13282513282513284,0.4462656564094634
+0085,0.06641684335091957,0.14400256574727388,0.4612198609536019
+0086,0.027238495769964302,0.075249932450689,0.36197369064501933
+0087,0.02723545490042952,0.10010764262648009,0.27206169465052715
+0088,0.021952769764826675,0.0889990089197225,0.24666308121058036
+0089,0.026172887823492003,0.10876194348444806,0.24064380411917224
+0090,0.02516647081864473,0.10504802779480892,0.2395710928319624
+0091,0.02211617405582923,0.1028148854961832,0.21510673234811165
+0092,0.022728441404843935,0.1336154776299879,0.1701033578443976
+0093,0.024105036413991178,0.14560099132589838,0.16555544158375218
+0094,0.027835158025201406,0.16833229231730168,0.16535839702540797
+0095,0.026486679961139233,0.15836135738306328,0.16725469141483867
+0096,0.029599713716067684,0.1751361161524501,0.16900976432697715
+0097,0.030213208528341133,0.1728652186849152,0.17477899115964637
+0098,0.03661044837515426,0.19625137816979052,0.18654874537227478
+0099,0.043620446769973835,0.21492315319781854,0.20295834171865568
+0100,0.02419637054441834,0.1194471865745311,0.20256961455781633
+0101,0.03832188420019627,0.18116446300162375,0.21153091265947008
+0102,0.02045998339762684,0.09964328180737217,0.20533229161580155
+0103,0.024429490930368638,0.12133688544441754,0.20133606397503415
+0104,0.021755946625410947,0.11238761238761238,0.19357957841810094
+0105,0.018684350646207465,0.105119825708061,0.17774335640640884
+0106,0.019714144898965006,0.12503907471084713,0.15766387382947264
+0107,0.018670760697305864,0.121730707135938,0.15337757527733756
+0108,0.0230200739039249,0.16612612612612612,0.13856985918306203
+0109,0.02109799093401981,0.1375912408759124,0.15333818344619174
+0110,0.026759415930312714,0.15956651718983558,0.16770069561947734
+0111,0.027400801344190255,0.16048448145344435,0.17073801214941192
+0112,0.028537611783271962,0.1608598962194218,0.1774066280904787
+0113,0.02490726020137785,0.14050822122571002,0.17726550079491257
+0114,0.029073415603430245,0.15404506834133727,0.18873317994840688
+0115,0.04889832369519069,0.23050379572118704,0.21213673962374643
+0116,0.03578558225508318,0.16230717639168343,0.22048059149722735
+0117,0.04273757499444485,0.18481742472773863,0.23124213021257684
+0118,0.034728935822116454,0.14886834555307618,0.23328623484792146
+0119,0.03547107685399985,0.14924433249370278,0.2376711816208935
+0120,0.024423647569048162,0.10242501595405233,0.2384539298485886

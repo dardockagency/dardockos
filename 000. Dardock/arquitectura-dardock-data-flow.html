@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dardock — Arquitectura de Datos</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #04060f;
+    background-image: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(34,211,238,0.07) 0%, transparent 70%);
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    color: #e2e8f0;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* grid dots */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(34,211,238,0.18) 1px, transparent 1px);
+    background-size: 24px 24px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .header-label {
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #22d3ee;
+    margin-bottom: 12px;
+    opacity: 0.8;
+  }
+  .header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    color: #f1f5f9;
+    margin-bottom: 8px;
+  }
+  .header p {
+    font-size: 13px;
+    color: #64748b;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Toggle */
+  .toggle-bar {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 48px;
+  }
+  .toggle-btn {
+    padding: 8px 20px;
+    border-radius: 6px;
+    border: 1px solid #1e293b;
+    background: transparent;
+    color: #64748b;
+    font-size: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .toggle-btn.active {
+    background: rgba(34,211,238,0.1);
+    border-color: #22d3ee;
+    color: #22d3ee;
+    box-shadow: 0 0 16px rgba(34,211,238,0.15);
+  }
+  .toggle-btn:hover:not(.active) {
+    border-color: #334155;
+    color: #94a3b8;
+  }
+
+  /* Canvas SVG */
+  .canvas-wrap {
+    position: relative;
+    width: 100%;
+  }
+  svg.canvas {
+    width: 100%;
+    height: 560px;
+    overflow: visible;
+  }
+
+  /* Node cards */
+  .node-group { cursor: default; }
+  .node-bg {
+    fill: #0a0f1e;
+    stroke-width: 1.5;
+    rx: 8;
+  }
+  .node-bg.healthy { stroke: #22d3ee; filter: drop-shadow(0 0 8px rgba(34,211,238,0.4)); }
+  .node-bg.warning { stroke: #f5c842; filter: drop-shadow(0 0 8px rgba(245,200,66,0.3)); }
+  .node-bg.critical { stroke: #ef4444; filter: drop-shadow(0 0 8px rgba(239,68,68,0.35)); }
+  .node-bg.planned  { stroke: #334155; filter: none; }
+  .node-bg.pending  { stroke: #f5c842; stroke-dasharray: 5 3; filter: drop-shadow(0 0 6px rgba(245,200,66,0.2)); }
+
+  .node-icon {
+    font-size: 18px;
+    dominant-baseline: central;
+    text-anchor: middle;
+  }
+  .node-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 11.5px;
+    font-weight: 600;
+    fill: #e2e8f0;
+    dominant-baseline: central;
+    text-anchor: middle;
+  }
+  .node-sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    fill: #64748b;
+    dominant-baseline: central;
+    text-anchor: middle;
+  }
+  .node-status {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    dominant-baseline: central;
+    text-anchor: middle;
+  }
+  .node-status.healthy { fill: #22d3ee; }
+  .node-status.warning { fill: #f5c842; }
+  .node-status.critical { fill: #ef4444; }
+  .node-status.planned  { fill: #475569; }
+  .node-status.pending  { fill: #f5c842; }
+
+  /* Cables */
+  .cable { fill: none; stroke-width: 2; }
+  .cable.healthy { stroke: #22d3ee; opacity: 0.6; }
+  .cable.warning { stroke: #f5c842; opacity: 0.5; stroke-dasharray: 6 4; }
+  .cable.planned { stroke: #334155; opacity: 0.6; stroke-dasharray: 4 4; }
+
+  /* Section labels */
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    fill: #334155;
+  }
+
+  /* Legend */
+  .legend {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    color: #64748b;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    border: 1.5px solid;
+  }
+  .legend-dot.healthy { border-color: #22d3ee; background: rgba(34,211,238,0.15); }
+  .legend-dot.warning { border-color: #f5c842; background: rgba(245,200,66,0.12); }
+  .legend-dot.planned { border-color: #334155; background: transparent; }
+  .legend-dot.pending { border-color: #f5c842; background: transparent; border-style: dashed; }
+
+  /* Routine cards below */
+  .routines-section {
+    margin-top: 56px;
+  }
+  .routines-label {
+    font-size: 9px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #334155;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 16px;
+  }
+  .routines-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+  }
+  .routine-card {
+    background: #0a0f1e;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    padding: 20px;
+    transition: border-color 0.2s;
+  }
+  .routine-card:hover { border-color: #22d3ee; }
+  .routine-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .routine-icon {
+    font-size: 20px;
+  }
+  .routine-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #e2e8f0;
+  }
+  .routine-trigger {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: #22d3ee;
+    background: rgba(34,211,238,0.08);
+    border: 1px solid rgba(34,211,238,0.2);
+    border-radius: 4px;
+    padding: 4px 8px;
+    margin-bottom: 12px;
+    display: inline-block;
+  }
+  .routine-steps {
+    list-style: none;
+    font-size: 11px;
+    font-family: 'Inter', sans-serif;
+    color: #64748b;
+    line-height: 1.8;
+  }
+  .routine-steps li::before {
+    content: '→ ';
+    color: #334155;
+  }
+  .routine-steps .highlight { color: #22d3ee; }
+  .routine-steps .pending { color: #f5c842; }
+
+  /* Particle animation via JS */
+  .particle { pointer-events: none; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <div class="header-label">Dardock OS · Arquitectura</div>
+    <h1>Flujo de Datos — Command Center</h1>
+    <p>Cómo viaja la información desde las plataformas hasta el dashboard</p>
+  </div>
+
+  <div class="toggle-bar">
+    <button class="toggle-btn active" onclick="setMode('hoy')">HOY (Live)</button>
+    <button class="toggle-btn" onclick="setMode('fase2')">FASE 2 — APIs conectadas</button>
+  </div>
+
+  <div class="canvas-wrap">
+    <svg class="canvas" id="mainSvg" viewBox="0 0 1100 540">
+
+      <!-- Section labels -->
+      <text class="section-label" x="90" y="30">Fuentes de datos</text>
+      <text class="section-label" x="430" y="30">Procesamiento</text>
+      <text class="section-label" x="810" y="30">Salidas</text>
+
+      <!-- Vertical dividers -->
+      <line x1="330" y1="20" x2="330" y2="520" stroke="#0f172a" stroke-width="1"/>
+      <line x1="720" y1="20" x2="720" y2="520" stroke="#0f172a" stroke-width="1"/>
+
+      <!-- ═══════════════ CABLES ═══════════════ -->
+
+      <!-- MasterData.json → GitHub Action -->
+      <path id="cable-masterdata-ghaction" class="cable healthy"
+        d="M 248 180 C 290 180 320 200 360 210"/>
+
+      <!-- GitHub Action → Supabase -->
+      <path id="cable-ghaction-supabase" class="cable healthy"
+        d="M 520 210 C 580 210 620 240 660 255"/>
+
+      <!-- Supabase → Dashboard -->
+      <path id="cable-supabase-dashboard" class="cable healthy"
+        d="M 818 260 C 840 260 850 245 860 245"/>
+      <!-- extra path to dashboard node -->
+      <path id="cable-supabase-dashboard2" class="cable healthy"
+        d="M 860 245 C 880 245 900 235 930 235"/>
+
+      <!-- Claude Routines → MasterData update -->
+      <path id="cable-routines-masterdata" class="cable warning"
+        d="M 490 320 C 420 320 350 290 248 250"/>
+
+      <!-- Claude Routines → Audit Report -->
+      <path id="cable-routines-report" class="cable healthy"
+        d="M 550 320 C 640 320 730 350 760 360"/>
+
+      <!-- Google Ads API → Vercel Edge (FASE 2) -->
+      <path id="cable-gads-edge" class="cable planned"
+        d="M 248 370 C 290 370 320 380 360 385"/>
+
+      <!-- GA4 API → Vercel Edge (FASE 2) -->
+      <path id="cable-ga4-edge" class="cable planned"
+        d="M 248 440 C 290 440 320 430 360 415"/>
+
+      <!-- Meta API → Vercel Edge (FASE 2) -->
+      <path id="cable-meta-edge" class="cable planned"
+        d="M 248 300 C 290 300 320 340 360 355"/>
+
+      <!-- Vercel Edge → Supabase (FASE 2) -->
+      <path id="cable-edge-supabase" class="cable planned"
+        d="M 520 395 C 580 395 620 340 660 295"/>
+
+      <!-- Vercel Edge → Dashboard (FASE 2) -->
+      <path id="cable-edge-dashboard" class="cable planned"
+        d="M 540 380 C 620 380 700 310 760 300"/>
+
+      <!-- ═══════════════ NODES ═══════════════ -->
+
+      <!-- ── COL 1: Fuentes ── -->
+
+      <!-- MasterData.json -->
+      <g class="node-group" id="node-masterdata">
+        <rect class="node-bg healthy" x="60" y="145" width="188" height="70" rx="8"/>
+        <text class="node-icon" x="85" y="176">📄</text>
+        <text class="node-title" x="163" y="168">MasterData.json</text>
+        <text class="node-sub"   x="163" y="183">00_MASTER_DATA / cliente</text>
+        <text class="node-status healthy" x="163" y="200">● LIVE</text>
+      </g>
+
+      <!-- Meta Ads API -->
+      <g class="node-group node-fase2" id="node-meta" style="opacity:0.35">
+        <rect class="node-bg pending" x="60" y="265" width="188" height="70" rx="8"/>
+        <text class="node-icon" x="85" y="296">📘</text>
+        <text class="node-title" x="163" y="288">Meta Ads API</text>
+        <text class="node-sub"   x="163" y="303">Token existe · sin conectar</text>
+        <text class="node-status pending" x="163" y="320">⏳ TOKEN OK / SIN HOOK</text>
+      </g>
+
+      <!-- Google Ads API -->
+      <g class="node-group node-fase2" id="node-gads" style="opacity:0.35">
+        <rect class="node-bg pending" x="60" y="340" width="188" height="70" rx="8"/>
+        <text class="node-icon" x="85" y="371">🔵</text>
+        <text class="node-title" x="163" y="363">Google Ads API</text>
+        <text class="node-sub"   x="163" y="378">Aprobación pendiente</text>
+        <text class="node-status pending" x="163" y="395">⏳ APROBACIÓN ~MARTES</text>
+      </g>
+
+      <!-- GA4 API -->
+      <g class="node-group node-fase2" id="node-ga4" style="opacity:0.35">
+        <rect class="node-bg pending" x="60" y="413" width="188" height="70" rx="8"/>
+        <text class="node-icon" x="85" y="444">📊</text>
+        <text class="node-title" x="163" y="436">GA4 API</text>
+        <text class="node-sub"   x="163" y="451">Analytics · OAuth listo</text>
+        <text class="node-status pending" x="163" y="468">⏳ PENDIENTE CONEXIÓN</text>
+      </g>
+
+      <!-- ── COL 2: Procesamiento ── -->
+
+      <!-- GitHub Action -->
+      <g class="node-group" id="node-ghaction">
+        <rect class="node-bg healthy" x="345" y="175" width="188" height="70" rx="8"/>
+        <text class="node-icon" x="370" y="206">⚡</text>
+        <text class="node-title" x="440" y="198">GitHub Action</text>
+        <text class="node-sub"   x="440" y="213">Auto-disparo en push main</text>
+        <text class="node-status healthy" x="440" y="230">● LIVE</text>
+      </g>
+
+      <!-- Claude Routines -->
+      <g class="node-group" id="node-routines">
+        <rect class="node-bg healthy" x="345" y="290" width="188" height="70" rx="8"/>
+        <text class="node-icon" x="370" y="321">🤖</text>
+        <text class="node-title" x="440" y="313">Claude Routines</text>
+        <text class="node-sub"   x="440" y="328">/audit semanal · /superaudit</text>
+        <text class="node-status healthy" x="440" y="345">● LIVE</text>
+      </g>
+
+      <!-- Vercel Edge Functions -->
+      <g class="node-group node-fase2" id="node-edge" style="opacity:0.35">
+        <rect class="node-bg planned" x="345" y="362" width="188" height="70" rx="8"/>
+        <text class="node-icon" x="370" y="393">▲</text>
+        <text class="node-title" x="440" y="385">Vercel Edge Fn</text>
+        <text class="node-sub"   x="440" y="400">API proxy — server-side</text>
+        <text class="node-status planned" x="440" y="417">○ FASE 2</text>
+      </g>
+
+      <!-- ── COL 3: Salidas ── -->
+
+      <!-- Supabase DB -->
+      <g class="node-group" id="node-supabase">
+        <rect class="node-bg warning" x="735" y="220" width="188" height="70" rx="8"/>
+        <text class="node-icon" x="760" y="251">🗄️</text>
+        <text class="node-title" x="832" y="243">Supabase DB</text>
+        <text class="node-sub"   x="832" y="258">clients.master_data JSONB</text>
+        <text class="node-status warning" x="832" y="275">⚠ CREDENCIALES PENDIENTES</text>
+      </g>
+
+      <!-- Command Center Dashboard -->
+      <g class="node-group" id="node-dashboard">
+        <rect class="node-bg healthy" x="735" y="130" width="188" height="70" rx="8"/>
+        <text class="node-icon" x="760" y="161">🖥️</text>
+        <text class="node-title" x="832" y="153">Command Center</text>
+        <text class="node-sub"   x="832" y="168">central.dardock.com</text>
+        <text class="node-status healthy" x="832" y="185">● LIVE</text>
+      </g>
+
+      <!-- Audit HTML Reports -->
+      <g class="node-group" id="node-reports">
+        <rect class="node-bg healthy" x="735" y="325" width="188" height="70" rx="8"/>
+        <text class="node-icon" x="760" y="356">📑</text>
+        <text class="node-title" x="832" y="348">Audit Reports</text>
+        <text class="node-sub"   x="832" y="363">audit_semanal + superaudit</text>
+        <text class="node-status healthy" x="832" y="380">● LIVE</text>
+      </g>
+
+      <!-- Particles container -->
+      <g id="particles"></g>
+
+    </svg>
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot healthy"></div>LIVE — activo hoy</div>
+    <div class="legend-item"><div class="legend-dot pending"></div>PENDIENTE — configurar</div>
+    <div class="legend-item"><div class="legend-dot planned"></div>FASE 2 — cuando APIs conectadas</div>
+  </div>
+
+  <!-- Routines reference -->
+  <div class="routines-section">
+    <div class="routines-label">Comandos disponibles</div>
+    <div class="routines-grid">
+
+      <div class="routine-card">
+        <div class="routine-header">
+          <span class="routine-icon">📋</span>
+          <span class="routine-name">Audit Semanal</span>
+        </div>
+        <div class="routine-trigger">"audit semanal [cliente]"</div>
+        <ul class="routine-steps">
+          <li>Lee MasterData + Estado_Actual</li>
+          <li>Recibe métricas del período</li>
+          <li>Genera <span class="highlight">audit_semanal_FECHA.html</span></li>
+          <li>Actualiza scores en MasterData</li>
+          <li class="highlight">Push → Supabase → Dashboard ✓</li>
+        </ul>
+      </div>
+
+      <div class="routine-card">
+        <div class="routine-header">
+          <span class="routine-icon">🔬</span>
+          <span class="routine-name">Superaudit Mensual</span>
+        </div>
+        <div class="routine-trigger">"superaudit [cliente]"</div>
+        <ul class="routine-steps">
+          <li>Lee últimas 4 audits semanales</li>
+          <li>Analiza 5 capas en profundidad</li>
+          <li>Genera <span class="highlight">superaudit_MES.html</span></li>
+          <li>Actualiza score global + hitos mes siguiente</li>
+          <li class="highlight">Push → Supabase → Dashboard ✓</li>
+        </ul>
+      </div>
+
+      <div class="routine-card">
+        <div class="routine-header">
+          <span class="routine-icon">🆕</span>
+          <span class="routine-name">Onboarding Cliente</span>
+        </div>
+        <div class="routine-trigger">"onboarding [cliente]"</div>
+        <ul class="routine-steps">
+          <li>Crea estructura de carpetas</li>
+          <li>Copia templates (CLAUDE.md, Estado_Actual)</li>
+          <li>Crea MasterData.json desde schema</li>
+          <li class="highlight">Push → cliente aparece en Dashboard ✓</li>
+        </ul>
+      </div>
+
+      <div class="routine-card">
+        <div class="routine-header">
+          <span class="routine-icon">📡</span>
+          <span class="routine-name">Pull APIs (Fase 2)</span>
+        </div>
+        <div class="routine-trigger">"pull data [cliente]"</div>
+        <ul class="routine-steps">
+          <li class="pending">⏳ Google Ads API (aprobación ~martes)</li>
+          <li class="pending">⏳ GA4 API (OAuth pendiente)</li>
+          <li class="pending">⏳ Meta Ads API (token ok, hook pendiente)</li>
+          <li>Corre antes del audit — data fresca automática</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Setup pendiente -->
+  <div style="margin-top:40px; background:#0a0f1e; border:1px solid #f5c84240; border-radius:8px; padding:24px;">
+    <div style="font-size:9px; letter-spacing:0.24em; text-transform:uppercase; color:#f5c842; margin-bottom:16px; font-family:monospace;">
+      ⚠ Setup requerido — una sola vez
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px;">
+      <div style="font-size:11px; color:#94a3b8; font-family:monospace; line-height:1.8;">
+        <span style="color:#f5c842;">1.</span> Supabase SQL editor<br>
+        <span style="color:#64748b;">→ correr add_master_data_column.sql</span>
+      </div>
+      <div style="font-size:11px; color:#94a3b8; font-family:monospace; line-height:1.8;">
+        <span style="color:#f5c842;">2.</span> GitHub dardockos Secrets<br>
+        <span style="color:#64748b;">→ SUPABASE_URL + SUPABASE_SERVICE_KEY</span>
+      </div>
+      <div style="font-size:11px; color:#94a3b8; font-family:monospace; line-height:1.8;">
+        <span style="color:#f5c842;">3.</span> Vercel env vars + .env local<br>
+        <span style="color:#64748b;">→ VITE_SUPABASE_URL + VITE_SUPABASE_ANON_KEY</span>
+      </div>
+      <div style="font-size:11px; color:#94a3b8; font-family:monospace; line-height:1.8;">
+        <span style="color:#22d3ee;">✓</span> Mergear PR #24<br>
+        <span style="color:#64748b;">→ github.com/dardockagency/dardock-command-center/pull/24</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// ── MODE TOGGLE ──────────────────────────────────────────
+function setMode(mode) {
+  document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'))
+  document.querySelector(`[onclick="setMode('${mode}')"]`).classList.add('active')
+
+  const fase2Nodes = document.querySelectorAll('.node-fase2')
+  if (mode === 'fase2') {
+    fase2Nodes.forEach(n => n.style.opacity = '1')
+    document.querySelectorAll('#cable-gads-edge, #cable-ga4-edge, #cable-meta-edge, #cable-edge-supabase, #cable-edge-dashboard')
+      .forEach(c => { c.classList.remove('planned'); c.classList.add('warning') })
+  } else {
+    fase2Nodes.forEach(n => n.style.opacity = '0.35')
+    document.querySelectorAll('#cable-gads-edge, #cable-ga4-edge, #cable-meta-edge, #cable-edge-supabase, #cable-edge-dashboard')
+      .forEach(c => { c.classList.remove('warning'); c.classList.add('planned') })
+  }
+}
+
+// ── PARTICLES ────────────────────────────────────────────
+const LIVE_CABLES = [
+  { id: 'cable-masterdata-ghaction', color: '#22d3ee', speed: 2200 },
+  { id: 'cable-ghaction-supabase',   color: '#22d3ee', speed: 2800 },
+  { id: 'cable-supabase-dashboard',  color: '#22d3ee', speed: 1800 },
+  { id: 'cable-supabase-dashboard2', color: '#22d3ee', speed: 2000 },
+  { id: 'cable-routines-masterdata', color: '#f5c842', speed: 3000 },
+  { id: 'cable-routines-report',     color: '#22d3ee', speed: 2500 },
+]
+
+const svgNS = 'http://www.w3.org/2000/svg'
+const container = document.getElementById('particles')
+
+function createParticle(cable, color, speed) {
+  const path = document.getElementById(cable)
+  if (!path) return
+
+  const totalLen = path.getTotalLength()
+  const circle = document.createElementNS(svgNS, 'circle')
+  circle.setAttribute('r', '3.5')
+  circle.setAttribute('fill', color)
+  circle.setAttribute('filter', `drop-shadow(0 0 4px ${color})`)
+  circle.classList.add('particle')
+  container.appendChild(circle)
+
+  let start = null
+  function step(ts) {
+    if (!start) start = ts
+    const elapsed = (ts - start) % speed
+    const t = elapsed / speed
+    const pt = path.getPointAtLength(t * totalLen)
+    circle.setAttribute('cx', pt.x)
+    circle.setAttribute('cy', pt.y)
+    circle.setAttribute('opacity', t < 0.1 ? t * 10 : t > 0.9 ? (1 - t) * 10 : 1)
+    requestAnimationFrame(step)
+  }
+  requestAnimationFrame(step)
+}
+
+// Stagger particle launches
+LIVE_CABLES.forEach((cfg, i) => {
+  setTimeout(() => createParticle(cfg.id, cfg.color, cfg.speed), i * 380)
+  // second particle offset
+  setTimeout(() => createParticle(cfg.id, cfg.color, cfg.speed), i * 380 + cfg.speed / 2)
+})
+</script>
+</body>
+</html>
