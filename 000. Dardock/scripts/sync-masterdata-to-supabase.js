@@ -78,7 +78,7 @@ async function syncClient(folderName, masterData) {
 
   const status = masterData.score_capas?.status ?? 'warning'
 
-  await supabaseRequest('POST', '/rest/v1/clients', {
+  await supabaseRequest('POST', '/rest/v1/clients?on_conflict=slug', {
     slug,
     name: masterData.cliente,
     industry: masterData.rubro ?? masterData.tipo ?? '',
